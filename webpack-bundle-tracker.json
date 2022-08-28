@@ -1,0 +1,42 @@
+{
+  "status": "done",
+  "assets": {
+    "css/main.css": {
+      "name": "css/main.css",
+      "path": "/Users/natasaur/Sites/kgpu/dist/css/main.css",
+      "publicPath": "/css/main.css"
+    },
+    "js/main.js": {
+      "name": "js/main.js",
+      "path": "/Users/natasaur/Sites/kgpu/dist/js/main.js",
+      "publicPath": "/js/main.js"
+    },
+    "css/main.css.gz": {
+      "name": "css/main.css.gz",
+      "path": "/Users/natasaur/Sites/kgpu/dist/css/main.css.gz",
+      "publicPath": "/css/main.css.gz"
+    },
+    "_head.hbs": {
+      "name": "_head.hbs",
+      "path": "/Users/natasaur/Sites/kgpu/dist/_head.hbs",
+      "publicPath": "/_head.hbs"
+    },
+    "index.html": {
+      "name": "index.html",
+      "path": "/Users/natasaur/Sites/kgpu/dist/index.html",
+      "publicPath": "/index.html"
+    },
+    "test.html": {
+      "name": "test.html",
+      "path": "/Users/natasaur/Sites/kgpu/dist/test.html",
+      "publicPath": "/test.html"
+    }
+  },
+  "chunks": {
+    "main": [
+      "css/main.css",
+      "js/main.js"
+    ]
+  },
+  "publicPath": "/"
+}

@@ -1,0 +1,7 @@
+@use '~/styles/colors';
+@import '~/styles/fonts';
+
+body {
+  background-color: colors.$red;
+  position: relative;
+}
