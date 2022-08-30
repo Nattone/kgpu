@@ -32,55 +32,42 @@
                     </button>
                 </div>
                 <div class="bottom">
-                    <ul class="nav nav-upper">
-                        <li class="nav__item">
-                            <a href="" class="link">Школьнику и абитуриенту</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="link">Студенту</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="link">Выпускнику</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="link">Сотруднику</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="link">Контакты</a>
-                        </li>
-                    </ul>
+                    <div class="nav-upper">
+                        {{> common/nav items=common.nav-upper}}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="nav nav-main">
-        <ul class="nav__items container">
-            <li class="nav__item">
-                <a href="" class="link link-more">Университет</a>
-                <ul class="subnav">
-                    <li class="subnav__item">
-                        <a href="" class="link">Страница ректора</a>
-                    </li>
-                    <li class="subnav__item">
-                        <a href="" class="link">Миссия</a>
-                    </li>
-                    <li class="subnav__item">
-                        <a href="" class="link">Подразделения</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav__item">
-                <a href="" class="link link-more">Образование</a>
-            </li>
-            <li class="nav__item">
-                <a href="" class="link link-more">Наука</a>
-            </li>
-            <li class="nav__item">
-                <a href="" class="link link-more">International</a>
-            </li>
-            <li class="nav__item">
-                <a href="" class="link link-more">Дополнительное образование</a>
-            </li>
-        </ul>
+    <div class="nav-main">
+        {{> common/nav class="container" items=common.nav-main}}
     </div>
+    {{!-- <ul class="nav__items container">
+        <li class="nav__item">
+            <a href="" class="link link_more">Университет</a>
+            <ul class="subnav">
+                <li class="subnav__item">
+                    <a href="" class="link">Страница ректора</a>
+                </li>
+                <li class="subnav__item">
+                    <a href="" class="link">Миссия</a>
+                </li>
+                <li class="subnav__item">
+                    <a href="" class="link">Подразделения</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav__item">
+            <a href="" class="link link-more">Образование</a>
+        </li>
+        <li class="nav__item">
+            <a href="" class="link link-more">Наука</a>
+        </li>
+        <li class="nav__item">
+            <a href="" class="link link-more">International</a>
+        </li>
+        <li class="nav__item">
+            <a href="" class="link link-more">Дополнительное образование</a>
+        </li>
+    </ul> --}}
 </header>

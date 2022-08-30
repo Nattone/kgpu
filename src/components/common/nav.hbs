@@ -1,0 +1,16 @@
+<ul class="nav {{class}}">
+    {{#each items}}
+        <li class="nav__item">
+            <a href="{{this.link}}" class="nav__link {{#if this.items}}nav__link_more{{/if}}">{{this.name}}</a>
+            {{#if this.items}}
+                <ul class="nav__sub">
+                    {{#each this.items}}
+                    <li class="nav__sub__item">
+                        <a href="{{this.link}}" class="nav__sub__link">{{this.name}}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+            {{/if}}
+        </li>
+    {{/each}}
+</ul>

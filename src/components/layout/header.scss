@@ -86,22 +86,26 @@
     }
 
     .nav-upper {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
 
-      .link {
-        border-bottom: 2px solid transparent;
-        color: colors.$blue;
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 22px;
-        text-transform: uppercase;
-        transition: border 0.3s ease;
+        // &__item {}
 
-        &:hover,
-        &:focus {
-          border-bottom-color: colors.$orange;
+        &__link {
+          border-bottom: 2px solid transparent;
+          color: colors.$blue;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 22px;
+          text-transform: uppercase;
+          transition: border 0.3s ease;
+
+          &:hover,
+          &:focus {
+            border-bottom-color: colors.$orange;
+          }
         }
       }
     }
@@ -110,64 +114,73 @@
   .nav-main {
     background-color: colors.$blue;
 
-    .nav__items {
+    .nav {
       display: flex;
       justify-content: space-between;
-    }
 
-    .link.link-more {
-      background-color: transparent;
-      color: colors.$white;
-      display: block;
-      font-size: 20px;
-      font-weight: 600;
-      line-height: 24px;
-      padding: 18px 42px 18px 12px;
-      position: relative;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-
-      &::after {
-        border: 5px solid transparent;
-        border-top: 5px solid colors.$white;
-        content: '';
-        position: absolute;
-        right: 12px;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: border 0.3s ease;
-      }
-
-      &:hover,
-      &:focus {
-        background-color: colors.$white;
-        color: colors.$blue;
-
-        &::after {
-          border-top-color: colors.$blue;
-        }
-      }
-    }
-
-    .subnav {
-      background-color: colors.$white;
-      display: none;
-      padding: 10px 0 18px;
-      position: absolute;
-
-      .link {
+      &__link {
         background-color: transparent;
-        color: colors.$blue;
+        color: colors.$white;
         display: block;
-        font-size: 16px;
-        line-height: 20px;
-        padding: 10px 22px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        padding: 18px 42px 18px 12px;
+        position: relative;
+        text-transform: uppercase;
         transition: all 0.3s ease;
 
         &:hover,
         &:focus {
-          background-color: colors.$blue;
-          color: colors.$white;
+          background-color: colors.$white;
+          color: colors.$blue;
+        }
+
+        &_more {
+          &::after {
+            border: 5px solid transparent;
+            border-top: 5px solid colors.$white;
+            content: '';
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: border 0.3s ease;
+          }
+
+          &:hover,
+          &:focus {
+            &::after {
+              border-top-color: colors.$blue;
+            }
+
+            + .nav__sub {
+              display: block;
+            }
+          }
+        }
+      }
+
+      &__sub {
+        background-color: colors.$white;
+        display: none;
+        padding: 10px 0 18px;
+        position: absolute;
+
+        &__link {
+          background-color: transparent;
+          color: colors.$blue;
+          display: block;
+          font-size: 16px;
+          line-height: 20px;
+          padding: 10px 22px;
+          transition: all 0.3s ease;
+
+          &:hover,
+          &:focus {
+            background-color: colors.$blue;
+            color: colors.$white;
+          }
         }
       }
     }
