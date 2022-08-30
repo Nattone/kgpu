@@ -1,3 +1,86 @@
-<header class="header">
-    <span class="header__title">{{title}}</span>
+<header class="header header-main">
+    {{!-- <span class="header__title">{{title}}</span> --}}
+    <div class="header__top">
+        <div class="container">
+            <div class="left">
+                <a class="logo" href="/">
+                    <img src="/img/logo.svg" alt="logo">
+                    {{!-- <svg class="icon">
+                        <use href="#logo" x="10" fill="blue"/>
+                    </svg> --}}
+                </a>
+                <div class="logo">
+                    <img src="/img/logo-ministry.svg" alt="ministry">
+                </div>
+            </div>
+            <div class="right">
+                <div class="top">
+                    <div class="search">
+                        <input type="search" id="search" placeholder="Поиск">
+                        <span class="icon-search">
+                            <img src="/img/icon-search.svg" alt="search">
+                        </span>
+                    </div>
+                    <div class="language">
+                        <select>
+                            <option>Пункт 1</option>
+                            <option>Пункт 2</option>
+                        </select>
+                    </div>
+                    <button class="availability">
+                        <img src="/img/icon-eye.svg" alt="availability">
+                    </button>
+                </div>
+                <div class="bottom">
+                    <ul class="nav nav-upper">
+                        <li class="nav__item">
+                            <a href="" class="link">Школьнику и абитуриенту</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="" class="link">Студенту</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="" class="link">Выпускнику</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="" class="link">Сотруднику</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="" class="link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav nav-main">
+        <ul class="nav__items container">
+            <li class="nav__item">
+                <a href="" class="link link-more">Университет</a>
+                <ul class="subnav">
+                    <li class="subnav__item">
+                        <a href="" class="link">Страница ректора</a>
+                    </li>
+                    <li class="subnav__item">
+                        <a href="" class="link">Миссия</a>
+                    </li>
+                    <li class="subnav__item">
+                        <a href="" class="link">Подразделения</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="" class="link link-more">Образование</a>
+            </li>
+            <li class="nav__item">
+                <a href="" class="link link-more">Наука</a>
+            </li>
+            <li class="nav__item">
+                <a href="" class="link link-more">International</a>
+            </li>
+            <li class="nav__item">
+                <a href="" class="link link-more">Дополнительное образование</a>
+            </li>
+        </ul>
+    </div>
 </header>
