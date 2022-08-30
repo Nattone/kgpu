@@ -20,6 +20,16 @@
       position: relative;
       text-transform: uppercase;
 
+      &._toggle_active {
+        + .fast-links__list {
+          display: block;
+        }
+
+        &::after {
+          transform: translateY(-50%) rotate(-90deg);
+        }
+      }
+
       &::after {
         border: 5px solid transparent;
         border-top: 5px solid colors.$white;
@@ -36,6 +46,7 @@
       background-color: colors.$orange;
       color: colors.$white;
       column-count: 3;
+      display: none;
       margin: 0 -16px;
       padding: 25px 0 50px;
     }

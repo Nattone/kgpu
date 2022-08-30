@@ -7,3 +7,11 @@ console.log('main page scripts loaded')
 //     });
 
 // });
+
+const toggleClass = (element) => () => {
+  element.classList.toggle('_toggle_active')
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('._toggle')?.forEach((element) => element.addEventListener('click', toggleClass(element)))
+})

@@ -20,7 +20,6 @@ body {
   background-color: colors.$orange;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   min-height: 100vh;
   position: relative;
 }
@@ -62,6 +61,10 @@ h5 {
 p {
   font-size: 16px;
   line-height: 20px;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .container {
