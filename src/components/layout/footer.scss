@@ -1,3 +1,165 @@
+@use '~/styles/colors';
+
 .footer {
-  color: inherit;
+  background-color: colors.$blue;
+  color: colors.$white;
+  font-size: 18px;
+  line-height: 25px;
+
+  .fast-links {
+    background-color: colors.$orange;
+    position: relative;
+
+    &__title {
+      color: colors.$white;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: 600;
+      padding: 20px 0 26px;
+      padding-right: 26px;
+      position: relative;
+      text-transform: uppercase;
+
+      &::after {
+        border: 5px solid transparent;
+        border-top: 5px solid colors.$white;
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: border 0.3s ease;
+      }
+    }
+
+    &__list {
+      background-color: colors.$orange;
+      color: colors.$white;
+      column-count: 3;
+      margin: 0 -16px;
+      padding: 25px 0 50px;
+    }
+
+    &__item {
+      padding: 0 16px;
+
+      & + .fast-links__item {
+        margin-top: 20px;
+      }
+    }
+
+    &__more {
+      color: colors.$white;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__wrapper {
+    // padding: 46px 0 66px;
+  }
+
+  &__top {
+    border-bottom: 1px solid colors.$white;
+    padding: 46px 0;
+  }
+
+  &__cols {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -16px;
+  }
+
+  &__col {
+    padding: 0 16px;
+    width: 28%;
+
+    &:last-child {
+      width: 16%;
+    }
+  }
+
+  .logo {
+    display: block;
+    padding-bottom: 36px;
+  }
+
+  &__nav {
+    .nav__item + .nav__item {
+      margin-top: 16px;
+    }
+
+    .link {
+      color: colors.$white;
+      text-transform: uppercase;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .other-link {
+    display: block;
+  }
+
+  .other-link,
+  &__phone a,
+  &__email a {
+    color: colors.$white;
+    font-size: 18px;
+    line-height: 25px;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    & + .other-link {
+      margin-top: 26px;
+    }
+  }
+
+  .logo-ministry {
+    background-color: colors.$white;
+    margin-bottom: 30px;
+    padding: 14px 30px;
+  }
+
+  &__caption,
+  &__address,
+  &__phone p,
+  &__email {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  &__bottom {
+    padding: 26px 0 66px;
+  }
+
+  &__social-list {
+    display: flex;
+    justify-content: end;
+  }
+
+  &__social-item {
+    display: block;
+
+    & + .footer__social-item {
+      margin-left: 20px;
+    }
+
+    img {
+      height: 32px;
+      width: 32px;
+    }
+  }
 }
