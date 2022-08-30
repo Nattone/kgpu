@@ -11,10 +11,10 @@
       "path": "/Users/natasaur/Sites/kgpu/dist/js/main.js",
       "publicPath": "/js/main.js"
     },
-    "css/main.css.gz": {
-      "name": "css/main.css.gz",
-      "path": "/Users/natasaur/Sites/kgpu/dist/css/main.css.gz",
-      "publicPath": "/css/main.css.gz"
+    "js/vendor.js": {
+      "name": "js/vendor.js",
+      "path": "/Users/natasaur/Sites/kgpu/dist/js/vendor.js",
+      "publicPath": "/js/vendor.js"
     },
     "_head.hbs": {
       "name": "_head.hbs",
@@ -30,13 +30,37 @@
       "name": "test.html",
       "path": "/Users/natasaur/Sites/kgpu/dist/test.html",
       "publicPath": "/test.html"
+    },
+    "main.3a7d06a3a1efb09fa8db.hot-update.js": {
+      "name": "main.3a7d06a3a1efb09fa8db.hot-update.js",
+      "path": "/Users/natasaur/Sites/kgpu/dist/main.3a7d06a3a1efb09fa8db.hot-update.js",
+      "publicPath": "/main.3a7d06a3a1efb09fa8db.hot-update.js"
+    },
+    "main.3a7d06a3a1efb09fa8db.hot-update.json": {
+      "name": "main.3a7d06a3a1efb09fa8db.hot-update.json",
+      "path": "/Users/natasaur/Sites/kgpu/dist/main.3a7d06a3a1efb09fa8db.hot-update.json",
+      "publicPath": "/main.3a7d06a3a1efb09fa8db.hot-update.json"
+    },
+    "main.04557465668f96edd7ee.hot-update.js": {
+      "name": "main.04557465668f96edd7ee.hot-update.js",
+      "path": "/Users/natasaur/Sites/kgpu/dist/main.04557465668f96edd7ee.hot-update.js",
+      "publicPath": "/main.04557465668f96edd7ee.hot-update.js"
+    },
+    "main.04557465668f96edd7ee.hot-update.json": {
+      "name": "main.04557465668f96edd7ee.hot-update.json",
+      "path": "/Users/natasaur/Sites/kgpu/dist/main.04557465668f96edd7ee.hot-update.json",
+      "publicPath": "/main.04557465668f96edd7ee.hot-update.json"
     }
   },
   "chunks": {
     "main": [
+      "js/vendor.js",
       "css/main.css",
-      "js/main.js"
+      "js/main.js",
+      "main.04557465668f96edd7ee.hot-update.js"
     ]
   },
-  "publicPath": "/"
+  "publicPath": "/",
+  "error": "ModuleBuildError",
+  "message": "Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: Undefined variable.\n  ╷\n5 │   background-color: colors.$red;\n  │                     ^^^^^^^^^^^\n  ╵\n  src/index.scss 5:21  root stylesheet"
 }

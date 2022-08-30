@@ -8,6 +8,7 @@ const BundleTracker = require('webpack-bundle-tracker')
 const HandlebarsPlugin = require('handlebars-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const PATHS = {
   src: resolve(__dirname, 'src'),
@@ -119,13 +120,13 @@ module.exports = (env = {}, argv = {}) => {
         minify: false,
       }),
 
-      // new CopyWebpackPlugin({
-      //   patterns: [
-      //     { from: `${PATHS.src}/img`, to: 'assets/img' },
-      //     { from: `${PATHS.src}/fonts`, to: 'assets/fonts' },
-      //     { from: `${PATHS.src}/static`, to: '' },
-      //   ],
-      // }),
+      new CopyWebpackPlugin({
+        patterns: [
+          { from: `${PATHS.src}/img`, to: 'img' },
+          // { from: `${PATHS.src}/fonts`, to: 'assets/fonts' },
+          // { from: `${PATHS.src}/static`, to: '' },
+        ],
+      }),
 
       new HandlebarsPlugin({
         // path to hbs entry file(s). Also supports nested directories if write path.join(process.cwd(), "app", "src", "**", "*.hbs"),
@@ -184,7 +185,8 @@ module.exports = (env = {}, argv = {}) => {
       port: 8080,
       historyApiFallback: false,
       allowedHosts: 'all',
-      hot: true,
+      hot: false,
+      watchFiles: ['src/**/*'],
       client: {
         // progress: true,
         overlay: {
