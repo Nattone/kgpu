@@ -139,6 +139,35 @@
             "link": "#",
             "date": "23 сентября 2022"
         }
+      ],
+      "info": [
+        {
+            "link": "#",
+            "img": "/img/content/info1.png",
+            "title": "тест2, чем занимаются студенты КГПУ летом"
+        },
+        {
+            "link": "#",
+            "img": "/img/content/info2.png"
+        },
+        {
+            "link": "#",
+            "img": "/img/content/news3.png"
+
+        },
+        {
+            "link": "#",
+            "img": "/img/content/info3.png"
+        },
+        {
+            "link": "#",
+            "img": "/img/content/info4.png"
+
+        },
+        {
+            "link": "#",
+            "img": "/img/content/info3.png"
+        }
       ]
     }
   }

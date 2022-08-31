@@ -58,32 +58,24 @@
 
         <section class="developments glide">
             <div class="container">
-                <div class="information__header section__header">
-                    <h1 class="information__title section__title">События</h1>
+                <div class="developments__header section__header">
+                    <h1 class="developments__title section__title">События</h1>
                     <div class="glide__arrows" data-glide-el="controls">
                         <button class="glide__arrow glide__arrow--left button button_more button_more_left button_round" data-glide-dir="<"></button>
                         <button class="glide__arrow glide__arrow--right button button_more button_more_right button_round" data-glide-dir=">"></button>
                     </div>
                 </div>
 
-                <div>
-                    <div class="glide__track" data-glide-el="track">
-                        <div class="glide__slides">
-                            {{#each pages.index.developments}}
-                                <div class="developments__list__item">
-                                    {{> developments/slide item=this }}
-                                </div>
-                            {{/each}}
+                <div class="glide__track" data-glide-el="track">
+                    <div class="glide__slides">
+                        {{#each pages.index.developments}}
+                            <div class="developments__list__item">
+                                {{> developments/slide item=this }}
+                            </div>
+                        {{/each}}
 
-                        </div>
                     </div>
                 </div>
-
-
-
-
-
-
             </div>
         </section>
 
@@ -115,11 +107,29 @@
             </div>
         </section>
 
-        <section class="info">
+        <section class="info glide">
             <div class="container">
+                <div class="info__header section__header">
+                    <h1 class="info__title section__title"></h1>
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left button button_more button_more_left button_round" data-glide-dir="<"></button>
+                        <button class="glide__arrow glide__arrow--right button button_more button_more_right button_round" data-glide-dir=">"></button>
+                    </div>
+                </div>
+                <div class="info__glide__track glide__track" data-glide-el="track">
+                        <div class="glide__slides">
+                            {{#each pages.index.info}}
+                                <div class="info__list__item">
+                                    {{> info/slide item=this }}
+                                </div>
+                            {{/each}}
+
+                        </div>
+                    </div>
                 
             </div>
         </section>
+
     </main>
 
     {{> layout/footer}}
