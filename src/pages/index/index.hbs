@@ -7,33 +7,36 @@
     {{> layout/header title='pages.index.title'}}
 
     <main class="main">
-        <section class="slider"></section>
+        <section class="slider">
+            {{!-- <div class="your-class">
+                <div>your content</div>
+                <div>your content</div>
+                <div>your content</div>
+            </div> --}}
+        </section>
 
-        <section class="news">
+
+        <section class="news section">
             <div class="container">
-                <div class="news__wrapper">
-                    <h1 class="title">Новости</h1>
-                    <a href="">Все новости</a>
+                <div class="news__header section__header">
+                    <h1 class="news__title section__title">Новости</h1>
+                    <a class="section__link" href="">Все новости</a>
                 </div>
-                <div class="news__cards cards">
-                    <div class="cards-big">
-                        <div class="cards__item cards-big__item">
-                            <img src="/img/content/news1.png" alt="news">
-                            <p class="description">Осенью в КГПУ откроется педагогический технопарк «Кванториум» им. Л. В. Киренского</p>
+
+                <div class="news__list">
+                    {{#each pages.index.news}}
+                        <div class="news__list__item">
+                            {{> news/card item=this }}
                         </div>
-                        <div class="cards__item cards-big__item">
-                            <img src="/img/content/news1.png" alt="news">
-                            <p class="description">Осенью в КГПУ откроется педагогический технопарк «Кванториум» им. Л. В. Киренского</p>
+                    {{/each}}
+                </div>
+
+                <div class="news__list">
+                    {{#each pages.index.news}}
+                        <div class="news__list__item">
+                            {{> news/card item=this isSmall=true }}
                         </div>
-                        <div class="cards__item cards-big__item">
-                            <img src="/img/content/news1.png" alt="news">
-                            <p class="description">Осенью в КГПУ откроется педагогический технопарк «Кванториум» им. Л. В. Киренского</p>
-                        </div>
-                        <div class="cards__item cards-big__item">
-                            <img src="/img/content/news1.png" alt="news">
-                            <p class="description">Осенью в КГПУ откроется педагогический технопарк «Кванториум» им. Л. В. Киренского</p>
-                        </div>
-                    </div>
+                    {{/each}}
                 </div>
             </div>
         </section>

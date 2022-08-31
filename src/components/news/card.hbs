@@ -1,0 +1,8 @@
+<a class="news__card {{#if isSmall}}news__card_small{{/if}}" href="{{item.link}}">
+    {{#unless isSmall}}
+        <div class="news__card__image">
+            <img class="news__card__image__img" src="{{item.img}}" alt="{{item.title}}">
+        </div>
+    {{/unless}}
+    <p class="news__card__title">{{item.title}}</p>
+</a>

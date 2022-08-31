@@ -4,6 +4,7 @@
   color: inherit;
 
   &__top {
+    background-color: colors.$light-grey;
     padding: 20px 0 26px;
 
     .container {
@@ -132,7 +133,7 @@
 
         &:hover,
         &:focus {
-          background-color: colors.$white;
+          background-color: colors.$light-grey;
           color: colors.$blue;
         }
 
@@ -162,7 +163,7 @@
       }
 
       &__sub {
-        background-color: colors.$white;
+        background-color: colors.$light-grey;
         display: none;
         padding: 10px 0 18px;
         position: absolute;

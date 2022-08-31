@@ -62,7 +62,24 @@
   "pages": {
     "index": {
       "pageTitle": "KGPU - main page",
-      "title": "page title"
+      "title": "page title",
+      "news": [
+        {
+            "title": "Осенью в КГПУ откроется педагогический технопарк «Кванториум» им. Л. В. Киренского",
+            "link": "#",
+            "img": "/img/content/news1.png"
+        },
+        {
+            "title": "Рассказываем, чем занимаются студенты КГПУ летом",
+            "link": "#",
+            "img": "/img/content/news2.png"
+        },
+        {
+            "title": "Осенью в КГПУ откроется педагогический технопарк «Кванториум» им. Л. В. Киренского",
+            "link": "#",
+            "img": "/img/content/news3.png"
+        }
+      ]
     }
   }
 }
