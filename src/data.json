@@ -169,6 +169,10 @@
             "img": "/img/content/info3.png"
         }
       ]
+    },
+    "news_common": {
+        "pageTitle": "Новости общая",
+        "title": "page title"
     }
   }
 }

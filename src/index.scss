@@ -100,6 +100,8 @@ p {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  height: 50px;
+  width: 50px;
 
   &_more {
     position: relative;
@@ -133,14 +135,39 @@ p {
   &_round {
     background-color: colors.$beige;
     border-radius: 100%;
-    height: 51px;
     opacity: 0.5;
     transition: opacity 0.3s ease;
-    width: 51px;
 
     &:hover,
     &:focus {
       opacity: 1;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  &__page {
+    background-color: transparent;
+    border-radius: 5px;
+    color: colors.$text-secondary;
+    font-size: 18px;
+    font-weight: 600;
+    height: 50px;
+    letter-spacing: 0.05em;
+    line-height: 50px;
+    margin: 0 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 50px;
+
+    &_active,
+    &:hover,
+    &:focus {
+      background-color: colors.$orange;
+      color: colors.$white;
     }
   }
 }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+{{#> common/body
+    title=pages.news_common.pageTitle
+    class="news_common-page"
+}}
+    {{> layout/header title='pages.news_common.title'}}
+
+    <main class="main">
+
+        <div class="container">
+            <div class="breadcrumbs"></div>
+
+            <section class="news section">
+                <div class="news__header section__header">
+                    <h1 class="news__title section__title">Новости общая</h1>
+                    {{!-- <a class="section__link" href="">rss</a> --}}
+                </div>
+
+                <div class="news__list">
+                    {{#each pages.index.news}}
+                        <div class="news__list__item">
+                            {{> news/card item=this }}
+                        </div>
+                    {{/each}}
+                </div>
+            </section>
+
+            <div class="pagination">
+                <button class="button button_more button_more_left"></button>
+                <a class="pagination__page" href="#">1</a>
+                <a class="pagination__page pagination__page_active" href="#">2</a>
+                <a class="pagination__page" href="#">3</a>
+                <a class="pagination__page" href="#">...</a>
+                <a class="pagination__page" href="#">10</a>
+                <button class="button button_more button_more_right"></button>
+            </div>
+        </div>
+
+
+    </main>
+
+    {{> layout/footer}}
+{{/common/body}}
