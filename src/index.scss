@@ -17,7 +17,7 @@ a {
 }
 
 body {
-  background-color: #e5e5e5;
+  background-color: colors.$light-grey;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -105,7 +105,8 @@ p {
     position: relative;
 
     &::after {
-      background-image: url('../src/img/icon-arrow.svg');
+      background-image: url('/img/icon-arrow.svg');
+      background-size: contain;
       content: '';
       display: block;
       height: 7px;
@@ -114,6 +115,18 @@ p {
       top: 50%;
       transform: translate(-50%, -50%);
       width: 12px;
+    }
+
+    &_left {
+      &::after {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+    }
+
+    &_right {
+      &::after {
+        transform: translate(-50%, -50%) rotate(270deg);
+      }
     }
   }
 

@@ -7,12 +7,27 @@
     {{> layout/header title='pages.index.title'}}
 
     <main class="main">
-        <section class="slider">
-            {{!-- <div class="your-class">
-                <div>your content</div>
-                <div>your content</div>
-                <div>your content</div>
-            </div> --}}
+        <section class="slider glide">
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left button button_more button_more_left button_round" data-glide-dir="<"></button>
+                <button class="glide__arrow glide__arrow--right button button_more button_more_right button_round" data-glide-dir=">"></button>
+            </div>
+            <div class="glide__track" data-glide-el="track">
+                <div class="glide__slides">
+                    <a class="glide__slide" href="">
+                        <img class="glide__image" src="/img/content/slide1.png" alt="">
+                    </a>
+                    <a class="glide__slide" href="">
+                        <img class="glide__image" src="/img/content/news1.png" alt="">
+                    </a>
+                    <a class="glide__slide" href="">3</a>
+                </div>
+            </div>
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+            </div>
         </section>
 
 
@@ -41,29 +56,69 @@
             </div>
         </section>
 
-        <section class="developments">
-            <div class="container"></div>
+        <section class="developments glide">
+            <div class="container">
+                <div class="information__header section__header">
+                    <h1 class="information__title section__title">События</h1>
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left button button_more button_more_left button_round" data-glide-dir="<"></button>
+                        <button class="glide__arrow glide__arrow--right button button_more button_more_right button_round" data-glide-dir=">"></button>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="glide__track" data-glide-el="track">
+                        <div class="glide__slides">
+                            {{#each pages.index.developments}}
+                                <div class="developments__list__item">
+                                    {{> developments/slide item=this }}
+                                </div>
+                            {{/each}}
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
         </section>
 
         <section class="information">
             <div class="container">
                 <div class="information__header section__header">
                     <h1 class="information__title section__title">Важная информация</h1>
-                    <button class="information__button_more button button_more button_round _toggle">test</button>
+                    <button class="information__button_more button button_more button_round _toggle"></button>
                 </div>
-                <div class="information__list">
-                    {{#each pages.index.information}}
+                <div class="information__preview">
+                    <div class="information__list">
+                    {{#each pages.index.information__preview}}
                         <div class="information__list__item">
                             {{> information/card item=this }}
                         </div>
                     {{/each}}
+                </div>
+                </div>
+                <div class="information__postview">
+                    <div class="information__list">
+                    {{#each pages.index.information__postview}}
+                        <div class="information__list__item">
+                            {{> information/card item=this }}
+                        </div>
+                    {{/each}}
+                </div>
                 </div>
 
             </div>
         </section>
 
         <section class="info">
-            <div class="container"></div>
+            <div class="container">
+                
+            </div>
         </section>
     </main>
 

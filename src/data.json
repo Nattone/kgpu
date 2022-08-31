@@ -80,7 +80,7 @@
             "img": "/img/content/news3.png"
         }
       ],
-      "information": [
+      "information__preview": [
         {
             "link": "#",
             "img": "/img/content/information1.png"
@@ -92,7 +92,9 @@
         {
             "link": "#",
             "img": "/img/content/information3.png"
-        },
+        }
+      ],
+      "information__postview": [
         {
             "link": "#",
             "img": "/img/content/information4.png"
@@ -104,6 +106,38 @@
         {
             "link": "#",
             "img": "/img/content/information6.png"
+        }
+      ],
+      "developments": [
+        {
+            "title": "Рассказываем, чем занимаются студенты КГПУ летом",
+            "link": "#",
+            "date": "12 сентября 2022"
+        },
+        {
+            "title": "Рассказываем, чем занимаются студенты КГПУ летом",
+            "link": "#",
+            "date": "23 сентября 2022"
+        },
+        {
+            "title": "тест1, чем занимаются студенты КГПУ летом",
+            "link": "#",
+            "date": "12 сентября 2022"
+        },
+        {
+            "title": "Рассказываем, чем занимаются студенты КГПУ летом",
+            "link": "#",
+            "date": "23 сентября 2022"
+        },
+        {
+            "title": "тест2, чем занимаются студенты КГПУ летом",
+            "link": "#",
+            "date": "12 сентября 2022"
+        },
+        {
+            "title": "Рассказываем, чем занимаются студенты КГПУ летом",
+            "link": "#",
+            "date": "23 сентября 2022"
         }
       ]
     }

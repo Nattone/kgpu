@@ -126,7 +126,7 @@
         font-size: 20px;
         font-weight: 600;
         line-height: 24px;
-        padding: 18px 42px 18px 12px;
+        padding: 18px 12px;
         position: relative;
         text-transform: uppercase;
         transition: all 0.3s ease;
@@ -138,6 +138,8 @@
         }
 
         &_more {
+          padding: 18px 42px 18px 12px;
+
           &::after {
             border: 5px solid transparent;
             border-top: 5px solid colors.$white;

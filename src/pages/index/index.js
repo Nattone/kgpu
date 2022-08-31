@@ -1,12 +1,4 @@
-console.log('main page scripts loaded')
-
-// $(document).ready(function () {
-
-//     $(document).on("click", ".fast-links__title", function () {
-//         $(this).toggleClass("open");
-//     });
-
-// });
+import Glide from '@glidejs/glide'
 
 const toggleClass = (element) => () => {
   element.classList.toggle('_toggle_active')
@@ -14,4 +6,6 @@ const toggleClass = (element) => () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('._toggle')?.forEach((element) => element.addEventListener('click', toggleClass(element)))
+
+  new Glide('.glide').mount()
 })

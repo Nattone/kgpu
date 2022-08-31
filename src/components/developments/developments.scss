@@ -1,0 +1,47 @@
+@use '~/styles/colors';
+
+.developments {
+  background-color: colors.$white;
+  padding: 65px 0;
+
+  &__slide {
+    &__date {
+      color: colors.$blue;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 22px;
+      margin-bottom: 10px;
+      padding-left: 26px;
+      position: relative;
+      text-transform: uppercase;
+
+      &::before {
+        background-image: url('/img/icon-calendar.svg');
+        background-size: contain;
+        content: '';
+        height: 15px;
+        left: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 14px;
+      }
+    }
+
+    &__title {
+      color: colors.$text-secondary;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 24px;
+      transition: all 0.3s ease;
+    }
+
+    &:hover,
+    &:focus {
+      .developments__slide__title {
+        color: colors.$blue;
+        text-decoration: underline;
+      }
+    }
+  }
+}

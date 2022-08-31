@@ -3,7 +3,9 @@
 .information {
   padding: 102px 0 62px;
 
-  // &__button_more {}
+  &__postview {
+    display: none;
+  }
 
   &__list {
     align-items: stretch;
