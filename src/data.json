@@ -79,6 +79,32 @@
             "link": "#",
             "img": "/img/content/news3.png"
         }
+      ],
+      "information": [
+        {
+            "link": "#",
+            "img": "/img/content/information1.png"
+        },
+        {
+            "link": "#",
+            "img": "/img/content/information2.png"
+        },
+        {
+            "link": "#",
+            "img": "/img/content/information3.png"
+        },
+        {
+            "link": "#",
+            "img": "/img/content/information4.png"
+        },
+        {
+            "link": "#",
+            "img": "/img/content/information5.png"
+        },
+        {
+            "link": "#",
+            "img": "/img/content/information6.png"
+        }
       ]
     }
   }

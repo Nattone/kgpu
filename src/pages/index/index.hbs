@@ -45,16 +45,21 @@
             <div class="container"></div>
         </section>
 
-        <section class="developments">
-            <div class="container"></div>
-        </section>
-
         <section class="information">
-            <div class="container"></div>
-        </section>
+            <div class="container">
+                <div class="information__header section__header">
+                    <h1 class="information__title section__title">Важная информация</h1>
+                    <button class="information__button_more button button_more button_round _toggle">test</button>
+                </div>
+                <div class="information__list">
+                    {{#each pages.index.information}}
+                        <div class="information__list__item">
+                            {{> information/card item=this }}
+                        </div>
+                    {{/each}}
+                </div>
 
-        <section class="developments">
-            <div class="container"></div>
+            </div>
         </section>
 
         <section class="info">
