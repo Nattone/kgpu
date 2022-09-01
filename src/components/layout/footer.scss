@@ -26,7 +26,8 @@
         }
 
         &::after {
-          transform: translateY(-50%) rotate(-90deg);
+          top: 25px;
+          transform: rotate(-180deg);
         }
       }
 
@@ -36,8 +37,7 @@
         content: '';
         position: absolute;
         right: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 30px;
         transition: border 0.3s ease;
       }
     }
@@ -96,9 +96,14 @@
     }
   }
 
-  .logo {
+  &__logo {
     display: block;
-    padding-bottom: 36px;
+
+    // margin-bottom: 36px;
+
+    .icon {
+      fill: colors.$white;
+    }
   }
 
   &__nav {
@@ -138,7 +143,7 @@
     }
   }
 
-  .logo-ministry {
+  &__logo_ministry {
     background-color: colors.$white;
     margin-bottom: 30px;
     padding: 14px 30px;

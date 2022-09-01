@@ -1,0 +1,53 @@
+@use '~/styles/colors';
+
+.content {
+  &__main {
+    &__text {
+      &:first-of-type {
+        &::after {
+          clear: both;
+          content: '';
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__emblem {
+    background-color: #248e05;
+    border-radius: 0 0 64px;
+    color: colors.$white;
+    display: inline-block;
+    float: left;
+    margin-right: 64px;
+    max-width: 192px;
+    padding: 35px 16px 20px;
+
+    &__top {
+      display: flex;
+      margin-bottom: 96px;
+    }
+
+    &__logo {
+      margin-right: 6px;
+    }
+
+    &__title {
+      border-left: 2px solid colors.$white;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.5;
+      padding-left: 10px;
+      text-transform: uppercase;
+    }
+
+    &__year {
+      font-size: 56px;
+      font-weight: 600;
+      line-height: 68px;
+      text-transform: uppercase;
+    }
+  }
+
+  // &__sidebar {}
+}

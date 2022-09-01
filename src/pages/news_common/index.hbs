@@ -6,25 +6,29 @@
 }}
     {{> layout/header title='pages.news_common.title'}}
 
-    <main class="content">
+    <main class="wrapper">
 
         <div class="container">
             {{> common/breadcrumbs}}
 
-            <section class="news section">
-                <div class="news__header section__header">
-                    <h1 class="news__title section__title">Новости общая</h1>
-                    {{!-- <a class="section__link" href="">rss</a> --}}
-                </div>
+            <div class="content">
 
-                <div class="news__list">
-                    {{#each pages.news_common.news}}
-                        <div class="news__list__item">
-                            {{> news/card item=this }}
-                        </div>
-                    {{/each}}
-                </div>
-            </section>
+                <section class="news">
+                    <div class="news__header section__header">
+                        <h1 class="news__title section__title">Новости общая</h1>
+                        {{!-- <a class="section__link" href="">rss</a> --}}
+                    </div>
+
+                    <div class="news__list">
+                        {{#each pages.news_common.news}}
+                            <div class="news__list__item">
+                                {{> news/card item=this }}
+                            </div>
+                        {{/each}}
+                    </div>
+                </section>
+            
+            </div>
 
             {{> common/pagination}}
 

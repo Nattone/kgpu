@@ -145,8 +145,16 @@ p {
   }
 }
 
-.content {
+.wrapper {
   padding: 22px 0 142px;
+
+  &__header {
+    margin-bottom: 40px;
+  }
+}
+
+.content {
+  padding-top: 42px;
 }
 
 .breadcrumbs {

@@ -2,16 +2,15 @@
     {{!-- <span class="header__title">{{title}}</span> --}}
     <div class="header__top">
         <div class="container">
-            <div class="left">
-                <a class="logo" href="/">
-                    {{!-- <img src="/img/logo.svg" alt="logo"> --}}
+            <div class="header__top__left">
+                <a class="header__logo logo" href="/">
                     <svg class="icon"><use href="#logo" /></svg>
                 </a>
-                <div class="logo">
+                <div class="header__logo_ministry logo_ministry">
                     <img src="/img/logo-ministry.svg" alt="ministry">
                 </div>
             </div>
-            <div class="right">
+            <div class="header__top__right">
                 <div class="top">
                     <div class="search">
                         <input type="search" id="search" placeholder="Поиск">
@@ -20,9 +19,9 @@
                         </span>
                     </div>
                     <div class="language">
-                        <select>
-                            <option>Пункт 1</option>
-                            <option>Пункт 2</option>
+                        <select class="language__list">
+                            <option class="language__item language_ru"></option>
+                            <option class="language__item language_eng">eng</option>
                         </select>
                     </div>
                     <button class="availability">
