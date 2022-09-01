@@ -6,10 +6,10 @@
 }}
     {{> layout/header title='pages.news_common.title'}}
 
-    <main class="main">
+    <main class="content">
 
         <div class="container">
-            <div class="breadcrumbs"></div>
+            {{> common/breadcrumbs}}
 
             <section class="news section">
                 <div class="news__header section__header">
@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="news__list">
-                    {{#each pages.index.news}}
+                    {{#each pages.news_common.news}}
                         <div class="news__list__item">
                             {{> news/card item=this }}
                         </div>
@@ -26,15 +26,8 @@
                 </div>
             </section>
 
-            <div class="pagination">
-                <button class="button button_more button_more_left"></button>
-                <a class="pagination__page" href="#">1</a>
-                <a class="pagination__page pagination__page_active" href="#">2</a>
-                <a class="pagination__page" href="#">3</a>
-                <a class="pagination__page" href="#">...</a>
-                <a class="pagination__page" href="#">10</a>
-                <button class="button button_more button_more_right"></button>
-            </div>
+            {{> common/pagination}}
+
         </div>
 
 
