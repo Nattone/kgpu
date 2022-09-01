@@ -2,6 +2,7 @@
 @import '~/styles/fonts';
 
 * {
+  box-sizing: border-box;
   font-family: Montserrat, sans-serif;
   margin: 0;
   padding: 0;
@@ -155,6 +156,73 @@ p {
 
 .content {
   padding-top: 42px;
+
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__main {
+    padding-right: 32px;
+    width: calc(100% - 480px);
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+
+    // line-height: 29px;
+  }
+
+  &__sidebar {
+    width: 480px;
+
+    &__card {
+      background-color: colors.$white;
+      border-radius: 5px;
+      padding: 32px 44px;
+
+      + .content__sidebar__card {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  &__text,
+  &__list {
+    margin-bottom: 20px;
+  }
+
+  &__text,
+  &__item,
+  &__caption {
+    // color: #0c4458;
+    color: colors.$text-main;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    &_underline {
+      text-decoration: underline;
+    }
+  }
+
+  &__list {
+    list-style-type: disc;
+  }
+
+  &__item {
+    margin-left: 20px;
+  }
+
+  &__caption {
+    list-style-type: none;
+  }
 }
 
 .breadcrumbs {
