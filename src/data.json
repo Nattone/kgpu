@@ -205,7 +205,10 @@
           ]
     },
     "faculty": {
-        "pageTitle": "Исторический факультет"
+        "pageTitle": "Факультет"
+    },
+    "worker": {
+        "pageTitle": "Работник"
     }
   }
 }

@@ -1,155 +1,157 @@
 @use '~/styles/colors';
 
-.content {
-  &__main {
-    &__text {
-      &:first-of-type {
-        &::after {
-          clear: both;
-          content: '';
-          display: block;
-        }
-      }
-    }
-  }
-
-  &__emblem {
-    background-color: #248e05;
-    border-radius: 0 0 64px;
-    color: colors.$white;
-    display: inline-block;
-    float: left;
-    margin-bottom: 20px;
-    margin-right: 64px;
-    max-width: 192px;
-    padding: 35px 16px 20px;
-
-    &__top {
-      display: flex;
-      margin-bottom: 96px;
-    }
-
-    &__logo {
-      margin-right: 6px;
-
-      //   width: 38px;
-      //   height: 38px;
-      //   fill: colors.$white
-    }
-
-    &__title {
-      border-left: 2px solid colors.$white;
-      font-size: 12px;
-      font-weight: 600;
-      line-height: 1.5;
-      padding-left: 10px;
-      text-transform: uppercase;
-    }
-
-    &__year {
-      font-size: 56px;
-      font-weight: 600;
-      line-height: 68px;
-      text-transform: uppercase;
-    }
-  }
-
-  .faculty {
-    &__structure {
-      margin-bottom: 62px;
-
-      &__list {
-        background: colors.$white;
-        border-radius: 10px;
-        padding: 22px 26px 6px;
-      }
-
-      &__item {
-        border-left: 4px solid colors.$orange;
-        color: colors.$text-main;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 24px;
-        margin-bottom: 16px;
-        padding-left: 18px;
-        text-transform: uppercase;
-      }
-    }
-
-    &__meetings {
-      margin-bottom: 66px;
-
-      &__list {
-        margin-bottom: 42px;
-      }
-
-      &__item {
-        background: colors.$white;
-        border-radius: 5px;
-        margin-bottom: 12px;
-        padding: 22px 16px;
-      }
-
-      &__link {
-        &:hover {
-          .faculty__meetings__name,
-          .faculty__meetings__address {
-            text-decoration: none;
+.faculty-page {
+  .content {
+    &__main {
+      &__text {
+        &:first-of-type {
+          &::after {
+            clear: both;
+            content: '';
+            display: block;
           }
         }
       }
+    }
 
-      &__name {
-        color: colors.$text-main;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 24px;
-        text-decoration: underline;
+    &__emblem {
+      background-color: #248e05;
+      border-radius: 0 0 64px;
+      color: colors.$white;
+      display: inline-block;
+      float: left;
+      margin-bottom: 20px;
+      margin-right: 64px;
+      max-width: 192px;
+      padding: 35px 16px 20px;
+
+      &__top {
+        display: flex;
+        margin-bottom: 96px;
       }
 
-      &__date {
-        color: colors.$blue;
-        font-size: 20px;
+      &__logo {
+        margin-right: 6px;
+
+        //   width: 38px;
+        //   height: 38px;
+        //   fill: colors.$white
+      }
+
+      &__title {
+        border-left: 2px solid colors.$white;
+        font-size: 12px;
         font-weight: 600;
-        line-height: 24px;
-        padding-right: 22px;
-      }
-
-      &__address {
-        color: #668ea9;
-        font-size: 16px;
-        line-height: 20px;
-        text-decoration: underline;
-      }
-
-      &__all {
-        color: colors.$text-main;
-        display: block;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 20px;
-        padding-right: 36px;
-        position: relative;
-        text-align: right;
+        line-height: 1.5;
+        padding-left: 10px;
         text-transform: uppercase;
+      }
 
-        &:hover {
+      &__year {
+        font-size: 56px;
+        font-weight: 600;
+        line-height: 68px;
+        text-transform: uppercase;
+      }
+    }
+
+    .faculty {
+      &__structure {
+        margin-bottom: 62px;
+
+        &__list {
+          background: colors.$white;
+          border-radius: 10px;
+          padding: 22px 26px 6px;
+        }
+
+        &__item {
+          border-left: 4px solid colors.$orange;
+          color: colors.$text-main;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 24px;
+          margin-bottom: 16px;
+          padding-left: 18px;
+          text-transform: uppercase;
+        }
+      }
+
+      &__meetings {
+        margin-bottom: 66px;
+
+        &__list {
+          margin-bottom: 42px;
+        }
+
+        &__item {
+          background: colors.$white;
+          border-radius: 5px;
+          margin-bottom: 12px;
+          padding: 22px 16px;
+        }
+
+        &__link {
+          &:hover {
+            .faculty__meetings__name,
+            .faculty__meetings__address {
+              text-decoration: none;
+            }
+          }
+        }
+
+        &__name {
+          color: colors.$text-main;
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 24px;
           text-decoration: underline;
         }
 
-        &::after {
-          background-image: url('/img/icon-arrow_big.svg');
-          content: '';
-          height: 12px;
-          position: absolute;
-          right: 0;
-          top: 50%;
-          transform: translateY(-50%) rotate(320deg);
-          width: 16px;
+        &__date {
+          color: colors.$blue;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 24px;
+          padding-right: 22px;
+        }
+
+        &__address {
+          color: #668ea9;
+          font-size: 16px;
+          line-height: 20px;
+          text-decoration: underline;
+        }
+
+        &__all {
+          color: colors.$text-main;
+          display: block;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 20px;
+          padding-right: 36px;
+          position: relative;
+          text-align: right;
+          text-transform: uppercase;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          &::after {
+            background-image: url('/img/icon-arrow_big.svg');
+            content: '';
+            height: 12px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%) rotate(320deg);
+            width: 16px;
+          }
         }
       }
     }
-  }
 
-  // &__sidebar {}
+    // &__sidebar {}
+  }
 }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+{{#> common/body
+    title=pages.worker.pageTitle
+    class="worker-page"
+}}
+    {{> layout/header title='pages.worker.title'}}
+
+    <main class="wrapper">
+
+        <div class="container">
+            {{> common/breadcrumbs}}
+
+            <div class="content"> 
+                <div class="content__wrapper">
+                    <div class="content__sidebar_small">
+                        {{!-- <div class="content__sidebar__card"></div> --}}
+                        <img class="content__sidebar_small__image"  src="/img/content/worker1.png" alt="worker">
+                    </div>
+                    <div class="content__main_big">
+                        <h3 class="content__subtitle">Буланков Василий Валерьевич</h3>
+                        <p class="content__main_big__post">Кандидат исторических наук</p>
+                        <a class="content__main_big__phone icon_phone" href="tel:+73912639533">+7 (391) 263 - 95 - 33</a>
+                        <a class="content__main_big__email icon_email" href="mailto:bulankovv@mail.ru">bulankovv@mail.ru</a>
+
+                        <div class="content__main_big__card"></div>
+                        <div class="content__main_big__card"></div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+    {{> layout/footer}}
+{{/common/body}}
+

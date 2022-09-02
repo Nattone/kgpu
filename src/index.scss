@@ -168,6 +168,11 @@ p {
   &__main {
     padding-right: 32px;
     width: calc(100% - 480px);
+
+    &_big {
+      padding-left: 80px;
+      width: calc(100% - 305px);
+    }
   }
 
   &__subtitle {
@@ -231,37 +236,10 @@ p {
     &__phone,
     &__email {
       color: colors.$text-main;
-      display: block;
       font-size: 20px;
       font-weight: 400;
       line-height: 24px;
       margin-bottom: 16px;
-      padding-left: 28px;
-      position: relative;
-
-      &::before {
-        content: '';
-        left: 0;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-    }
-
-    &__phone {
-      &::before {
-        background-image: url('/img/icon-phone.svg');
-        height: 16px;
-        width: 15px;
-      }
-    }
-
-    &__email {
-      &::before {
-        background-image: url('/img/icon-email.svg');
-        height: 13px;
-        width: 17px;
-      }
     }
 
     &__link {
@@ -289,6 +267,15 @@ p {
 
       & + .content__sidebar__link {
         margin-top: 20px;
+      }
+    }
+
+    &_small {
+      width: 305px;
+
+      &__image {
+        border-radius: 0 0 150px 150px;
+        width: 100%;
       }
     }
   }
@@ -322,6 +309,37 @@ p {
 
   &__caption {
     list-style-type: none;
+  }
+
+  .icon_phone,
+  .icon_email {
+    display: block;
+    padding-left: 28px;
+    position: relative;
+
+    &::before {
+      content: '';
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .icon_phone {
+    &::before {
+      background-image: url('/img/icon-phone.svg');
+      height: 16px;
+      width: 15px;
+    }
+  }
+
+  .icon_email {
+    &::before {
+      background-image: url('/img/icon-email.svg');
+      height: 13px;
+      width: 17px;
+    }
   }
 }
 
