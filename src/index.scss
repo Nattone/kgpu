@@ -191,6 +191,106 @@ p {
         margin-top: 16px;
       }
     }
+
+    &__block {
+      & + .content__sidebar__block {
+        margin-top: 20px;
+      }
+
+      &_main {
+        border-bottom: 1px solid colors.$light-blue;
+        padding-bottom: 8px;
+      }
+    }
+
+    &__caption {
+      color: colors.$light-blue;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    &__name {
+      color: colors.$text-main;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 24px;
+      margin-bottom: 14px;
+    }
+
+    &__post {
+      color: colors.$text-main;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+
+    &__phone,
+    &__email {
+      color: colors.$text-main;
+      display: block;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+      margin-bottom: 16px;
+      padding-left: 28px;
+      position: relative;
+
+      &::before {
+        content: '';
+        left: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &__phone {
+      &::before {
+        background-image: url('/img/icon-phone.svg');
+        height: 16px;
+        width: 15px;
+      }
+    }
+
+    &__email {
+      &::before {
+        background-image: url('/img/icon-email.svg');
+        height: 13px;
+        width: 17px;
+      }
+    }
+
+    &__link {
+      color: colors.$text-main;
+      display: inline-block;
+      font-weight: 500;
+      padding-right: 36px;
+      position: relative;
+      text-transform: uppercase;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &::after {
+        background-image: url('/img/icon-arrow_big.svg');
+        content: '';
+        height: 12px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(320deg);
+        width: 16px;
+      }
+
+      & + .content__sidebar__link {
+        margin-top: 20px;
+      }
+    }
   }
 
   &__text,
