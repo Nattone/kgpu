@@ -172,6 +172,16 @@ p {
     &_big {
       padding-left: 80px;
       width: calc(100% - 305px);
+
+      .content__main__card {
+        background-color: colors.$white;
+        border-radius: 5px;
+        padding: 32px 40px;
+
+        + .content__main__card {
+          margin-top: 16px;
+        }
+      }
     }
   }
 
@@ -190,7 +200,7 @@ p {
     &__card {
       background-color: colors.$white;
       border-radius: 5px;
-      padding: 32px 44px;
+      padding: 32px 40px;
 
       + .content__sidebar__card {
         margin-top: 16px;
@@ -246,23 +256,10 @@ p {
       color: colors.$text-main;
       display: inline-block;
       font-weight: 500;
-      padding-right: 36px;
-      position: relative;
       text-transform: uppercase;
 
       &:hover {
         text-decoration: underline;
-      }
-
-      &::after {
-        background-image: url('/img/icon-arrow_big.svg');
-        content: '';
-        height: 12px;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%) rotate(320deg);
-        width: 16px;
       }
 
       & + .content__sidebar__link {
@@ -304,6 +301,7 @@ p {
   }
 
   &__item {
+    margin-bottom: 16px;
     margin-left: 20px;
   }
 
@@ -311,13 +309,15 @@ p {
     list-style-type: none;
   }
 
-  .icon_phone,
-  .icon_email {
+  .link_phone,
+  .link_email {
     display: block;
     padding-left: 28px;
     position: relative;
 
     &::before {
+      background-repeat: no-repeat;
+      background-size: contain;
       content: '';
       left: 0;
       position: absolute;
@@ -326,7 +326,7 @@ p {
     }
   }
 
-  .icon_phone {
+  .link_phone {
     &::before {
       background-image: url('/img/icon-phone.svg');
       height: 16px;
@@ -334,11 +334,27 @@ p {
     }
   }
 
-  .icon_email {
+  .link_email {
     &::before {
       background-image: url('/img/icon-email.svg');
       height: 13px;
       width: 17px;
+    }
+  }
+
+  .link_arrow {
+    padding-right: 36px;
+    position: relative;
+
+    &::after {
+      background-image: url('/img/icon-arrow_big.svg');
+      content: '';
+      height: 12px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(320deg);
+      width: 16px;
     }
   }
 }
@@ -414,6 +430,50 @@ p {
     &_active:focus {
       background-color: colors.$orange;
       color: colors.$white;
+    }
+  }
+}
+
+.accordion {
+  &__content {
+    display: none;
+  }
+
+  &__caption {
+    color: colors.$text-main;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.5;
+    padding-right: 34px;
+    position: relative;
+    text-transform: uppercase;
+
+    &::after {
+      background-image: url('/img/icon-arrow.svg');
+      background-size: contain;
+      content: '';
+      display: block;
+      height: 7px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+    }
+
+    &._toggle_active {
+      &::after {
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+
+      + .accordion__content {
+        border-top: 1px solid colors.$light-blue;
+        display: block;
+        margin-top: 22px;
+        padding-top: 30px;
+      }
     }
   }
 }

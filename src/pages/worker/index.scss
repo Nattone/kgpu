@@ -1,3 +1,136 @@
 @use '~/styles/colors';
 
-// .worker-page {}
+.worker-page {
+  .content__main {
+    // &_big {}
+
+    &__title {
+      color: colors.$text-main;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 49px;
+      margin-bottom: 22px;
+    }
+
+    &__position {
+      color: colors.$text-main;
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 37px;
+      margin-bottom: 22px;
+    }
+
+    &__phone,
+    &__email {
+      color: colors.$text-main;
+      display: inline-block;
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 37px;
+      margin-bottom: 42px;
+      margin-right: 40px;
+      padding-left: 40px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__phone {
+      &::before {
+        height: 20px;
+        width: 20px;
+      }
+    }
+
+    &__email {
+      &::before {
+        height: 17px;
+        width: 22px;
+      }
+    }
+
+    &__caption {
+      .content__main__post {
+        font-size: 20px;
+        line-height: 36px;
+        margin-left: 16px;
+      }
+    }
+
+    &__post {
+      color: colors.$light-blue;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+
+    &__link {
+      color: #0c4458;
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.4;
+      margin-bottom: 14px;
+    }
+
+    &__item {
+      + .content__main__item {
+        margin-top: 22px;
+      }
+    }
+
+    &__subtitle {
+      margin-bottom: 26px;
+      margin-top: 36px;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+    &__string {
+      display: flex;
+      margin-bottom: 26px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      .content__text {
+        margin-bottom: 0;
+      }
+    }
+
+    &__year {
+      color: #0c4458;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.4;
+      padding-right: 25px;
+    }
+  }
+
+  .content__item {
+    &_awards {
+      list-style-type: none;
+      margin-left: 0;
+      padding-left: 35px;
+      position: relative;
+
+      &::after {
+        background-image: url('/img/icon-awards.svg');
+        background-size: contain;
+        content: '';
+        display: block;
+        height: 25px;
+        left: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 25px;
+      }
+    }
+  }
+}
