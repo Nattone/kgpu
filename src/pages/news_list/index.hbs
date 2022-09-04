@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 
 {{#> common/body
-    title=pages.news_common.pageTitle
-    class="news_common-page"
+    title=pages.news_list.pageTitle
+    class="news_list-page"
 }}
-    {{> layout/header title='pages.news_common.title'}}
+    {{> layout/header title='pages.news_list.title'}}
 
     <main class="wrapper">
 
@@ -20,7 +20,7 @@
                     </div>
 
                     <div class="news__list">
-                        {{#each pages.news_common.news}}
+                        {{#each pages.news_list.news}}
                             <div class="news__list__item">
                                 {{> news/card item=this }}
                             </div>

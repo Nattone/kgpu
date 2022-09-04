@@ -298,6 +298,15 @@ p {
 
   &__list {
     list-style-type: disc;
+
+    &_decorated {
+      list-style-type: none;
+
+      .content__item {
+        border-left: 4px solid colors.$orange;
+        padding-left: 18px;
+      }
+    }
   }
 
   &__item {
@@ -307,6 +316,79 @@ p {
 
   &__caption {
     list-style-type: none;
+  }
+
+  &__quote {
+    background: colors.$white;
+    border-radius: 10px;
+    box-shadow: 0 13px 45px rgba(0, 0, 0, 0.05);
+    margin-bottom: 42px;
+    padding: 90px 50px 52px;
+    position: relative;
+
+    &::before {
+      background-image: url('/img/icon-quotes.svg');
+      background-repeat: no-repeat;
+      content: '';
+      height: 30px;
+      left: 50px;
+      position: absolute;
+      top: 36px;
+      width: 37px;
+    }
+
+    &__signature {
+      font-style: italic;
+      margin-top: 30px;
+      padding-left: 145px;
+      position: relative;
+
+      &::before {
+        background-color: colors.$blue;
+        content: '';
+        height: 1px;
+        left: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 130px;
+      }
+    }
+  }
+
+  &__image {
+    border-radius: 10px;
+    margin-bottom: 40px;
+    max-width: 100%;
+  }
+
+  &__images-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px 22px;
+
+    .content__image {
+      height: auto;
+      margin-bottom: 20px;
+      object-fit: contain;
+      padding: 0 15px;
+      width: 50%;
+    }
+  }
+
+  &__link {
+    &_single {
+      display: inline-block;
+      margin-bottom: 22px;
+      max-width: 600px;
+
+      + .link_arrow {
+        &::after {
+          top: 0;
+          transform: rotate(320deg);
+        }
+      }
+    }
   }
 
   .link_phone,

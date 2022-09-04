@@ -1,0 +1,36 @@
+@use '~/styles/colors';
+
+.news__detail {
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .news {
+    &__publication {
+      margin-bottom: 16px;
+      width: 100%;
+    }
+
+    &__image {
+      border-bottom: 8px solid colors.$orange;
+      border-radius: 5px;
+      overflow: hidden;
+      position: fixed;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    &__title {
+      color: colors.$text-main;
+      font-size: 50px;
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 62px;
+      text-transform: uppercase;
+    }
+  }
+}
