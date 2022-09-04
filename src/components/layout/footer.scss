@@ -89,20 +89,20 @@
 
   &__col {
     padding: 0 16px;
-    width: 28%;
+    width: 27%;
 
     &:last-child {
-      width: 16%;
+      width: 19%;
     }
   }
 
   &__logo {
     display: block;
-
-    // margin-bottom: 36px;
+    margin-bottom: 36px;
 
     .icon {
       fill: colors.$white;
+      height: 80px;
     }
   }
 
