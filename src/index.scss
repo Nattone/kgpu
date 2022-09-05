@@ -147,7 +147,7 @@ p {
 }
 
 .wrapper {
-  padding: 22px 0 142px;
+  padding: 22px 0 100px;
 
   &__header {
     margin-bottom: 40px;
@@ -188,13 +188,22 @@ p {
   &__subtitle {
     font-size: 24px;
     font-weight: 600;
-    margin-bottom: 32px;
-    text-transform: uppercase;
 
     // line-height: 29px;
+    margin: 42px 0 20px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    &_h2,
+    &_h3,
+    &_h4 {
+      margin: 42px 0 20px;
+    }
   }
 
   &__sidebar {
+    padding-bottom: 42px;
     width: 480px;
 
     &__card {
@@ -322,6 +331,10 @@ p {
     background: colors.$white;
     border-radius: 10px;
     box-shadow: 0 13px 45px rgba(0, 0, 0, 0.05);
+    color: #0c4458;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.4;
     margin-bottom: 42px;
     padding: 90px 50px 52px;
     position: relative;
@@ -338,7 +351,10 @@ p {
     }
 
     &__signature {
+      font-size: 18px;
       font-style: italic;
+      font-weight: 300;
+      line-height: 1.4;
       margin-top: 30px;
       padding-left: 145px;
       position: relative;
@@ -358,14 +374,14 @@ p {
 
   &__image {
     border-radius: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     max-width: 100%;
   }
 
   &__images-block {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -15px 22px;
+    margin: 0 -15px 20px;
 
     .content__image {
       height: auto;
@@ -377,9 +393,11 @@ p {
   }
 
   &__link {
+    color: #5a83ec;
+
     &_single {
       display: inline-block;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
       max-width: 600px;
 
       + .link_arrow {
@@ -388,6 +406,8 @@ p {
           transform: rotate(320deg);
         }
       }
+
+      // НЕ РАБОТАЕТ!!!!!!!!!!!!!!!!!!!!!!!!
     }
   }
 
@@ -425,7 +445,7 @@ p {
   }
 
   .link_arrow {
-    padding-right: 36px;
+    padding-right: 30px;
     position: relative;
 
     &::after {
@@ -438,6 +458,130 @@ p {
       transform: translateY(-50%) rotate(320deg);
       width: 16px;
     }
+  }
+
+  &__separator {
+    border-top: 1px solid colors.$light-blue;
+    margin-bottom: 42px;
+    margin-top: 20px;
+  }
+
+  &__document {
+    color: colors.$text-secondary;
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    padding-left: 48px;
+    position: relative;
+
+    &::before,
+    &::after {
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: '';
+      height: 30px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 24px;
+    }
+
+    &_pdf::before {
+      background-image: url('/img/icon-pdf.svg');
+    }
+
+    &_doc::before {
+      background-image: url('/img/icon-doc.svg');
+    }
+
+    &_jpg::before {
+      background-image: url('/img/icon-jpg.svg');
+    }
+
+    &_locked {
+      padding-left: 102px;
+
+      &::after {
+        background-image: url('/img/icon-locked.svg');
+        left: 48px;
+      }
+    }
+  }
+
+  &__documents-block {
+    margin-bottom: 42px;
+  }
+
+  &__table {
+    border-collapse: collapse;
+    display: inline-block;
+    margin-bottom: 42px;
+    overflow-x: scroll;
+    padding-bottom: 12px;
+    width: 100%;
+
+    &::-webkit-scrollbar {
+      appearance: none;
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: colors.$orange;
+      border-radius: 30px;
+      box-shadow: none;
+    }
+
+    &::-webkit-scrollbar-track-piece {
+      background-color: rgb(82 85 86 / 0.2);
+      border-radius: 30px;
+    }
+
+    &__header {
+      background: colors.$grey;
+    }
+
+    tr {
+      border-bottom: 1px solid rgb(102 142 169 / 0.3);
+    }
+
+    th,
+    td {
+      color: #273d45;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 16px;
+      padding: 20px 22px;
+      vertical-align: middle;
+    }
+
+    &__inconspicuous {
+      background: colors.$grey;
+      border-bottom: 2px solid colors.$beige !important;
+
+      td {
+        color: rgb(39 61 69 / 0.3);
+      }
+    }
+
+    &__subtext {
+      color: colors.$light-blue;
+      display: inline-block;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+
+  &__table-block {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  &__video {
+    border-radius: 10px;
+    margin-bottom: 42px;
+    overflow: hidden;
   }
 }
 

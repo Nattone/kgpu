@@ -16,7 +16,8 @@
       border-bottom: 8px solid colors.$orange;
       border-radius: 5px;
       overflow: hidden;
-      position: fixed;
+      position: sticky;
+      top: 0;
 
       img {
         display: block;
@@ -29,7 +30,7 @@
       font-size: 50px;
       font-weight: 600;
       line-height: 1.5;
-      margin-bottom: 62px;
+      margin-bottom: 20px;
       text-transform: uppercase;
     }
   }
