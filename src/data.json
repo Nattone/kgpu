@@ -212,6 +212,12 @@
     },
     "worker": {
         "pageTitle": "Работник"
+    },
+    "events": {
+        "pageTitle": "Календарь событий"
+    },
+    "meetings": {
+        "pageTitle": "Заседания"
     }
   }
 }

@@ -163,6 +163,7 @@ p {
 
   &__wrapper {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__main {
@@ -197,8 +198,11 @@ p {
   &__title {
     &_h2,
     &_h3,
-    &_h4 {
+    &_h4,
+    &_h5 {
+      display: block;
       margin: 42px 0 20px;
+      width: 100%;
     }
   }
 
@@ -321,6 +325,24 @@ p {
   &__item {
     margin-bottom: 16px;
     margin-left: 20px;
+
+    &_calendar {
+      list-style-type: none;
+      padding-left: 26px;
+      position: relative;
+
+      &::before {
+        background-image: url('/img/icon-calendar.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+        height: 16px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 15px;
+      }
+    }
   }
 
   &__caption {

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+{{#> common/body
+    title=pages.events.pageTitle
+    class="events-page"
+}}
+    {{> layout/header title='pages.events.title'}}
+
+    <main class="wrapper">
+
+        <div class="container">
+            {{> common/breadcrumbs}}
+
+            <div class="content"> 
+                <div class="content__header">
+                    <h1 class="content__title_main">Календарь управления делами и развития персонала</h1>
+                </div>
+
+                <div class="content__wrapper">
+                    <div class="content__main">
+                        <div class="events__coming">
+                            <h2 class="content__title_h2">Предстоящие события</h2>
+                            <ul class="content__list">
+                                <li class="content__item content__item_calendar">
+                                    <a class="events__link link_arrow" href="">
+                                        <span class="events__date">до 12 августа 2022</span>
+                                        <span class="events__name">Заседание НМСУ</span>
+                                    </a>
+                                </li>
+                                <li class="content__item content__item_calendar">
+                                    <a class="events__link link_arrow" href="">
+                                        <span class="events__date">до 12 августа 2022</span>
+                                        <span class="events__name">Конкурсный отбор на должности профессорско-преподавательского состава в КГПУ им. В.П. Астафьева</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="events__past">
+                            <h2 class="content__title_h2">Прошедшие события</h2>
+                            <ul class="content__list">
+                                <li class="content__item content__item_calendar">
+                                    <a class="events__link link_arrow" href="">
+                                        <span class="events__date">до 12 августа 2022</span>
+                                        <span class="events__name">Заседание НМСУ</span>
+                                    </a>
+                                </li>
+                                <li class="content__item content__item_calendar">
+                                    <a class="events__link link_arrow" href="">
+                                        <span class="events__date">до 1 мая 2022</span>
+                                        <span class="events__name">Конкурсный отбор на должности профессорско-преподавательского состава в КГПУ им. В.П. Астафьева</span>
+                                    </a>
+                                </li>
+                                <li class="content__item content__item_calendar">
+                                    <a class="events__link link_arrow" href="">
+                                        <span class="events__date">до 12 августа 2022</span>
+                                        <span class="events__name">Заседание НМСУ</span>
+                                    </a>
+                                </li>
+                                <li class="content__item content__item_calendar">
+                                    <a class="events__link link_arrow" href="">
+                                        <span class="events__date">до 1 ноября 2022</span>
+                                        <span class="events__name">Конкурсный отбор на должности профессорско-преподавательского состава в КГПУ им. В.П. Астафьева</span>
+                                    </a>
+                                </li>
+                                <li class="content__item content__item_calendar">
+                                    <a class="events__link link_arrow" href="">
+                                        <span class="events__date">до 30 марта 2022</span>
+                                        <span class="events__name">Заседание НМСУ</span>
+                                    </a>
+                                </li>
+                                <li class="content__item content__item_calendar">
+                                    <a class="events__link link_arrow" href="">
+                                        <span class="events__date">до 4 декабря 2022</span>
+                                        <span class="events__name">Конкурсный отбор на должности профессорско-преподавательского состава в КГПУ им. В.П. Астафьева</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        {{> common/pagination}}
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+    {{> layout/footer}}
+{{/common/body}}

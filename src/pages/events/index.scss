@@ -1,0 +1,83 @@
+@use '~/styles/colors';
+
+.events,
+.meetings {
+  &__date {
+    color: #0c4458;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    padding-right: 40px;
+    vertical-align: top;
+    white-space: nowrap;
+    width: 250px;
+  }
+
+  &__name {
+    color: colors.$text-main;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    transition: color 0.3s ease;
+    width: 100%;
+  }
+
+  &__link {
+    display: flex;
+
+    &:hover {
+      .events__name {
+        color: colors.$blue;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-page {
+    .content__item_calendar {
+      &::before {
+        top: 2px;
+      }
+    }
+
+    .link_arrow {
+      &::after {
+        top: 0;
+        transform: rotate(320deg);
+      }
+    }
+  }
+}
+
+.events {
+  &__coming,
+  &__past {
+    .content__title_h2 {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__coming {
+    margin-bottom: 62px;
+
+    .content__title_h2 {
+      margin-top: 0;
+    }
+  }
+
+  &__past {
+    margin-bottom: 80px;
+
+    .content__title_h2 {
+      margin-top: 0;
+    }
+  }
+}
+
+.meetings {
+  &__block {
+    margin-bottom: 80px;
+  }
+}
