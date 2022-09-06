@@ -60,6 +60,9 @@
     ]
   },
   "pages": {
+    "all": {
+        "pageTitle": "Страницы"
+    },
     "index": {
       "pageTitle": "KGPU - main page",
       "title": "page title",
@@ -218,6 +221,9 @@
     },
     "meetings": {
         "pageTitle": "Заседания"
+    },
+    "documents": {
+        "pageTitle": "Документы"
     }
   }
 }
