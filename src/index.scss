@@ -725,3 +725,23 @@ p {
     }
   }
 }
+
+.notice {
+  background-color: colors.$white;
+  border-radius: 10px;
+  font-weight: 500;
+  padding: 22px 30px 36px;
+
+  &__title {
+    color: #e71b4c;
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    color: colors.$text-main;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}

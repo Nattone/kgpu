@@ -1,7 +1,8 @@
 @use '~/styles/colors';
 
 .events,
-.meetings {
+.meetings,
+.documents {
   &__date {
     color: #0c4458;
     display: inline-block;
@@ -28,7 +29,9 @@
     display: flex;
 
     &:hover {
-      .events__name {
+      .events__name,
+      .meetings__name,
+      .documents__name {
         color: colors.$blue;
         text-decoration: underline;
       }
@@ -76,8 +79,21 @@
   }
 }
 
-.meetings {
+.meetings,
+.documents {
   &__block {
     margin-bottom: 80px;
+  }
+}
+
+.documents-page {
+  .notice {
+    &__image {
+      background-image: url('/img/icon-locked.svg');
+      display: inline-block;
+      height: 30px;
+      margin: 0 4px -4px;
+      width: 24px;
+    }
   }
 }
