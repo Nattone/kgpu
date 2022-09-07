@@ -9,10 +9,11 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 20px;
+    max-width: 200px;
     padding-right: 40px;
     vertical-align: top;
     white-space: nowrap;
-    width: 250px;
+    width: 100%;
   }
 
   &__name {
@@ -94,6 +95,39 @@
       height: 30px;
       margin: 0 4px -4px;
       width: 24px;
+    }
+  }
+}
+
+.documents {
+  &__images-block {
+    display: flex;
+    justify-content: end;
+    margin-right: 30px;
+    max-width: 60px;
+    width: 100%;
+  }
+
+  &__image {
+    display: inline-block;
+    height: 30px;
+    width: 24px;
+
+    &_locked {
+      background-image: url('/img/icon-locked.svg');
+      margin-right: 12px;
+    }
+
+    &_pdf {
+      background-image: url('/img/icon-pdf.svg');
+    }
+
+    &_jpg {
+      background-image: url('/img/icon-jpg.svg');
+    }
+
+    &_doc {
+      background-image: url('/img/icon-doc.svg');
     }
   }
 }
