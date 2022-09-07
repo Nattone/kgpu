@@ -39,7 +39,8 @@
     }
   }
 
-  &-page {
+  &-page,
+  &_basic-page {
     .content__item_calendar {
       &::before {
         top: 2px;
@@ -87,7 +88,8 @@
   }
 }
 
-.documents-page {
+.documents-page,
+.documents_basic-page {
   .notice {
     &__image {
       background-image: url('/img/icon-locked.svg');
@@ -131,3 +133,5 @@
     }
   }
 }
+
+// .documents_basic {}

@@ -216,6 +216,12 @@
     "worker": {
         "pageTitle": "Работник"
     },
+    "workers": {
+        "pageTitle": "Работники"
+    },
+    "professors": {
+        "pageTitle": "Профессора университета"
+    },
     "events": {
         "pageTitle": "Календарь событий"
     },
@@ -224,6 +230,12 @@
     },
     "documents": {
         "pageTitle": "Документы"
+    },
+    "documents_basic": {
+        "pageTitle": "Основополагающие документы"
+    },
+    "structure": {
+        "pageTitle": "Структура"
     }
   }
 }

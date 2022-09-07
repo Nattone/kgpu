@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+{{#> common/body
+    title=pages.documents.pageTitle
+    class="professors-page"
+}}
+    {{> layout/header title='pages.professors.title'}}
+
+    <main class="wrapper">
+
+        <div class="container">
+            {{> common/breadcrumbs}}
+
+            <div class="content"> 
+                <div class="content__header">
+                    <h1 class="content__title_main">Профессора университета</h1>
+                    <select class="">
+                        <option class="">Все</option>
+                        <option class="">Руководство</option>
+                        <option class="">Отдел по работе с персоналом</option>
+                        <option class="">Студенческий отдел</option>
+                        <option class="">Военно-учетный стол</option>
+                    </select>
+                </div>
+                <div class="content__wrapper">
+                    <ul class="workers__list">
+                        <li class="workers__item">
+                            <a href="" class="workers__link">
+                                <img class="workers__image" src="/img/content/worker2.png" alt="">
+                                <p class="workers__name">имя</p>
+                                <p class="workers__post">пост</p>
+                                <p class="workers__post">пост</p>
+                                <p class="workers__post">пост</p>
+                            </a>
+                        </li>
+                        <li class="workers__item">
+                            <a href="" class="workers__link">
+                                <img class="workers__image" src="/img/content/worker3.png" alt="">
+                                <p class="workers__name">имя</p>
+                                <p class="workers__post">пост</p>
+                            </a>
+                        </li>
+                        <li class="workers__item">
+                            <a href="" class="workers__link">
+                                <img class="workers__image" src="/img/content/worker4.png" alt="">
+                                <p class="workers__name">имя</p>
+                                <p class="workers__post">пост</p>
+                            </a>
+                        </li>
+                        <li class="workers__item">
+                            <a href="" class="workers__link">
+                                <img class="workers__image" src="/img/content/worker1.png" alt="">
+                                <p class="workers__name">имя</p>
+                                <p class="workers__post">пост</p>
+                            </a>
+                        </li>
+                        <li class="workers__item">
+                            <a href="" class="workers__link">
+                                <img class="workers__image" src="/img/content/worker5.png" alt="">
+                                <p class="workers__name">имя</p>
+                                <p class="workers__post">пост</p>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+    {{> layout/footer}}
+{{/common/body}}

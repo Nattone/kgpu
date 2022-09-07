@@ -2,9 +2,9 @@
 
 {{#> common/body
     title=pages.documents.pageTitle
-    class="documents-page"
+    class="documents_basic-page"
 }}
-    {{> layout/header title='pages.documents.title'}}
+    {{> layout/header title='pages.documents_basic.title'}}
 
     <main class="wrapper">
 
@@ -13,10 +13,24 @@
 
             <div class="content"> 
                 <div class="content__header">
-                    <h1 class="content__title_main">Документы управления делами и развития персонала</h1>
+                    <h1 class="content__title_main">Основополагающие документы</h1>
                 </div>
 
                 <div class="content__wrapper">
+
+                    {{> common/tags}}
+
+                    <div class="notice">
+                        <p class="notice__title">Памятка</p>
+                        <p class="notice__text">Для удобства поиска документов предусмотрены следующие возможности:</p>
+                        <ul class="notice__list">
+                            <li class="notice__item">в строке «Поиск» ввести ключевые слова;</li>
+                            <li class="notice__item">использовать фильтры по следующим категориям: (целевая аудитория; тип документа; сфера деятельности; принявший орган власти).</li>
+                        </ul>
+                        <p class="notice__text">О применении фильтра сигнализирует выделенный элемент в списке и вверху у фильтра появляется оражевый элемент с выбранным наименованием.<br>Чтобы снять фильтр, можно нажать на крестик или на «Очистить все»
+                        </p>
+                    </div>
+
                     <div class="content__main">
                         <div class="documents__block">
                             <ul class="content__list">
@@ -62,9 +76,41 @@
                         </div>
                         {{!-- {{> common/pagination}} --}}
                     </div>
-                    <div class="notice">
-                        <p class="notice__title">Внимание!</p>
-                        <p class="notice__text">Файлы с пометкой <span class="notice__image"></span> доступны только с логином и паролем внутренней сети КГПУ.<br>Если у вас проблемы со скачиванием файлов, не помеченных таким значком, просьба обращаться к администратору.</p>
+
+                    <div class="content__sidebar">
+                        <div class="filter__block content__sidebar__card">
+                            <div class="search">
+                                <input type="search" id="search" placeholder="Поиск по справочнику">
+                                <span class="icon-search">
+                                    <img src="/img/icon-search.svg" alt="search">
+                                </span>
+                            </div>
+                            <ul class="filter__list">
+                                <li class="filter__item _toggle">
+                                    <div class="filter__title">
+                                        <p class="filter__name">По названию</p>
+                                        <button class="button button_more button_round"></button>
+                                    </div>
+                                    <ul class="filter__sublist">
+                                        <li class="filter__subitem">123<span class="filter__subamount">(11452)</span></li>
+                                        <li class="filter__subitem active">456<span class="filter__subamount">(56)</span></li>
+                                        <li class="filter__subitem">789<span class="filter__subamount">(21)</span></li>
+                                    </ul>
+                                </li>
+                                <li class="filter__item _toggle">
+                                    <div class="filter__title">
+                                        <p class="filter__name">По типу</p>
+                                        <button class="button button_more button_round"></button>
+                                    </div>
+                                    <ul class="filter__sublist">
+                                        <li class="filter__subitem">Приказ<span class="filter__subamount">(17)</span></li>
+                                        <li class="filter__subitem">Письмо<span class="filter__subamount">(0)</span></li>
+                                        <li class="filter__subitem">Распоряжение<span class="filter__subamount">(227)</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
                     </div>
                 </div>
 

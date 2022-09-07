@@ -1,0 +1,66 @@
+@use '~/styles/colors';
+
+.documents_basic-page {
+  .filter {
+    &__block {
+      .search {
+        margin-bottom: 45px;
+      }
+    }
+
+    // &__list {}
+
+    &__item {
+      & + .filter__item {
+        margin-top: 36px;
+      }
+    }
+
+    &__item,
+    &__subitem {
+      color: colors.$text-main;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    &__title {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      width: 100%;
+    }
+
+    &__name {
+      line-height: 38px;
+    }
+
+    // &__sublist {}
+
+    &__subitem {
+      & + .filter__subitem {
+        margin-top: 12px;
+      }
+
+      &.active {
+        background-color: colors.$orange;
+        border-radius: 5px;
+        color: colors.$white;
+        padding: 6px 40px;
+
+        // &::after {
+        //     content: '';
+        //     background-image: url('/img/icon-x.svg');
+        //     width: 10px;
+        //     height: 10px;
+        // }
+        // ????????????????????????????
+      }
+    }
+
+    &__subamount {
+      padding-left: 6px;
+    }
+  }
+}

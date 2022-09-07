@@ -1,0 +1,48 @@
+@use '~/styles/colors';
+
+.workers {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  &__item {
+    margin-bottom: 32px;
+    padding: 0 16px;
+    width: 25%;
+  }
+
+  &__link {
+    background-color: rgba(255, 255, 255, 0.6);
+    display: block;
+    font-weight: 600;
+    height: 100%;
+    padding: 16px 64px 20px;
+    text-align: center;
+  }
+
+  &__image {
+    border-radius: 0 0 109.304px 112.5px;
+    margin-bottom: 18px;
+    width: 100%;
+  }
+
+  &__name {
+    color: colors.$text-main;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 26px;
+  }
+
+  &__post {
+    color: colors.$light-blue;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+
+    & + .workers__post {
+      margin-top: 16px;
+    }
+  }
+}
