@@ -437,7 +437,8 @@ p {
   }
 
   .link_phone,
-  .link_email {
+  .link_email,
+  .link_address {
     display: block;
     padding-left: 28px;
     position: relative;
@@ -465,6 +466,14 @@ p {
     &::before {
       background-image: url('/img/icon-email.svg');
       height: 13px;
+      width: 17px;
+    }
+  }
+
+  .link_address {
+    &::before {
+      background-image: url('/img/icon-address.svg');
+      height: 20px;
       width: 17px;
     }
   }
@@ -797,5 +806,25 @@ p {
 
   &__amount {
     color: colors.$light-blue;
+  }
+}
+
+.social {
+  &__list {
+    display: flex;
+    justify-content: end;
+  }
+
+  &__item {
+    display: block;
+
+    & + .social__item {
+      margin-left: 20px;
+    }
+
+    img {
+      height: 32px;
+      width: 32px;
+    }
   }
 }

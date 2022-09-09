@@ -222,6 +222,9 @@
     "professors": {
         "pageTitle": "Профессора университета"
     },
+    "divisions": {
+        "pageTitle": "Подразделения по типам"
+    },
     "events": {
         "pageTitle": "Календарь событий"
     },

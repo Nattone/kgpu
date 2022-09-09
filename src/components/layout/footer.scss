@@ -160,22 +160,4 @@
   &__bottom {
     padding: 26px 0 66px;
   }
-
-  &__social-list {
-    display: flex;
-    justify-content: end;
-  }
-
-  &__social-item {
-    display: block;
-
-    & + .footer__social-item {
-      margin-left: 20px;
-    }
-
-    img {
-      height: 32px;
-      width: 32px;
-    }
-  }
 }
