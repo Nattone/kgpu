@@ -147,6 +147,26 @@
     .nav {
       display: flex;
       justify-content: space-between;
+      position: relative;
+
+      &__item {
+        &:hover {
+          .nav__link {
+            background-color: colors.$light-grey;
+            color: colors.$blue;
+
+            &_more {
+              &::after {
+                border-top-color: colors.$blue;
+              }
+            }
+          }
+
+          .nav__sub {
+            display: block;
+          }
+        }
+      }
 
       &__link {
         background-color: transparent;
@@ -160,11 +180,11 @@
         text-transform: uppercase;
         transition: all 0.3s ease;
 
-        &:hover,
-        &:focus {
-          background-color: colors.$light-grey;
-          color: colors.$blue;
-        }
+        // &:hover,
+        // &:focus {
+        //   background-color: colors.$light-grey;
+        //   color: colors.$blue;
+        // }
 
         &_more {
           padding: 18px 42px 18px 12px;
@@ -180,24 +200,26 @@
             transition: border 0.3s ease;
           }
 
-          &:hover,
-          &:focus {
-            &::after {
-              border-top-color: colors.$blue;
-            }
+          // &:hover,
+          // &:focus {
+          //   &::after {
+          //     border-top-color: colors.$blue;
+          // }
 
-            + .nav__sub {
-              display: block;
-            }
-          }
+          // + .nav__sub {
+          //   display: block;
+          // }
+          // }
         }
       }
 
       &__sub {
         background-color: colors.$light-grey;
         display: none;
+        min-width: 350px;
         padding: 10px 0 18px;
         position: absolute;
+        z-index: 1;
 
         &__link {
           background-color: transparent;

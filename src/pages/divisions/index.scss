@@ -77,11 +77,20 @@
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 20px;
+    transition: all 0.3s ease;
 
     &_highlighted {
       font-weight: 600;
       margin-right: 6px;
       text-transform: uppercase;
+    }
+  }
+
+  &__email,
+  &__phone {
+    &:hover {
+      color: colors.$blue;
+      text-decoration: underline;
     }
   }
 

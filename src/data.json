@@ -239,6 +239,9 @@
     },
     "structure": {
         "pageTitle": "Структура"
+    },
+    "sitemap": {
+        "pageTitle": "Карта сайта"
     }
   }
 }
