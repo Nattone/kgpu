@@ -37,7 +37,7 @@ module.exports = (env = {}, argv = {}) => {
     output: {
       filename: 'js/[name].js',
       path: PATHS.dist,
-      publicPath: '/',
+      publicPath: '',
     },
     optimization: {
       splitChunks: {
