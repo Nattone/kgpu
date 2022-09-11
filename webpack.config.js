@@ -1,8 +1,6 @@
 const { resolve } = require('path')
 const { sync } = require('glob')
 // const fs = require('fs')
-// const CopyWebpackPlugin = require('copy-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const BundleTracker = require('webpack-bundle-tracker')
@@ -10,6 +8,7 @@ const HandlebarsPlugin = require('handlebars-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 const PATHS = {
   src: resolve(__dirname, 'src'),
