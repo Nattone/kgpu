@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+
+{{#> common/body
+    title=pages.documents.pageTitle
+    class="documents_basic-page"
+}}
+    {{> layout/header title='pages.documents_basic.title'}}
+
+    <main class="wrapper">
+
+        <div class="container">
+            {{> common/breadcrumbs}}
+
+            <div class="content"> 
+                <div class="content__header">
+                    <h1 class="content__title_main">Основополагающие документы</h1>
+                </div>
+
+                <div class="content__wrapper">
+
+                    {{!-- {{> common/tags}} --}}
+
+                    <div class="content__main"></div>
+                    <div class="content__sidebar"></div>
+                </div>
+
+                    {{!-- {{> common/pagination}} --}}
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+    {{> layout/footer}}
+{{/common/body}}
