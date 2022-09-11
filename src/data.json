@@ -63,6 +63,9 @@
     "all": {
         "pageTitle": "Страницы"
     },
+    "graduate": {
+        "pageTitle": "Школьнику и абитуриенту"
+    },
     "index": {
       "pageTitle": "KGPU - main page",
       "title": "page title",
@@ -221,6 +224,9 @@
     },
     "professors": {
         "pageTitle": "Профессора университета"
+    },
+    "divisions_list": {
+        "pageTitle": "Подразделения по типам"
     },
     "divisions": {
         "pageTitle": "Подразделения по типам"
