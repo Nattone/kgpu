@@ -1,6 +1,7 @@
 @use '~/styles/colors';
 
-.faculty-page {
+.faculty-page,
+.divisions-page {
   .content {
     &__main {
       &__text {
@@ -66,12 +67,20 @@
         }
 
         &__item {
+          margin-bottom: 16px;
+        }
+
+        &__link {
           color: colors.$text-main;
           font-size: 20px;
           font-weight: 400;
           line-height: 24px;
           margin-bottom: 16px;
           text-transform: uppercase;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
 
@@ -148,8 +157,143 @@
           }
         }
       }
+
+      &__directions {
+        width: 100%;
+
+        .directions {
+          &__card {
+            &__list {
+              width: 100%;
+            }
+
+            &__item {
+              $item-height: 256px;
+
+              background-color: colors.$white;
+              border-radius: 5px;
+              height: $item-height;
+              margin-bottom: 32px;
+              overflow: hidden;
+              padding: 30px 26px;
+
+              /* width: calc(100% / 3); */
+              width: 480px;
+
+              &_high {
+                height: $item-height * 2 + 32px;
+              }
+            }
+
+            &__header {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 20px;
+            }
+
+            &__label {
+              background-color: colors.$blue;
+              border-radius: 5px;
+              color: colors.$white;
+              line-height: 24px;
+              padding: 0 12px;
+              text-transform: uppercase;
+            }
+
+            &__degree,
+            &__profile,
+            &__type {
+              color: colors.$text-main;
+              font-size: 20px;
+              line-height: 24px;
+              text-transform: uppercase;
+            }
+
+            &__degree {
+              color: colors.$light-blue;
+              font-weight: 600;
+              padding-right: 10px;
+            }
+
+            &__profile {
+              font-weight: 600;
+              margin-bottom: 16px;
+            }
+
+            &__type {
+              font-weight: 400;
+              margin-bottom: 16px;
+            }
+
+            &__subject {
+              &__item {
+                border-left: 4px solid colors.$orange;
+                color: colors.$text-main;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 24px;
+                margin-bottom: 10px;
+                padding-left: 16px;
+              }
+            }
+          }
+        }
+      }
     }
 
-    // &__sidebar {}
+    &__sidebar {
+      &__header {
+        display: flex;
+        margin-bottom: 46px;
+      }
+
+      &__logo {
+        margin-right: 16px;
+      }
+
+      &__title {
+        border-left: 3px solid #248e05;
+        color: #248e05;
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 1.5;
+        padding-left: 20px;
+        text-transform: uppercase;
+      }
+
+      &__address-block {
+        margin-bottom: 30px;
+      }
+
+      &__address,
+      &__time {
+        color: colors.$text-main;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        padding-left: 40px;
+      }
+
+      &__address {
+        margin-bottom: 16px;
+      }
+
+      &__time {
+        margin-bottom: 12px;
+
+        &:last-of-type {
+          margin-top: 16px;
+        }
+      }
+
+      &__topic {
+        color: colors.$text-main;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+      }
+    }
   }
 }
