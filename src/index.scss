@@ -438,7 +438,8 @@ p {
 
   .link_phone,
   .link_email,
-  .link_address {
+  .link_address,
+  .link_time {
     display: block;
     padding-left: 28px;
     position: relative;
@@ -475,6 +476,14 @@ p {
       background-image: url('/img/icon-address.svg');
       height: 20px;
       width: 17px;
+    }
+  }
+
+  .link_time {
+    &::before {
+      background-image: url('/img/icon-time.svg');
+      height: 20px;
+      width: 20px;
     }
   }
 
