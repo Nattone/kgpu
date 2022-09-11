@@ -147,6 +147,7 @@ p {
 }
 
 .wrapper {
+  flex-grow: 1;
   padding: 22px 0 100px;
 
   &__header {
