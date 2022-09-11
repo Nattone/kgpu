@@ -2,6 +2,7 @@ const { resolve } = require('path')
 const { sync } = require('glob')
 // const fs = require('fs')
 // const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const BundleTracker = require('webpack-bundle-tracker')
@@ -38,7 +39,6 @@ module.exports = (env = {}, argv = {}) => {
       filename: 'js/[name].js',
       path: PATHS.dist,
       publicPath: '/',
-      clean: true,
     },
     optimization: {
       splitChunks: {
@@ -105,7 +105,7 @@ module.exports = (env = {}, argv = {}) => {
       ],
     },
     plugins: [
-      // ...(isProduction ? [new CleanWebpackPlugin()] : []),
+      ...(isProduction ? [new CleanWebpackPlugin()] : []),
 
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
