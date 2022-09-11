@@ -3,9 +3,32 @@
 
 {{#> common/body
     title=pages.documents.pageTitle
-    class="documents_basic-page"
+    class="graduate-page"
 }}
     {{> layout/header title='pages.documents_basic.title'}}
+
+    <section class="slider glide">
+        {{!-- <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left button button_more button_more_left button_round" data-glide-dir="<"></button>
+            <button class="glide__arrow glide__arrow--right button button_more button_more_right button_round" data-glide-dir=">"></button>
+        </div> --}}
+        <div class="glide__track" data-glide-el="track">
+            <div class="glide__slides">
+                <a class="glide__slide" href="">
+                    <img class="glide__image" src="/img/content/slide1.png" alt="">
+                </a>
+                <a class="glide__slide" href="">
+                    <img class="glide__image" src="/img/content/news1.png" alt="">
+                </a>
+                <a class="glide__slide" href="">3</a>
+            </div>
+        </div>
+        {{!-- <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+        </div> --}}
+    </section>
 
     <main class="wrapper">
 
@@ -14,25 +37,20 @@
 
             <div class="content"> 
                 <div class="content__header">
-                    <h1 class="content__title_main">Основополагающие документы</h1>
+                    <h1 class="content__title_main">Школьнику и абитуриенту</h1>
                 </div>
 
-                <div class="content__wrapper">
-
-                    {{!-- {{> common/tags}} --}}
-
-                    <div class="content__main"></div>
-                    <div class="content__sidebar"></div>
+                <div class="graduate-page__cards grid">
+                    <div class="graduate-page__card graduate-page__card_theme_light"></div>
+                    <div class="graduate-page__card"></div>
+                    <div class="graduate-page__card graduate-page__card_format_high"></div>
+                    <div class="graduate-page__card"></div>
+                    <div class="graduate-page__card"></div>
+                    <div class="graduate-page__card"></div>
+                    <div class="graduate-page__card graduate-page__card_format_wide  graduate-page__card_theme_dark"></div>
                 </div>
-
-                    {{!-- {{> common/pagination}} --}}
-
             </div>
-
-
         </div>
-
-
     </main>
 
     {{> layout/footer}}

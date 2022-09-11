@@ -1,12 +1,15 @@
 @use '~/styles/colors';
 
-.graduate {
+.graduate-page {
   &__cards {
     display: flex;
     flex-wrap: wrap;
   }
 
   &__card {
+    $width: 480px;
+    $height: 330px;
+
     background-color: green;
     border-radius: 20px;
     color: colors.$white;
@@ -15,28 +18,32 @@
     font-weight: 500;
 
     /* width: 33.3%; */
-    height: 330px;
+    height: $height;
     line-height: 61px;
+    margin-bottom: 37px;
     overflow: hidden;
     padding: 30px 40px;
     text-transform: uppercase;
-    width: 480px;
+    width: $width;
 
-    &_horizontal {
-      width: 66.6%;
-      width: 960px;
+    &_format {
+      &_wide {
+        width: $width * 2 + 32px;
+      }
+
+      &_high {
+        height: $height * 2 + 37px;
+      }
     }
 
-    &_vertical {
-      height: 660px;
-    }
+    &_theme {
+      &_dark {
+        background-color: colors.$blue;
+      }
 
-    &_dark {
-      background-color: colors.$blue;
-    }
-
-    &_light {
-      background-color: colors.$orange;
+      &_light {
+        background-color: colors.$orange;
+      }
     }
   }
 }
