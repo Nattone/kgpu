@@ -73,45 +73,45 @@
         {
             "description": "Осенью в КГПУ откроется педагогический технопарк «Кванториум» им. Л. В. Киренского",
             "link": "#",
-            "img": "/img/content/news1.png"
+            "img": "img/content/news1.png"
         },
         {
             "description": "Рассказываем, чем занимаются студенты КГПУ летом",
             "link": "#",
-            "img": "/img/content/news2.png"
+            "img": "img/content/news2.png"
         },
         {
             "description": "Осенью в КГПУ откроется педагогический технопарк «Кванториум» им. Л. В. Киренского",
             "link": "#",
-            "img": "/img/content/news3.png"
+            "img": "img/content/news3.png"
         }
       ],
       "information__preview": [
         {
             "link": "#",
-            "img": "/img/content/information1.png"
+            "img": "img/content/information1.png"
         },
         {
             "link": "#",
-            "img": "/img/content/information2.png"
+            "img": "img/content/information2.png"
         },
         {
             "link": "#",
-            "img": "/img/content/information3.png"
+            "img": "img/content/information3.png"
         }
       ],
       "information__postview": [
         {
             "link": "#",
-            "img": "/img/content/information4.png"
+            "img": "img/content/information4.png"
         },
         {
             "link": "#",
-            "img": "/img/content/information5.png"
+            "img": "img/content/information5.png"
         },
         {
             "link": "#",
-            "img": "/img/content/information6.png"
+            "img": "img/content/information6.png"
         }
       ],
       "developments": [
@@ -149,30 +149,30 @@
       "info": [
         {
             "link": "#",
-            "img": "/img/content/info1.png",
+            "img": "img/content/info1.png",
             "title": "тест2, чем занимаются студенты КГПУ летом"
         },
         {
             "link": "#",
-            "img": "/img/content/info2.png"
+            "img": "img/content/info2.png"
         },
         {
             "link": "#",
-            "img": "/img/content/news3.png"
+            "img": "img/content/news3.png"
 
         },
         {
             "link": "#",
-            "img": "/img/content/info3.png"
+            "img": "img/content/info3.png"
         },
         {
             "link": "#",
-            "img": "/img/content/info4.png"
+            "img": "img/content/info4.png"
 
         },
         {
             "link": "#",
-            "img": "/img/content/info3.png"
+            "img": "img/content/info3.png"
         }
       ]
     },
@@ -182,7 +182,7 @@
             {
                 "description": "Осенью в КГПУ откроется педагогический технопарк «Кванториум» им. Л. В. Киренского",
                 "link": "/news_detail.html",
-                "img": "/img/content/news1.png"
+                "img": "img/content/news1.png"
             },
             {
                 "link": "#",
@@ -191,22 +191,22 @@
             {
                 "description": "Осенью в КГПУ откроется педагогический технопарк «Кванториум» им. Л. В. Киренского",
                 "link": "#",
-                "img": "/img/content/news3.png"
+                "img": "img/content/news3.png"
             },
             {
                 "description": "Осенью в КГПУ откроется педагогический технопарк «Кванториум» им. Л. В. Киренского",
                 "link": "#",
-                "img": "/img/content/news1.png"
+                "img": "img/content/news1.png"
             },
             {
                 "description": "Рассказываем, чем занимаются студенты КГПУ летом",
                 "link": "#",
-                "img": "/img/content/news2.png"
+                "img": "img/content/news2.png"
             },
             {
                 "description": "Осенью в КГПУ откроется педагогический технопарк «Кванториум» им. Л. В. Киренского",
                 "link": "#",
-                "img": "/img/content/news3.png"
+                "img": "img/content/news3.png"
             }
           ]
     },
