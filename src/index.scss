@@ -706,7 +706,9 @@ p {
 
 .accordion {
   &__content {
-    display: none;
+    border-top: 1px solid colors.$light-blue;
+    margin-top: 22px;
+    padding-top: 30px;
   }
 
   &__caption {
@@ -731,19 +733,6 @@ p {
       top: 50%;
       transform: translate(-50%, -50%);
       width: 12px;
-    }
-
-    &._toggle_active {
-      &::after {
-        transform: translate(-50%, -50%) rotate(180deg);
-      }
-
-      + .accordion__content {
-        border-top: 1px solid colors.$light-blue;
-        display: block;
-        margin-top: 22px;
-        padding-top: 30px;
-      }
     }
   }
 }
@@ -836,5 +825,21 @@ p {
       height: 32px;
       width: 32px;
     }
+  }
+}
+
+._toggle {
+  $this: &;
+
+  &._toggle_active {
+    #{$this} {
+      &__container {
+        display: block;
+      }
+    }
+  }
+
+  &__container {
+    display: none;
   }
 }

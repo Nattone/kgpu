@@ -10,6 +10,21 @@
     background-color: colors.$orange;
     position: relative;
 
+    &._toggle_active {
+      .fast-links {
+        &__title {
+          &::after {
+            top: 25px;
+            transform: rotate(-180deg);
+          }
+        }
+
+        &__list {
+          display: block;
+        }
+      }
+    }
+
     &__title {
       color: colors.$white;
       cursor: pointer;
@@ -19,17 +34,6 @@
       padding-right: 26px;
       position: relative;
       text-transform: uppercase;
-
-      &._toggle_active {
-        + .fast-links__list {
-          display: block;
-        }
-
-        &::after {
-          top: 25px;
-          transform: rotate(-180deg);
-        }
-      }
 
       &::after {
         border: 5px solid transparent;

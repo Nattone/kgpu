@@ -56,7 +56,7 @@
             </div>
         </section>
 
-        <section class="developments glide">
+        <section class="developments glide" data-count="3">
             <div class="container">
                 <div class="developments__header section__header">
                     <h1 class="developments__title section__title">События</h1>
@@ -79,35 +79,35 @@
             </div>
         </section>
 
-        <section class="information">
+        <section class="information _toggle">
             <div class="container">
                 <div class="information__header section__header">
                     <h1 class="information__title section__title">Важная информация</h1>
-                    <button class="information__button_more button button_more button_round _toggle"></button>
+                    <button class="information__button_more button button_more button_round _toggle__button"></button>
                 </div>
                 <div class="information__preview">
                     <div class="information__list">
-                    {{#each pages.index.information__preview}}
-                        <div class="information__list__item">
-                            {{> information/card item=this }}
-                        </div>
-                    {{/each}}
+                        {{#each pages.index.information__preview}}
+                            <div class="information__list__item">
+                                {{> information/card item=this }}
+                            </div>
+                        {{/each}}
+                    </div>
                 </div>
-                </div>
-                <div class="information__postview">
+                <div class="information__postview _toggle__container">
                     <div class="information__list">
-                    {{#each pages.index.information__postview}}
-                        <div class="information__list__item">
-                            {{> information/card item=this }}
-                        </div>
-                    {{/each}}
-                </div>
+                        {{#each pages.index.information__postview}}
+                            <div class="information__list__item">
+                                {{> information/card item=this }}
+                            </div>
+                        {{/each}}
+                    </div>
                 </div>
 
             </div>
         </section>
 
-        <section class="info glide">
+        <section class="info glide" data-count="4">
             <div class="container">
                 <div class="info__header section__header">
                     <h1 class="info__title section__title"></h1>

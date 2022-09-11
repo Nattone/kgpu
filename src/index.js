@@ -7,7 +7,9 @@ export const toggleClass = (element) => () => {
 
 export const initGlide = (selector) => {
   document.querySelectorAll(selector)?.forEach((element) => {
-    const glide = new Glide(element)
+    const glide = new Glide(element, {
+      perView: element.dataset.count || 1,
+    })
     glide?.mount()
   })
 }
@@ -20,7 +22,9 @@ export const initMasonry = (selector, options = {}) => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('._toggle')?.forEach((element) => element.addEventListener('click', toggleClass(element)))
+  document.querySelectorAll('._toggle')?.forEach((element) => {
+    element.querySelector('._toggle__button').addEventListener('click', toggleClass(element))
+  })
 
   initMasonry('.grid', {
     percentPosition: true,
