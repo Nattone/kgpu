@@ -1,0 +1,42 @@
+@use '~/styles/colors';
+
+.graduate {
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    background-color: green;
+    border-radius: 20px;
+    color: colors.$white;
+    display: block;
+    font-size: 50px;
+    font-weight: 500;
+
+    /* width: 33.3%; */
+    height: 330px;
+    line-height: 61px;
+    overflow: hidden;
+    padding: 30px 40px;
+    text-transform: uppercase;
+    width: 480px;
+
+    &_horizontal {
+      width: 66.6%;
+      width: 960px;
+    }
+
+    &_vertical {
+      height: 660px;
+    }
+
+    &_dark {
+      background-color: colors.$blue;
+    }
+
+    &_light {
+      background-color: colors.$orange;
+    }
+  }
+}
