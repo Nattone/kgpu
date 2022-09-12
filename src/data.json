@@ -251,6 +251,9 @@
     },
     "search": {
       "pageTitle": "Поиск"
-  }
+    },
+    "phonebook": {
+      "pageTitle": "Телефонный справочник"
+    }
   }
 }

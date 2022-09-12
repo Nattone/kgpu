@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+{{#> common/body
+    title=pages.phonebook.pageTitle
+    class="phonebook-page"
+}}
+    {{> layout/header title='pages.phonebook.title'}}
+
+    <main class="wrapper">
+
+        <div class="container">
+            {{> common/breadcrumbs}}
+
+            <div class="content"> 
+                <div class="content__header">
+                    <h1 class="content__title_main">Телефонный справочник</h1>
+                </div>
+
+                <div class="content__wrapper phonebook">
+
+                    <div class="phonebook__search"></div>
+
+                    <ul class="phonebook__list _toggle">
+
+                        <li class="phonebook__item">
+                            <div class="phonebook__item__head _toggle__button">
+                                <p class="phonebook__item__title">Деканат</p>
+                                <button class="information__button_more button button_more button_round"></button>
+                            </div>
+
+                            <div class="phonebook__item__body _toggle__container">
+                                {{> phonebook/table}}
+                            </div>
+                        </li>
+
+                        <li class="phonebook__item">
+                            <div class="phonebook__item__head _toggle__button">
+                                <p class="phonebook__item__title">Учёный совет КГПУ</p>
+                                <button class="information__button_more button button_more button_round"></button>
+                            </div>
+
+                            <div class="phonebook__item__body _toggle__container">
+                                {{> phonebook/table}}
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+    {{> layout/footer}}
+{{/common/body}}

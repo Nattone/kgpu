@@ -1,1 +1,35 @@
 @use '~/styles/colors';
+
+.phonebook {
+  &__list {
+    width: 100%;
+  }
+
+  &__item {
+    &__head {
+      background: colors.$grey;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 30px;
+      width: 100%;
+    }
+
+    &__body {
+      margin: 12px 0 42px;
+    }
+
+    &__title {
+      color: colors.$text-main;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 50px;
+      text-transform: uppercase;
+    }
+
+    & + .phonebook__item {
+      margin-top: 14px;
+    }
+  }
+}
