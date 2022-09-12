@@ -108,7 +108,7 @@ p {
     position: relative;
 
     &::after {
-      background-image: url('/img/icon-arrow.svg');
+      background-image: url('img/icon-arrow.svg');
       background-size: contain;
       content: '';
       display: block;
@@ -336,7 +336,7 @@ p {
       position: relative;
 
       &::before {
-        background-image: url('/img/icon-calendar.svg');
+        background-image: url('img/icon-calendar.svg');
         background-repeat: no-repeat;
         background-size: contain;
         content: '';
@@ -366,7 +366,7 @@ p {
     position: relative;
 
     &::before {
-      background-image: url('/img/icon-quotes.svg');
+      background-image: url('img/icon-quotes.svg');
       background-repeat: no-repeat;
       content: '';
       height: 30px;
@@ -458,7 +458,7 @@ p {
 
   .link_phone {
     &::before {
-      background-image: url('/img/icon-phone.svg');
+      background-image: url('img/icon-phone.svg');
       height: 16px;
       width: 15px;
     }
@@ -466,7 +466,7 @@ p {
 
   .link_email {
     &::before {
-      background-image: url('/img/icon-email.svg');
+      background-image: url('img/icon-email.svg');
       height: 13px;
       width: 17px;
     }
@@ -474,7 +474,7 @@ p {
 
   .link_address {
     &::before {
-      background-image: url('/img/icon-address.svg');
+      background-image: url('img/icon-address.svg');
       height: 20px;
       width: 17px;
     }
@@ -482,7 +482,7 @@ p {
 
   .link_time {
     &::before {
-      background-image: url('/img/icon-time.svg');
+      background-image: url('img/icon-time.svg');
       height: 20px;
       width: 20px;
     }
@@ -493,7 +493,7 @@ p {
     position: relative;
 
     &::after {
-      background-image: url('/img/icon-arrow_big.svg');
+      background-image: url('img/icon-arrow_big.svg');
       content: '';
       height: 12px;
       position: absolute;
@@ -533,22 +533,22 @@ p {
     }
 
     &_pdf::before {
-      background-image: url('/img/icon-pdf.svg');
+      background-image: url('img/icon-pdf.svg');
     }
 
     &_doc::before {
-      background-image: url('/img/icon-doc.svg');
+      background-image: url('img/icon-doc.svg');
     }
 
     &_jpg::before {
-      background-image: url('/img/icon-jpg.svg');
+      background-image: url('img/icon-jpg.svg');
     }
 
     &_locked {
       padding-left: 102px;
 
       &::after {
-        background-image: url('/img/icon-locked.svg');
+        background-image: url('img/icon-locked.svg');
         left: 48px;
       }
     }
@@ -644,7 +644,7 @@ p {
       padding-left: 12px;
 
       &::before {
-        background-image: url('/img/icon-arrow.svg');
+        background-image: url('img/icon-arrow.svg');
         background-repeat: no-repeat;
         background-size: contain;
         content: '';
@@ -733,7 +733,7 @@ p {
     text-transform: uppercase;
 
     &::after {
-      background-image: url('/img/icon-arrow.svg');
+      background-image: url('img/icon-arrow.svg');
       background-size: contain;
       content: '';
       display: block;
