@@ -2,9 +2,9 @@
 
 {{#> common/body
     title=pages.documents.pageTitle
-    class="documents_basic-page"
+    class="search-page"
 }}
-    {{> layout/header title='pages.documents_basic.title'}}
+    {{> layout/header title='pages.search.title'}}
 
     <main class="wrapper">
 
@@ -13,18 +13,79 @@
 
             <div class="content"> 
                 <div class="content__header">
-                    <h1 class="content__title_main">Основополагающие документы</h1>
+                    <h1 class="content__title_main">Поиск</h1>
                 </div>
 
-                <div class="content__wrapper">
+                <div class="content__wrapper search-wrapper">
+                    <div class="search">
+                        <form action="" class="search__form">
+                            <input class="search__input" type="search" id="search" placeholder="Что вы хотите найти?">
+                            <button class="search__btn">Найти</button>
+                        </form>
+                        <div class="search__filter-list">
+                            <select class="search__filter search__filter_sorting">
+                                <option value="" disabled selected>Сортировка</option>
+                                <option value="time">По времени</option>
+                                <option value="relevance">По релевантности</option>
+                            </select>
+                            <select class="search__filter search__filter_sorting">
+                                <option value="" disabled selected>Сортировка</option>
+                                <option value="time">По времени</option>
+                                <option value="relevance">По релевантности</option>
+                            </select>
+                            <select class="search__filter search__filter_sorting">
+                                <option value="" disabled selected>Сортировка</option>
+                                <option value="time">По времени</option>
+                                <option value="relevance">По релевантности</option>
+                            </select>
+                            <div class="search__checkbox">
+                                <input  class="search__checkbox__input" type="checkbox" id="titles" name="titles">
+                                <label for="titles"  class="search__checkbox__label">только в заголовках</label>
+                            </div>
+                        </div>
+                    </div>
 
-                    {{!-- {{> common/tags}} --}}
+                    <div class="search-results">
+                        <h3 class="search-results__title">Нашелся 61 результат. Показаны результаты с 1 по 24.</h3>
+                        <ul class="search-results__list">
+                            <li class="search-results__item">
+                                <a href="" class="search-results__link">
+                                    <p class="search-results__item__title">Внимание! В ЭБС КГПУ им. В.П. Астафьева размещено электронное научно-популярное просветительское издание «Кот Шредингера»</p>
+                                    <p class="search-results__item__description">Описание краткое  или вывод первых до 254 символов</p>
+                                    <p class="search-results__item__date">01.03.2022</p>
+                                </a>
+                            </li>
+                            <li class="search-results__item">
+                                <a href="" class="search-results__link">
+                                    <p class="search-results__item__title">Название новости <br> в две строки</p>
+                                    <p class="search-results__item__description">Описание краткое  или вывод первых до 254 символов</p>
+                                    <p class="search-results__item__date">01.03.2022</p>
+                                </a>
+                            </li>
+                            <li class="search-results__item">
+                                <a href="" class="search-results__link">
+                                    <p class="search-results__item__title"><span class="documents__image documents__image_pdf"></span>Название документа</p>
+                                    <p class="search-results__item__description">Описание краткое  или вывод первых до 254 символов</p>
+                                    <p class="search-results__item__date">01.03.2022</p>
+                                </a>
+                            </li>
+                            <li class="search-results__item">
+                                <a href="" class="search-results__link">
+                                    <p class="search-results__item__title"><span class="documents__image documents__image_doc"></span>Внимание! В ЭБС КГПУ им. В.П. Астафьева размещено электронное научно-популярное просветительское издание «Кот Шредингера»</p>
+                                    <p class="search-results__item__description">Описание краткое  или вывод первых до 254 символов</p>
+                                    <p class="search-results__item__date">01.03.2022</p>
+                                </a>
+                            </li>
+                        </ul>
 
-                    <div class="content__main"></div>
-                    <div class="content__sidebar"></div>
+                        {{> common/pagination}}
+
+                    </div>
+                    <div class="search-results search-results_empty">
+                        <h3 class="search-results__title">По данному запросу ничего не найдено.<br>Попробуйте поискать что нибудь другое.</h3>
+                    </div>
+
                 </div>
-
-                    {{!-- {{> common/pagination}} --}}
 
             </div>
 
