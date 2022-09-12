@@ -10,21 +10,38 @@
     $width: 480px;
     $height: 330px;
 
-    background-color: green;
     border-radius: 20px;
-    color: colors.$white;
     display: block;
-    font-size: 50px;
-    font-weight: 500;
-
-    /* width: 33.3%; */
     height: $height;
-    line-height: 61px;
     margin-bottom: 37px;
     overflow: hidden;
-    padding: 30px 40px;
-    text-transform: uppercase;
     width: $width;
+
+    &__text {
+      color: colors.$white;
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 61px;
+      padding-top: 85px;
+      position: relative;
+      text-transform: uppercase;
+
+      &::before {
+        background-image: url('/img/icon-book.svg');
+        content: '';
+        height: 57px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 57px;
+      }
+    }
+
+    &__image {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
 
     &_format {
       &_wide {
@@ -37,12 +54,29 @@
     }
 
     &_theme {
+      &_dark,
+      &_light {
+        padding: 30px 60px 94px;
+      }
+
       &_dark {
         background-color: colors.$blue;
       }
 
       &_light {
         background-color: colors.$orange;
+
+        &::after {
+          background-image: url('/img/icon-2022.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          bottom: 16px;
+          content: '';
+          height: 54.67px;
+          position: absolute;
+          right: 16px;
+          width: 182.11px;
+        }
       }
     }
   }
