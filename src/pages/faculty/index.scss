@@ -15,13 +15,17 @@
       }
     }
 
+    &__subtitle {
+      margin: 0 0 42px;
+    }
+
     &__emblem {
       background-color: #248e05;
       border-radius: 0 0 64px;
       color: colors.$white;
       display: inline-block;
       float: left;
-      margin-bottom: 20px;
+      margin-bottom: 64px;
       margin-right: 64px;
       max-width: 192px;
       padding: 35px 16px 20px;
@@ -33,10 +37,6 @@
 
       &__logo {
         margin-right: 6px;
-
-        //   width: 38px;
-        //   height: 38px;
-        //   fill: colors.$white
       }
 
       &__title {
@@ -226,6 +226,12 @@
             }
 
             &__subject {
+              &__list {
+                & + .directions__card__profile {
+                  margin-top: 34px;
+                }
+              }
+
               &__item {
                 border-left: 4px solid colors.$orange;
                 color: colors.$text-main;
@@ -265,6 +271,10 @@
         margin-bottom: 30px;
       }
 
+      &__time-block {
+        margin-bottom: 42px;
+      }
+
       &__address,
       &__time {
         color: colors.$text-main;
@@ -293,6 +303,11 @@
         line-height: 24px;
         margin-bottom: 16px;
         text-transform: uppercase;
+      }
+
+      &__social-block {
+        justify-content: flex-start;
+        padding-left: 40px;
       }
     }
   }

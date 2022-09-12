@@ -17,6 +17,9 @@
                 </div>
 
                 <div class="content__wrapper">
+
+                    {{> common/tags}}
+
                     <div class="content__main">
 
                         <div class="faculty__information">
@@ -24,7 +27,6 @@
                             <div class="content__emblem">
                                 <div class="content__emblem__top">
                                     <img  class="content__emblem__logo" src="/img/logo_small.svg" alt="logo">
-                                    {{!-- <svg class="icon content__emblem__logo"><use href="#logo_small" /></svg> --}}
                                     <p class="content__emblem__title">Исторический факультет</p>
                                 </div>
                                 <div class="content__emblem__bottom">
@@ -86,6 +88,11 @@
                                 <p class="content__sidebar__time">перерыв: 13:00 - 13:45</p>
                                 <p class="content__sidebar__time">сб-вс: выходной</p>
                             </div>
+                            <div class="content__sidebar__social-block social__list">
+                                <a href="https://t.me" class="content__sidebar__social-item social__item"><img src="/img/icon-telegram_b.svg" alt="telegram"></a>
+                                <a href="https://vk.com" class="content__sidebar__social-item social__item"><img src="/img/icon-vk_b.svg" alt="vk"></a>
+                            </div>
+
                         </div>
                         <div class="content__sidebar__card">
                             <div class="content__sidebar__block content__sidebar__block_main">
@@ -175,7 +182,6 @@
                                 <p class="directions__card__profile">Педагогическое образование</p>
                                 <p class="directions__card__type">Программа</p>
                                 <ul class="directions__card__subject__list">
-                                    {{!-- <li class="directions__card__subject__item">История</li> --}}
                                     <li class="directions__card__subject__item">Социально-историческое образование в условиях меняющихся профессиональных стандартов</li>
                                 </ul>
                             </div>
