@@ -13,9 +13,12 @@
 
             <div class="content"> 
                 <div class="content__header">
-                    <h1 class="content__title_main">Исторический факультет</h1>
+                    <h1 class="content__title_main">Кафедра отечественной истории (стр Ост подразделения)</h1>
                 </div>
                 <div class="content__wrapper">
+                    
+                    {{> common/tags}}
+                    
                     <div class="content__main">
 
                         <div class="faculty__information">
@@ -103,6 +106,10 @@
                                 <p class="content__sidebar__time">перерыв: 13:00 - 13:45</p>
                                 <p class="content__sidebar__time">сб-вс: выходной</p>
                             </div>
+                            <div class="content__sidebar__social-block social__list">
+                                <a href="https://t.me" class="content__sidebar__social-item social__item"><img src="/img/icon-telegram_b.svg" alt="telegram"></a>
+                                <a href="https://vk.com" class="content__sidebar__social-item social__item"><img src="/img/icon-vk_b.svg" alt="vk"></a>
+                            </div>
                         </div>
                         <div class="content__sidebar__card">
                             <div class="content__sidebar__block content__sidebar__block_main">
@@ -141,6 +148,61 @@
                 <div class="content__wrapper">
                     <div class="faculty__directions">
                         <h3 class="content__subtitle">Направления подготовки</h3>
+
+                        <div class="directions__card__list grid">
+                            <div class="directions__card__item">
+                                <div class="directions__card__header">
+                                    <p class="directions__card__degree">Магистратура</p>
+                                    <p class="directions__card__label">Очно</p>
+                                </div>
+                                <p class="directions__card__profile">Педагогическое образование</p>
+                                <p class="directions__card__type">Программа</p>
+                                <ul class="directions__card__subject__list">
+                                    {{!-- <li class="directions__card__subject__item">История</li> --}}
+                                    <li class="directions__card__subject__item">Социально-историческое образование в условиях меняющихся профессиональных стандартов</li>
+                                </ul>
+                            </div>
+                            <div class="directions__card__item">
+                                <div class="directions__card__header">
+                                    <p class="directions__card__degree">Бакалавриат</p>
+                                    <p class="directions__card__label">Заочно</p>
+                                </div>
+                                <p class="directions__card__profile">Педагогическое образование</p>
+                                <p class="directions__card__type">Профиль</p>
+                                <ul class="directions__card__subject__list">
+                                    <li class="directions__card__subject__item">История</li>
+                                </ul>
+                            </div>
+                            <div class="directions__card__item directions__card__item_high">
+                                <div class="directions__card__header">
+                                    <p class="directions__card__degree">Бакалавриат</p>
+                                    <p class="directions__card__label">Очно</p>
+                                </div>
+                                <p class="directions__card__profile">Педагогическое образование (с двумя профилями подготовки)</p>
+                                <p class="directions__card__type">Профили</p>
+                                <ul class="directions__card__subject__list">
+                                    <li class="directions__card__subject__item">История</li>
+                                    <li class="directions__card__subject__item">Социально-историческое образование в условиях меняющихся профессиональных стандартов</li>
+                                </ul>
+                                <p class="directions__card__profile">Педагогическое образование (с двумя профилями подготовки)</p>
+                                <p class="directions__card__type">Профили</p>
+                                <ul class="directions__card__subject__list">
+                                    <li class="directions__card__subject__item">История</li>
+                                    <li class="directions__card__subject__item">Социально-историческое образование в условиях меняющихся профессиональных стандартов</li>
+                                </ul>
+                            </div>
+                            <div class="directions__card__item">
+                                <div class="directions__card__header">
+                                    <p class="directions__card__degree">Магистратура</p>
+                                    <p class="directions__card__label">Очно</p>
+                                </div>
+                                <p class="directions__card__profile">Педагогическое образование</p>
+                                <p class="directions__card__type">Программа</p>
+                                <ul class="directions__card__subject__list">
+                                    <li class="directions__card__subject__item">Социально-историческое образование в условиях меняющихся профессиональных стандартов</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

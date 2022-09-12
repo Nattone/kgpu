@@ -57,6 +57,10 @@
     }
 
     .faculty {
+      &__information {
+        margin-bottom: 62px;
+      }
+
       &__structure {
         margin-bottom: 62px;
 
@@ -159,6 +163,7 @@
       }
 
       &__directions {
+        margin-top: 60px;
         width: 100%;
 
         .directions {
