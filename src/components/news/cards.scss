@@ -5,6 +5,40 @@
     padding: 32px 0 56px;
   }
 
+  &__rss {
+    background-color: colors.$grey;
+    border: none;
+    border-radius: 10px;
+    color: colors.$text-main;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 12px 0 47px;
+    position: relative;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: colors.$orange;
+      color: colors.$white;
+    }
+
+    &::before {
+      background-image: url('/img/icon-rss.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: '';
+      height: 27px;
+      left: 12px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 27px;
+    }
+  }
+
   &__list {
     align-items: stretch;
     display: flex;
