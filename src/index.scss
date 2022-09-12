@@ -702,6 +702,16 @@ p {
       color: colors.$white;
     }
   }
+
+  .button_more {
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: colors.$orange;
+      color: colors.$white;
+    }
+  }
 }
 
 .accordion {
