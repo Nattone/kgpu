@@ -4,7 +4,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    margin: 0 -16px;
   }
 
   &__item {
@@ -18,13 +18,14 @@
     display: block;
     font-weight: 600;
     height: 100%;
-    padding: 16px 64px 20px;
+    padding: 16px 28px 30px;
     text-align: center;
   }
 
   &__image {
     border-radius: 0 0 150px 150px;
     margin-bottom: 18px;
+    max-width: 275px;
     width: 100%;
   }
 
