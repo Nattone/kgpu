@@ -229,7 +229,7 @@
         "pageTitle": "Подразделения по типам"
     },
     "divisions": {
-        "pageTitle": "Подразделения по типам"
+        "pageTitle": "Остальные подразделения"
     },
     "events": {
         "pageTitle": "Календарь событий"
@@ -248,6 +248,9 @@
     },
     "sitemap": {
         "pageTitle": "Карта сайта"
-    }
+    },
+    "search": {
+      "pageTitle": "Поиск"
+  }
   }
 }
