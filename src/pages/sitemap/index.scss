@@ -33,7 +33,7 @@
     position: relative;
 
     &::before {
-      background-image: url('img/icon-arrow.svg');
+      background-image: url('/img/icon-arrow.svg');
       background-repeat: no-repeat;
       background-size: contain;
       content: '';

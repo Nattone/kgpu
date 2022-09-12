@@ -41,7 +41,7 @@
       text-transform: uppercase;
 
       &::before {
-        background-image: url('img/icon-book.svg');
+        background-image: url('/img/icon-book.svg');
         content: '';
         height: 57px;
         left: 0;
@@ -81,7 +81,7 @@
         background-color: colors.$orange;
 
         &::after {
-          background-image: url('img/icon-2022.png');
+          background-image: url('/img/icon-2022.png');
           background-repeat: no-repeat;
           background-size: contain;
           bottom: 16px;

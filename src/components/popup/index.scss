@@ -61,7 +61,7 @@
     width: 100%;
 
     &::before {
-      background-image: url('img/icon-login.svg');
+      background-image: url('/img/icon-login.svg');
       content: '';
       height: 17px;
       width: 22px;
@@ -70,7 +70,7 @@
 
   &__password {
     &::before {
-      background-image: url('img/icon-password.svg');
+      background-image: url('/img/icon-password.svg');
       content: '';
       height: 22px;
       width: 19px;
