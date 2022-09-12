@@ -7,6 +7,7 @@
     &__track {
       border-bottom: 1px solid rgba(102, 142, 169, 0.5);
       border-top: 1px solid rgba(102, 142, 169, 0.5);
+      margin: 0 -16px;
       padding: 64px 0 74px;
     }
   }
@@ -15,6 +16,7 @@
     &__item {
       align-self: center;
       display: flex;
+      padding: 0 16px;
     }
   }
 
@@ -24,6 +26,8 @@
     &__img {
       display: block;
       max-height: 120px;
+      object-fit: contain;
+      width: 100%;
     }
   }
 }
