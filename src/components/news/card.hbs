@@ -1,4 +1,4 @@
-<a class="news__card {{#if isSmall}}news__card_small{{/if}}" href="{{item.link}}">
+<a class="news__card{{#if isSmall}} news__card_small{{/if}}{{#if item.theme}} news__card_theme_{{item.theme}}{{/if}}" href="{{item.link}}">
     {{#unless isSmall}}
         <div class="news__card__image">
         {{#if item.img}}
