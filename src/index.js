@@ -5,6 +5,16 @@ export const initGlide = (selector) => {
   document.querySelectorAll(selector)?.forEach((element) => {
     const glide = new Glide(element, {
       perView: element.dataset.count || 1,
+      type: 'carousel',
+      // autoplay: 5000,
+      // breakpoints: {
+      //   1024: {
+      //     perView: 2
+      //   },
+      //   600: {
+      //     perView: 1
+      //   }
+      // }
     })
     glide?.mount()
   })
