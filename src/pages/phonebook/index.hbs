@@ -18,29 +18,33 @@
 
                 <div class="content__wrapper phonebook">
 
-                    <div class="phonebook__search"></div>
+                    <div class="phonebook__search">
+                        {{> search/index}}
+                    </div>
 
                     <ul class="phonebook__list">
 
-                        <li class="phonebook__item _toggle">
+                        <li class="phonebook__item _toggle _toggle_active">
                             <div class="phonebook__item__head _toggle__button">
                                 <p class="phonebook__item__title">Деканат</p>
-                                <button class="information__button_more button button_more button_round"></button>
+                                <button class="phonebook__item__button button button_more button_round"></button>
                             </div>
 
                             <div class="phonebook__item__body _toggle__container">
-                                {{> phonebook/table}}
+                                {{> phonebook/table_desctop}}
+                                {{> phonebook/table_mobile}}
                             </div>
                         </li>
 
                         <li class="phonebook__item _toggle">
                             <div class="phonebook__item__head _toggle__button">
                                 <p class="phonebook__item__title">Учёный совет КГПУ</p>
-                                <button class="information__button_more button button_more button_round"></button>
+                                <button class="phonebook__item__button button button_more button_round"></button>
                             </div>
 
                             <div class="phonebook__item__body _toggle__container">
-                                {{> phonebook/table}}
+                                {{> phonebook/table_desctop}}
+                                {{> phonebook/table_mobile}}
                             </div>
                         </li>
                     </ul>
