@@ -73,15 +73,28 @@
       }
     }
 
-    &_dark {
-      .news__card__image {
-        background-color: colors.$blue;
+    &_theme {
+      &_dark {
+        .news__card__image {
+          background-color: colors.$blue;
+        }
       }
-    }
 
-    &_light {
-      .news__card__image {
-        background-color: colors.$orange;
+      &_light {
+        .news__card__image {
+          background-color: colors.$orange;
+        }
+      }
+
+      &_dark,
+      &_light {
+        .news__card__image {
+          border-bottom: none;
+        }
+
+        .news__card__title {
+          padding: 104px 54px;
+        }
       }
     }
 
