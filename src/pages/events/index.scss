@@ -92,7 +92,7 @@
 .documents_basic-page {
   .notice {
     &__image {
-      background-image: url('/img/icon-locked.svg');
+      background-image: url('../img/icon-locked.svg');
       display: inline-block;
       height: 30px;
       margin: 0 4px -4px;
@@ -116,20 +116,20 @@
     width: 24px;
 
     &_locked {
-      background-image: url('/img/icon-locked.svg');
+      background-image: url('../img/icon-locked.svg');
       margin-right: 12px;
     }
 
     &_pdf {
-      background-image: url('/img/icon-pdf.svg');
+      background-image: url('../img/icon-pdf.svg');
     }
 
     &_jpg {
-      background-image: url('/img/icon-jpg.svg');
+      background-image: url('../img/icon-jpg.svg');
     }
 
     &_doc {
-      background-image: url('/img/icon-doc.svg');
+      background-image: url('../img/icon-doc.svg');
     }
   }
 }
