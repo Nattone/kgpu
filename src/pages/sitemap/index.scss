@@ -1,6 +1,10 @@
 @use '~/styles/colors';
 
 .sitemap {
+  &-wrapper {
+    max-width: 1120px;
+  }
+
   &__item {
     margin-bottom: 62px;
   }
