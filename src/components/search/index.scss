@@ -1,0 +1,30 @@
+@use '~/styles/colors';
+
+.search-solo {
+  .search {
+    position: relative;
+
+    #search {
+      background: transparent;
+      border: 2px solid colors.$blue;
+      border-radius: 5px;
+      color: colors.$blue;
+      float: left;
+      font-size: 10pt;
+      height: 38px;
+      outline: none;
+      padding: 0 34px 0 12px;
+    }
+
+    &__btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      height: 38px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 38px;
+    }
+  }
+}
