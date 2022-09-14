@@ -37,6 +37,7 @@
       width: 60%;
 
       .top {
+        align-items: center;
         display: flex;
         justify-content: end;
         padding-bottom: 30px;
@@ -78,31 +79,55 @@
 
       .language {
         cursor: pointer;
-        margin-right: 16px;
+        height: 25px;
+        margin-right: 15px;
+        position: relative;
+        width: 60px;
 
-        &__list {
-          background-color: transparent;
-          border: none;
-          cursor: pointer;
-          outline: none;
+        &._open {
+          .language {
+            &__item {
+              display: block;
+            }
+          }
         }
 
-        // &__item {
+        &__items {
+          display: flex;
+          flex-flow: column nowrap;
+          left: 0;
+          overflow: hidden;
+          position: absolute;
+          top: 0;
+        }
 
-        //   &.language_ru span {
-        //     background-image: url('../img/icon-lang_eng.svg');
-        //   }
+        &__item {
+          display: none;
+          height: 25px;
+          margin-bottom: 8px;
+          width: 36px;
 
-        //   &::before {
-        //     content: '';
-        //     position: absolute;
-        //     left: 0;
-        //     top: 0;
-        //     width: 100%;
-        //     height: 100%;
-        //     background-image: url('../img/icon-lang_eng.svg');
-        //   }
-        // }
+          &._current {
+            display: block;
+            order: -1;
+          }
+
+          &__img {
+            display: block;
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+          }
+        }
+
+        &__arrow {
+          height: 10px;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 16px;
+        }
       }
 
       .availability {

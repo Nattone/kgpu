@@ -1,10 +1,6 @@
 import Glide from '@glidejs/glide'
 import Masonry from 'masonry-layout'
 
-export const toggleClass = (element) => () => {
-  element.classList.toggle('_toggle_active')
-}
-
 export const initGlide = (selector) => {
   document.querySelectorAll(selector)?.forEach((element) => {
     const glide = new Glide(element, {
@@ -21,14 +17,41 @@ export const initMasonry = (selector, options = {}) => {
   })
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+export const initToggle = () => {
+  const toggleClass = (element) => () => {
+    element.classList.toggle('_toggle_active')
+  }
   document.querySelectorAll('._toggle')?.forEach((element) => {
-    element.querySelector('._toggle__button').addEventListener('click', toggleClass(element))
+    element.querySelector(`._toggle__button`).addEventListener('click', toggleClass(element))
   })
+}
+
+export const initLanguages = () => {
+  const container = document.querySelector('.language')
+  const itemsContainer = container?.querySelector('.language__items')
+
+  itemsContainer?.querySelectorAll('.language__item')?.forEach((element) =>
+    element.addEventListener('click', (event) => {
+      if (element.classList.contains('_current')) {
+        event.preventDefault()
+        container.classList.toggle('_open')
+      } else {
+        container.classList.remove('_open')
+        itemsContainer?.querySelector('._current')?.classList?.remove('_current')
+        element?.classList?.add('_current')
+      }
+    })
+  )
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initToggle()
+  initLanguages()
 
   initMasonry('.grid', {
     percentPosition: true,
     gutter: 30,
   })
+
   initGlide('.glide')
 })

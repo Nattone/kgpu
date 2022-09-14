@@ -1,5 +1,4 @@
 <header class="header header-main">
-    {{!-- <span class="header__title">{{title}}</span> --}}
     <div class="header__top">
         <div class="container">
             <div class="header__top__left">
@@ -12,17 +11,18 @@
             </div>
             <div class="header__top__right">
                 <div class="top">
-                    <div class="search">
-                        <input type="search" id="search" placeholder="Поиск">
-                        <button class="search__btn">
+                    <form action="search.html" class="search">
+                        <input type="text" id="search" name="search" placeholder="Поиск">
+                        <button class="search__btn" type="submit">
                             <img class="icon-search" src="img/icon-search.svg" alt="search">
                         </button>
-                    </div>
+                    </form>
                     <div class="language">
-                        <select class="language__list">
-                            <option class="language__item language_ru"></option>
-                            <option class="language__item language_eng">eng</option>
-                        </select>
+                        <div class="language__items">
+                            <div class="language__item _current"><img class="language__item__img" src="img/icon-lang_ru.svg"></div>
+                            <div class="language__item"><img class="language__item__img" src="img/icon-lang_eng.svg"></div>
+                        </div>
+                        <div class="language__arrow button_more"></div>
                     </div>
                     <button class="availability">
                         <img src="img/icon-eye.svg" alt="availability">
@@ -39,32 +39,4 @@
     <div class="nav-main">
         {{> common/nav class="container" items=common.nav-main}}
     </div>
-    {{!-- <ul class="nav__items container">
-        <li class="nav__item">
-            <a href="" class="link link_more">Университет</a>
-            <ul class="subnav">
-                <li class="subnav__item">
-                    <a href="" class="link">Страница ректора</a>
-                </li>
-                <li class="subnav__item">
-                    <a href="" class="link">Миссия</a>
-                </li>
-                <li class="subnav__item">
-                    <a href="" class="link">Подразделения</a>
-                </li>
-            </ul>
-        </li>
-        <li class="nav__item">
-            <a href="" class="link link-more">Образование</a>
-        </li>
-        <li class="nav__item">
-            <a href="" class="link link-more">Наука</a>
-        </li>
-        <li class="nav__item">
-            <a href="" class="link link-more">International</a>
-        </li>
-        <li class="nav__item">
-            <a href="" class="link link-more">Дополнительное образование</a>
-        </li>
-    </ul> --}}
 </header>
