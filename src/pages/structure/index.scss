@@ -1,6 +1,15 @@
 @use '~/styles/colors';
 
 .structure {
+  &-page {
+    .content__main {
+      @media (max-width: 1440px) {
+        padding-right: 0;
+        width: 100%;
+      }
+    }
+  }
+
   &__item {
     font-size: 20px;
     font-weight: 500;

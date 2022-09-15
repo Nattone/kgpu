@@ -27,11 +27,41 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-
-      // left: -86px;
-      // right: -86px;
       width: 100%;
       z-index: 1;
+
+      @media (max-width: 1600px) {
+        padding: 0 20px;
+      }
+
+      .button_more {
+        &::after {
+          background-image: url('../img/icon-arrow_b.svg');
+          height: 12px;
+          transform: translate(-50%, -50%);
+          width: 7px;
+        }
+      }
+
+      .button_more_left::after {
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+    }
+
+    &__arrow--left {
+      left: 70px;
+
+      @media (max-width: 1600px) {
+        left: 0;
+      }
+    }
+
+    &__arrow--right {
+      right: 70px;
+
+      @media (max-width: 1600px) {
+        right: 0;
+      }
     }
 
     &__bullets {

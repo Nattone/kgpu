@@ -117,11 +117,19 @@
       background-color: transparent;
       border: none;
       cursor: pointer;
+
+      img {
+        display: block;
+      }
     }
   }
 
   &__bottom {
     padding-bottom: 26px;
+
+    @media (max-width: 1440px) {
+      padding-top: 26px;
+    }
 
     .header__nav {
       display: flex;
@@ -198,8 +206,16 @@
       text-transform: uppercase;
       transition: all 0.3s ease;
 
+      @media (max-width: 1440px) {
+        font-size: 18px;
+      }
+
       &_more {
         padding: 18px 42px 18px 12px;
+
+        @media (max-width: 1440px) {
+          padding-right: 32px;
+        }
 
         &::after {
           border: 5px solid transparent;

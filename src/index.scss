@@ -8,6 +8,8 @@
   padding: 0;
 }
 
+// @media (max-width: 920px) {}
+
 ul,
 ol {
   list-style: none;
@@ -76,6 +78,11 @@ p {
   max-width: 1600px;
   padding: 0 50px;
   width: 100%;
+
+  @media (max-width: 1600px) {
+    max-width: 1440px;
+    padding: 0 20px;
+  }
 }
 
 .section {
@@ -109,6 +116,7 @@ p {
 
     &::after {
       background-image: url('../img/icon-arrow.svg');
+      background-repeat: no-repeat;
       background-size: contain;
       content: '';
       display: block;
@@ -432,8 +440,6 @@ p {
           transform: rotate(320deg);
         }
       }
-
-      // НЕ РАБОТАЕТ!!!!!!!!!!!!!!!!!!!!!!!!
     }
   }
 
@@ -626,6 +632,12 @@ p {
     border-radius: 10px;
     margin-bottom: 42px;
     overflow: hidden;
+
+    &_iframe {
+      @media (max-width: 1440px) {
+        height: 450px;
+      }
+    }
   }
 }
 
@@ -787,19 +799,19 @@ p {
 
 .tag {
   &__block {
-    margin-bottom: 42px;
+    margin-bottom: 22px;
   }
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
     text-transform: uppercase;
     width: 100%;
   }
 
   &__item {
-    & + .tag__item {
-      padding-left: 40px;
-    }
+    margin-bottom: 20px;
+    margin-right: 40px;
   }
 
   &__link {

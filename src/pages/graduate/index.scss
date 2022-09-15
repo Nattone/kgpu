@@ -17,7 +17,12 @@
       margin: 0 auto;
       max-width: 100%;
       min-height: 600px;
+      object-fit: contain;
       width: auto;
+
+      @media (max-width: 1440px) {
+        min-height: 400px;
+      }
     }
   }
 

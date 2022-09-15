@@ -94,6 +94,18 @@
 
         .news__card__title {
           padding: 104px 54px;
+
+          @media (max-width: 1600px) {
+            font-size: 36px;
+            line-height: 44px;
+            padding: 50px;
+          }
+
+          @media (max-width: 1440px) {
+            padding: 30px;
+            top: 0;
+            transform: none;
+          }
         }
       }
     }

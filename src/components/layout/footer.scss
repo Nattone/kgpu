@@ -151,6 +151,15 @@
     background-color: colors.$white;
     margin-bottom: 30px;
     padding: 14px 30px;
+
+    @media (max-width: 1600px) {
+      padding: 14px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
   }
 
   &__caption,
