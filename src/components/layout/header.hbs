@@ -1,4 +1,4 @@
-<header class="header header-main">
+<header class="header">
     <div class="header__top">
         <div class="container">
             <div class="header__top__left">
@@ -10,10 +10,10 @@
                 </div>
             </div>
             <div class="header__top__right">
-                <div class="top">
+                <div class="header__control">
                     
                     {{> search/index}}
-
+                    
                     <div class="language">
                         <div class="language__items">
                             <div class="language__item _current"><img class="language__item__img" src="img/icon-lang_ru.svg"></div>
@@ -25,15 +25,17 @@
                         <img src="img/icon-eye.svg" alt="availability">
                     </button>
                 </div>
-                <div class="bottom">
-                    <div class="nav-upper">
-                        {{> common/nav items=common.nav-upper}}
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-    <div class="nav-main">
+    <div class="header__bottom">
+        <div class="container">
+            <div class="header__nav">
+                {{> common/nav items=common.nav-upper}}
+            </div>
+        </div>
+    </div>
+    <div class="header__nav-main">
         {{> common/nav class="container" items=common.nav-main}}
     </div>
 </header>

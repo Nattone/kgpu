@@ -5,7 +5,7 @@
 
   &__top {
     background-color: colors.$light-grey;
-    padding: 20px 0 26px;
+    padding-top: 20px;
 
     .container {
       display: flex;
@@ -17,7 +17,9 @@
       width: 40%;
 
       .logo .icon {
+        display: block;
         fill: colors.$blue;
+        max-height: 74px;
       }
 
       .logo,
@@ -28,217 +30,211 @@
 
       .logo_ministry {
         margin-left: 56px;
+
+        img {
+          max-height: 74px;
+        }
       }
     }
 
     &__right {
       display: flex;
-      flex-direction: column;
-      width: 60%;
+      justify-content: end;
+      width: 100%;
+    }
 
-      .top {
-        align-items: center;
-        display: flex;
-        justify-content: end;
-        padding-bottom: 30px;
-        width: 100%;
-      }
+    .header__control {
+      align-items: center;
+      display: flex;
+      justify-content: end;
+      padding-bottom: 30px;
+      width: 100%;
+    }
 
-      .search {
-        margin-right: 32px;
+    .search {
+      margin-right: 32px;
+      width: 280px;
+
+      #search {
         width: 280px;
-
-        #search {
-          width: 280px;
-        }
-      }
-
-      .language {
-        cursor: pointer;
-        height: 25px;
-        margin-right: 15px;
-        position: relative;
-        width: 60px;
-
-        &._open {
-          .language {
-            &__item {
-              display: block;
-            }
-          }
-        }
-
-        &__items {
-          display: flex;
-          flex-flow: column nowrap;
-          left: 0;
-          overflow: hidden;
-          position: absolute;
-          top: 0;
-        }
-
-        &__item {
-          display: none;
-          height: 25px;
-          margin-bottom: 8px;
-          width: 36px;
-
-          &._current {
-            display: block;
-            order: -1;
-          }
-
-          &__img {
-            display: block;
-            height: 100%;
-            object-fit: cover;
-            width: 100%;
-          }
-        }
-
-        &__arrow {
-          height: 10px;
-          position: absolute;
-          right: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 16px;
-        }
-      }
-
-      .availability {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
       }
     }
 
-    .nav-upper {
-      .nav {
+    .language {
+      cursor: pointer;
+      height: 25px;
+      margin-right: 15px;
+      position: relative;
+      width: 60px;
+
+      &._open {
+        .language {
+          &__item {
+            display: block;
+          }
+        }
+      }
+
+      &__items {
         display: flex;
-        justify-content: space-between;
-        width: 100%;
+        flex-flow: column nowrap;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+      }
 
-        &__item {
-          white-space: nowrap;
+      &__item {
+        display: none;
+        height: 25px;
+        margin-bottom: 8px;
+        width: 36px;
 
-          + .nav__item {
-            margin-left: 24px;
-          }
+        &._current {
+          display: block;
+          order: -1;
         }
 
-        &__link {
-          border-bottom: 2px solid transparent;
-          color: colors.$blue;
-          font-size: 18px;
-          font-weight: 600;
-          line-height: 22px;
-          text-transform: uppercase;
-          transition: border 0.3s ease;
-
-          &:hover,
-          &:focus {
-            border-bottom-color: colors.$orange;
-          }
+        &__img {
+          display: block;
+          height: 100%;
+          object-fit: cover;
+          width: 100%;
         }
+      }
+
+      &__arrow {
+        height: 10px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+      }
+    }
+
+    .availability {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  &__bottom {
+    padding-bottom: 26px;
+
+    .header__nav {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+
+    .nav__list {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .nav__item {
+      white-space: nowrap;
+
+      + .nav__item {
+        margin-left: 24px;
+      }
+    }
+
+    .nav__link {
+      border-bottom: 2px solid transparent;
+      color: colors.$blue;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 22px;
+      text-transform: uppercase;
+      transition: border 0.3s ease;
+
+      &:hover,
+      &:focus {
+        border-bottom-color: colors.$orange;
       }
     }
   }
 
-  .nav-main {
+  .header__nav-main {
     background-color: colors.$blue;
 
-    .nav {
+    .nav__list {
       display: flex;
       justify-content: space-between;
       position: relative;
+    }
 
-      &__item {
-        &:hover {
-          .nav__link {
-            background-color: colors.$light-grey;
-            color: colors.$blue;
+    .nav__item {
+      &:hover {
+        .nav__link {
+          background-color: colors.$light-grey;
+          color: colors.$blue;
 
-            &_more {
-              &::after {
-                border-top-color: colors.$blue;
-              }
+          &_more {
+            &::after {
+              border-top-color: colors.$blue;
             }
           }
+        }
 
-          .nav__sub {
-            display: block;
-          }
+        .nav__sub {
+          display: block;
         }
       }
+    }
+
+    .nav__link {
+      background-color: transparent;
+      color: colors.$white;
+      display: block;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 24px;
+      padding: 18px 12px;
+      position: relative;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+
+      &_more {
+        padding: 18px 42px 18px 12px;
+
+        &::after {
+          border: 5px solid transparent;
+          border-top: 5px solid colors.$white;
+          content: '';
+          position: absolute;
+          right: 12px;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: border 0.3s ease;
+        }
+      }
+    }
+
+    .nav__sub {
+      background-color: colors.$light-grey;
+      display: none;
+      min-width: 350px;
+      padding: 10px 0 18px;
+      position: absolute;
+      z-index: 1;
 
       &__link {
         background-color: transparent;
-        color: colors.$white;
+        color: colors.$blue;
         display: block;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 24px;
-        padding: 18px 12px;
-        position: relative;
-        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 10px 22px;
         transition: all 0.3s ease;
 
-        // &:hover,
-        // &:focus {
-        //   background-color: colors.$light-grey;
-        //   color: colors.$blue;
-        // }
-
-        &_more {
-          padding: 18px 42px 18px 12px;
-
-          &::after {
-            border: 5px solid transparent;
-            border-top: 5px solid colors.$white;
-            content: '';
-            position: absolute;
-            right: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: border 0.3s ease;
-          }
-
-          // &:hover,
-          // &:focus {
-          //   &::after {
-          //     border-top-color: colors.$blue;
-          // }
-
-          // + .nav__sub {
-          //   display: block;
-          // }
-          // }
-        }
-      }
-
-      &__sub {
-        background-color: colors.$light-grey;
-        display: none;
-        min-width: 350px;
-        padding: 10px 0 18px;
-        position: absolute;
-        z-index: 1;
-
-        &__link {
-          background-color: transparent;
-          color: colors.$blue;
-          display: block;
-          font-size: 16px;
-          line-height: 20px;
-          padding: 10px 22px;
-          transition: all 0.3s ease;
-
-          &:hover,
-          &:focus {
-            background-color: colors.$blue;
-            color: colors.$white;
-          }
+        &:hover,
+        &:focus {
+          background-color: colors.$blue;
+          color: colors.$white;
         }
       }
     }
