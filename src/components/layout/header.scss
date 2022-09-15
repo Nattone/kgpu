@@ -189,7 +189,8 @@
         }
 
         .nav__sub {
-          display: block;
+          display: flex;
+          flex-direction: column;
         }
       }
     }
@@ -233,10 +234,14 @@
     .nav__sub {
       background-color: colors.$light-grey;
       display: none;
+      flex-wrap: wrap;
+      max-height: 400px;
       min-width: 350px;
       padding: 10px 0 18px;
       position: absolute;
-      z-index: 1;
+      z-index: 5;
+
+      // &__item {}
 
       &__link {
         background-color: transparent;
