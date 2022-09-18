@@ -1,40 +1,85 @@
 <header class="header">
-    <div class="header__top">
-        <div class="container">
-            <div class="header__top__left">
-                <a class="header__logo logo" href="all.html">
-                    <svg class="icon"><use href="#logo" /></svg>
-                </a>
-                <div class="header__logo_ministry logo_ministry">
-                    <img src="img/logo-ministry.svg" alt="ministry">
-                </div>
-            </div>
-            <div class="header__top__right">
-                <div class="header__control">
-                    
-                    {{> search/index}}
-                    
-                    <div class="language">
-                        <div class="language__items">
-                            <div class="language__item _current"><img class="language__item__img" src="img/icon-lang_ru.svg"></div>
-                            <div class="language__item"><img class="language__item__img" src="img/icon-lang_eng.svg"></div>
-                        </div>
+
+    <div class="header_desctop">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top__left">
+                    <a class="header__logo logo" href="all.html">
+                        <img src="img/logo.svg" alt="ministry">
+                    </a>
+                    <div class="header__logo_ministry logo_ministry">
+                        <img src="img/logo-ministry.svg" alt="ministry">
                     </div>
-                    <button class="availability">
-                        <img src="img/icon-eye.svg" alt="availability">
-                    </button>
+                </div>
+                <div class="header__top__right">
+                    <div class="header__control">
+                        
+                        {{> search/index}}
+                        
+                        <div class="language">
+                            <div class="language__items">
+                                <div class="language__item _current"><img class="language__item__img" src="img/icon-lang_ru.svg"></div>
+                                <div class="language__item"><img class="language__item__img" src="img/icon-lang_eng.svg"></div>
+                            </div>
+                        </div>
+                        <button class="availability">
+                            <img src="img/icon-eye.svg" alt="availability">
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="header__bottom">
-        <div class="container">
-            <div class="header__nav">
-                {{> common/nav items=common.nav}}
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__nav">
+                    {{> common/nav items=common.nav}}
+                </div>
             </div>
         </div>
+        <div class="header__nav-main">
+            {{> common/nav class="nav_desctop container" items=common.nav-main}}
+        </div>
     </div>
-    <div class="header__nav-main">
-        {{> common/nav class="container" items=common.nav-main}}
+
+    <div class="header_mobile _toggle">
+        <div class="header__top container">
+            <a class="header__logo logo" href="all.html">
+                <img src="img/logo.svg" alt="ministry">
+            </a>
+            <div class="header__logo_ministry logo_ministry">
+                <img src="img/logo-ministry.svg" alt="ministry">
+            </div>
+        </div>
+
+        <div class="nav_mobile__open _toggle__button">
+            <button class="nav_mobile__btn"></button>
+        </div>
+
+        <div class="header__bottom _toggle__container ">
+            <div class="header__control">
+                
+                {{> search/index}}
+                
+                <div class="language">
+                    <div class="language__items">
+                        <div class="language__item _current"><img class="language__item__img" src="img/icon-lang_ru.svg"></div>
+                        <div class="language__item"><img class="language__item__img" src="img/icon-lang_eng.svg"></div>
+                    </div>
+                </div>
+                <button class="availability">
+                    <img src="img/icon-eye.svg" alt="availability">
+                </button>
+            </div>
+
+
+            <div class="container">
+                <div class="header__nav">
+                    {{> common/nav items=common.nav}}
+                </div>
+            </div>
+            <div class="header__nav-main">
+                {{> common/nav_mobile class="container" items=common.nav-main}}
+            </div>
+        </div>
     </div>
 </header>
