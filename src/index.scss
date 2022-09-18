@@ -39,16 +39,31 @@ h1 {
   font-size: 36px;
   line-height: 44px;
   text-transform: uppercase;
+
+  @media (max-width: 991px) {
+    font-size: 28px;
+    line-height: 1.2;
+  }
 }
 
 h2 {
   font-size: 28px;
   line-height: 34px;
+
+  @media (max-width: 991px) {
+    font-size: 24px;
+    line-height: 1.2;
+  }
 }
 
 h3 {
   font-size: 24px;
   line-height: 29px;
+
+  @media (max-width: 991px) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }
 
 h4 {
@@ -179,6 +194,12 @@ p {
     padding-right: 32px;
     width: calc(100% - 480px);
 
+    @media (max-width: 991px) {
+      order: 2;
+      padding-right: 0;
+      width: 100%;
+    }
+
     &_big {
       padding-left: 80px;
       width: calc(100% - 305px);
@@ -202,6 +223,10 @@ p {
     // line-height: 29px;
     margin: 42px 0 20px;
     text-transform: uppercase;
+
+    @media (max-width: 991px) {
+      margin: 20px 0 40px;
+    }
   }
 
   &__title {
@@ -218,6 +243,10 @@ p {
   &__sidebar {
     padding-bottom: 42px;
     width: 480px;
+
+    @media (max-width: 991px) {
+      width: 100%;
+    }
 
     &__card {
       background-color: colors.$white;
@@ -493,6 +522,7 @@ p {
   }
 
   .link_arrow {
+    display: inline-block;
     padding-right: 30px;
     position: relative;
 
@@ -640,7 +670,14 @@ p {
 }
 
 .breadcrumbs {
-  // &__list {}
+  &__list {
+    overflow: scroll;
+    white-space: nowrap;
+
+    @media (max-width: 991px) {
+      padding-bottom: 15px;
+    }
+  }
 
   &__item {
     color: colors.$text-secondary;
@@ -810,6 +847,10 @@ p {
   &__item {
     margin-bottom: 20px;
     margin-right: 40px;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
   }
 
   &__link {
@@ -817,6 +858,10 @@ p {
     font-size: 20px;
     font-weight: 600;
     line-height: 24px;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
 
     &::after {
       top: 6px !important;
