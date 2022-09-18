@@ -32,7 +32,7 @@ export const initToggle = () => {
     element.classList.toggle('_toggle_active')
   }
   document.querySelectorAll('._toggle')?.forEach((element) => {
-    element.querySelector(`._toggle__button`).addEventListener('click', toggleClass(element))
+    element.querySelector('._toggle__button')?.addEventListener('click', toggleClass(element))
   })
 }
 
@@ -53,7 +53,7 @@ export const initLanguages = () => {
     })
   )
 
-  document.addEventListener('click', function (e) {
+  document.addEventListener('click', (e) => {
     if (!itemsContainer.contains(e.target)) {
       if (container.classList.contains('_open')) {
         e.preventDefault()
@@ -63,7 +63,7 @@ export const initLanguages = () => {
     }
   })
 
-  document.addEventListener('keydown', function (e) {
+  document.addEventListener('keydown', (e) => {
     if (e.key === 'Tab' || e.key === 'Escape') {
       container.classList.remove('_open')
     }
@@ -71,18 +71,18 @@ export const initLanguages = () => {
 }
 
 export const initDropdown = (selector) => {
-  document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
+  document.querySelectorAll('.dropdown').forEach((dropDownWrapper) => {
     const dropDownBtn = dropDownWrapper.querySelector('.dropdown__btn')
     const dropDownList = dropDownWrapper.querySelector('.dropdown__list')
     const dropDownItems = dropDownList.querySelectorAll('.dropdown__item')
     const dropDownInputHidden = dropDownWrapper.querySelector('.dropdown__input_hidden')
 
-    dropDownBtn.addEventListener('click', function () {
+    dropDownBtn.addEventListener('click', () => {
       dropDownList.classList.toggle('dropdown__list_visible')
     })
 
-    dropDownItems.forEach(function (listItem) {
-      listItem.addEventListener('click', function (e) {
+    dropDownItems.forEach((listItem) => {
+      listItem.addEventListener('click', (e) => {
         e.stopPropagation()
         dropDownBtn.innerText = this.innerText
         // dropDownBtn.focus();
@@ -91,13 +91,13 @@ export const initDropdown = (selector) => {
       })
     })
 
-    document.addEventListener('click', function (e) {
+    document.addEventListener('click', (e) => {
       if (e.target !== dropDownBtn) {
         dropDownList.classList.remove('dropdown__list_visible')
       }
     })
 
-    document.addEventListener('keydown', function (e) {
+    document.addEventListener('keydown', (e) => {
       if (e.key === 'Tab' || e.key === 'Escape') {
         dropDownList.classList.remove('dropdown__list_visible')
       }
