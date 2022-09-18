@@ -4,12 +4,13 @@
   .search {
     position: relative;
 
-    #search {
+    &__input {
       background: transparent;
       border: 2px solid colors.$blue;
       border-radius: 5px;
       color: colors.$blue;
-      float: left;
+
+      // float: left;
       font-size: 10pt;
       height: 38px;
       outline: none;

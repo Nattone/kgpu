@@ -3,8 +3,14 @@
 .documents_basic-page {
   .filter {
     &__block {
-      .search {
+      .search-solo {
+        display: block;
         margin-bottom: 45px;
+      }
+
+      .search__input {
+        border: 1px solid colors.$light-blue;
+        width: 100%;
       }
     }
 

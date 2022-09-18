@@ -7,7 +7,7 @@
     .search {
       width: 608px;
 
-      #search {
+      &__input {
         border: 1px solid colors.$light-blue;
         width: 608px;
       }

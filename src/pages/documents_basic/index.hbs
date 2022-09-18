@@ -79,30 +79,44 @@
 
                     <div class="content__sidebar">
                         <div class="filter__block content__sidebar__card">
-                            <div class="search">
-                                <input type="search" id="search" placeholder="Поиск по справочнику">
+                            {{!-- <div class="search">
+                                <input class="search__input" type="search" id="search" placeholder="Поиск по справочнику">
                                 <span class="icon-search">
                                     <img src="img/icon-search.svg" alt="search">
                                 </span>
-                            </div>
+                            </div> --}}
+                            
+                            {{> search/index}}
+
                             <ul class="filter__list">
                                 <li class="filter__item _toggle">
-                                    <div class="filter__title">
+                                    <div class="filter__title  _toggle__button">
                                         <p class="filter__name">По названию</p>
                                         <button class="button button_more button_round"></button>
                                     </div>
-                                    <ul class="filter__sublist">
+                                    <ul class="filter__sublist _toggle__container">
                                         <li class="filter__subitem">123<span class="filter__subamount">(11452)</span></li>
                                         <li class="filter__subitem active">456<span class="filter__subamount">(56)</span></li>
                                         <li class="filter__subitem">789<span class="filter__subamount">(21)</span></li>
                                     </ul>
                                 </li>
                                 <li class="filter__item _toggle">
-                                    <div class="filter__title">
+                                    <div class="filter__title _toggle__button">
                                         <p class="filter__name">По типу</p>
                                         <button class="button button_more button_round"></button>
                                     </div>
-                                    <ul class="filter__sublist">
+                                    <ul class="filter__sublist _toggle__container">
+                                        <li class="filter__subitem">Приказ<span class="filter__subamount">(17)</span></li>
+                                        <li class="filter__subitem">Письмо<span class="filter__subamount">(0)</span></li>
+                                        <li class="filter__subitem">Распоряжение<span class="filter__subamount">(227)</span></li>
+                                    </ul>
+                                </li>
+                                <li class="filter__item _toggle">
+                                    <div class="filter__title _toggle__button">
+                                        <p class="filter__name">По типу</p>
+                                        <button class="button button_more button_round"></button>
+                                    </div>
+                                    <ul class="filter__sublist _toggle__container">
                                         <li class="filter__subitem">Приказ<span class="filter__subamount">(17)</span></li>
                                         <li class="filter__subitem">Письмо<span class="filter__subamount">(0)</span></li>
                                         <li class="filter__subitem">Распоряжение<span class="filter__subamount">(227)</span></li>
