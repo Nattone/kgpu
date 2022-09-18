@@ -83,20 +83,48 @@
   &__top {
     border-bottom: 1px solid colors.$white;
     padding: 46px 0;
+
+    @media (max-width: 600px) {
+      padding: 30px 0 20px;
+    }
   }
 
   &__cols {
     display: flex;
     justify-content: space-between;
     margin: 0 -16px;
+
+    @media (max-width: 991px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__col {
     padding: 0 16px;
     width: 27%;
 
+    @media (max-width: 991px) {
+      margin-bottom: 40px;
+      width: 50%;
+    }
+
+    @media (max-width: 600px) {
+      margin-bottom: 22px;
+      width: 100%;
+    }
+
     &:last-child {
       width: 19%;
+
+      @media (max-width: 991px) {
+        margin-bottom: 40px;
+        width: 50%;
+      }
+
+      @media (max-width: 600px) {
+        margin-bottom: 22px;
+        width: 100%;
+      }
     }
   }
 
@@ -104,9 +132,21 @@
     display: block;
     margin-bottom: 36px;
 
-    .icon {
-      fill: colors.$white;
-      height: 80px;
+    @media (max-width: 600px) {
+      margin-bottom: 42px;
+    }
+
+    // .icon {
+    //   fill: colors.$white;
+    //   height: 80px;
+    // }
+    img {
+      display: block;
+      max-width: 100%;
+
+      @media (max-width: 600px) {
+        margin: 0 auto;
+      }
     }
   }
 
@@ -128,6 +168,11 @@
 
   .other-link {
     display: block;
+  }
+
+  &__phone a,
+  &__email a {
+    white-space: nowrap;
   }
 
   .other-link,
@@ -156,9 +201,21 @@
       padding: 14px;
     }
 
+    @media (max-width: 1199px) {
+      padding: 5px;
+    }
+
+    @media (max-width: 991px) {
+      padding: 14px;
+    }
+
     img {
       display: block;
       width: 100%;
+
+      @media (max-width: 991px) {
+        max-height: 100px;
+      }
     }
   }
 
@@ -168,9 +225,31 @@
   &__email {
     font-size: 18px;
     line-height: 25px;
+    margin-bottom: 6px;
+
+    @media (max-width: 600px) {
+      margin-bottom: 22px;
+    }
   }
 
   &__bottom {
     padding: 26px 0 66px;
+
+    @media (max-width: 991px) {
+      padding-bottom: 20px;
+    }
+
+    @media (max-width: 600px) {
+      padding-top: 42px;
+    }
+  }
+
+  .social {
+    &__list {
+      @media (max-width: 600px) {
+        justify-content: center;
+        margin-top: 10px;
+      }
+    }
   }
 }
