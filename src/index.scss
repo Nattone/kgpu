@@ -22,6 +22,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-width: 360px;
   position: relative;
 }
 
@@ -183,6 +184,14 @@ p {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+
+      .dropdown {
+        width: 100%;
+      }
+    }
   }
 
   &__wrapper {
@@ -522,9 +531,12 @@ p {
   }
 
   .link_arrow {
-    display: inline-block;
     padding-right: 30px;
     position: relative;
+
+    // @media (max-width: 767px) {
+    //   display: inline-block; !!!!!!
+    // }
 
     &::after {
       background-image: url('../img/icon-arrow_big.svg');
