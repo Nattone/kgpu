@@ -11,16 +11,12 @@
         <div class="container">
             {{> common/breadcrumbs}}
 
-            <div class="content"> 
+            <div class="content workers"> 
                 <div class="content__header">
                     <h1 class="content__title_main">Управление делами и развития персонала</h1>
-                    <select class="">
-                        <option class="">Все</option>
-                        <option class="">Руководство</option>
-                        <option class="">Отдел по работе с персоналом</option>
-                        <option class="">Студенческий отдел</option>
-                        <option class="">Военно-учетный стол</option>
-                    </select>
+                    {{> common/select 
+                        class="workers__select"
+                    }}
                 </div>
                 <div class="content__wrapper">
                     <ul class="workers__list">

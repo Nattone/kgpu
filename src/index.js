@@ -52,6 +52,57 @@ export const initLanguages = () => {
       }
     })
   )
+
+  document.addEventListener('click', function (e) {
+    if (!itemsContainer.contains(e.target)) {
+      if (container.classList.contains('_open')) {
+        e.preventDefault()
+        e.stopPropagation()
+        container.classList.remove('_open')
+      }
+    }
+  })
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Tab' || e.key === 'Escape') {
+      container.classList.remove('_open')
+    }
+  })
+}
+
+export const initDropdown = (selector) => {
+  document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
+    const dropDownBtn = dropDownWrapper.querySelector('.dropdown__btn')
+    const dropDownList = dropDownWrapper.querySelector('.dropdown__list')
+    const dropDownItems = dropDownList.querySelectorAll('.dropdown__item')
+    const dropDownInputHidden = dropDownWrapper.querySelector('.dropdown__input_hidden')
+
+    dropDownBtn.addEventListener('click', function () {
+      dropDownList.classList.toggle('dropdown__list_visible')
+    })
+
+    dropDownItems.forEach(function (listItem) {
+      listItem.addEventListener('click', function (e) {
+        e.stopPropagation()
+        dropDownBtn.innerText = this.innerText
+        // dropDownBtn.focus();
+        dropDownInputHidden.value = this.dataset.value
+        dropDownList.classList.remove('dropdown__list_visible')
+      })
+    })
+
+    document.addEventListener('click', function (e) {
+      if (e.target !== dropDownBtn) {
+        dropDownList.classList.remove('dropdown__list_visible')
+      }
+    })
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Tab' || e.key === 'Escape') {
+        dropDownList.classList.remove('dropdown__list_visible')
+      }
+    })
+  })
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -64,4 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   initGlide('.glide')
+
+  initDropdown()
 })

@@ -71,6 +71,12 @@
         .language {
           &__item {
             display: block;
+
+            &._current {
+              &::after {
+                transform: rotate(-180deg);
+              }
+            }
           }
         }
       }
@@ -79,7 +85,6 @@
         display: flex;
         flex-flow: column nowrap;
         left: 0;
-        overflow: hidden;
         position: absolute;
         top: 0;
       }
@@ -93,6 +98,20 @@
         &._current {
           display: block;
           order: -1;
+          position: relative;
+
+          &::after {
+            background: url('../img/icon-arrow.svg') 50% 50% no-repeat;
+            background-size: 12px 7px;
+            content: '';
+            display: block;
+            height: 100%;
+            left: 100%;
+            position: absolute;
+            top: 0;
+            transition: transform 0.1s ease;
+            width: 24px;
+          }
         }
 
         &__img {
@@ -101,15 +120,6 @@
           object-fit: cover;
           width: 100%;
         }
-      }
-
-      &__arrow {
-        height: 10px;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 16px;
       }
     }
 
