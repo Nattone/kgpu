@@ -23,25 +23,20 @@
                             <button class="search__btn">Найти</button>
                         </form>
                         <div class="search__filter-list">
-                            <select class="search__filter search__filter_sorting">
-                                <option value="" disabled selected>Сортировка</option>
-                                <option value="time">По времени</option>
-                                <option value="relevance">По релевантности</option>
-                            </select>
-                            <select class="search__filter search__filter_sorting">
-                                <option value="" disabled selected>Сортировка</option>
-                                <option value="time">По времени</option>
-                                <option value="relevance">По релевантности</option>
-                            </select>
-                            <select class="search__filter search__filter_sorting">
-                                <option value="" disabled selected>Сортировка</option>
-                                <option value="time">По времени</option>
-                                <option value="relevance">По релевантности</option>
-                            </select>
-                            <div class="search__checkbox">
-                                <input  class="search__checkbox__input" type="checkbox" id="titles" name="titles">
-                                <label for="titles"  class="search__checkbox__label">только в заголовках</label>
-                            </div>
+
+                            {{> dropdown/index 
+                                class="search__filter search__filter_sorting"
+                            }}
+                            {{> dropdown/index 
+                                class="search__filter search__filter_period"
+                            }}
+                            {{> dropdown/index 
+                                class="search__filter search__filter_sections"
+                            }}
+
+                            {{> checkbox/index 
+                                class="search__checkbox"
+                            }}
                         </div>
                     </div>
 

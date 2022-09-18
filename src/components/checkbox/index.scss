@@ -1,0 +1,51 @@
+@use '~/styles/colors';
+
+.checkbox-wrapper {
+  label {
+    cursor: pointer;
+  }
+}
+
+.checkbox_real {
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  z-index: -1;
+
+  &:checked {
+    & + .checkbox_custom::after {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  &:focus {
+    & + .checkbox_custom {
+      box-shadow: 0 0 0 1px colors.$blue, 0 0 5px colors.$light-blue;
+    }
+  }
+}
+
+.checkbox_custom {
+  border: 1px solid colors.$light-blue;
+  cursor: pointer;
+  display: inline-block;
+  height: 15px;
+  margin-right: 12px;
+  position: relative;
+  vertical-align: sub;
+  width: 15px;
+
+  &::after {
+    background-color: colors.$light-blue;
+    content: '';
+    display: inline-block;
+    height: 10px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.2s ease-in;
+    width: 10px;
+  }
+}

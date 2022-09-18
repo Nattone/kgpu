@@ -1,0 +1,44 @@
+@use '~/styles/colors';
+
+.select-wrapper {
+  position: relative;
+
+  &::after {
+    background-image: url('../img/icon-select.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    display: block;
+    height: 24px;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+  }
+}
+
+.select {
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  color: #0c4458;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  height: 100%;
+  line-height: 20px;
+  outline: none;
+  padding: 0 40px 0 10px;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 1px colors.$light-blue;
+    outline: none;
+  }
+}

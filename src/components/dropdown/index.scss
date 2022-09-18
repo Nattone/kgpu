@@ -1,0 +1,91 @@
+@use '~/styles/colors';
+
+.dropdown {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  width: 200px;
+
+  &__btn {
+    background: transparent;
+    border: none;
+    color: #0c4458;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 0 40px 0 10px;
+
+    // height: 100%;
+    position: relative;
+    text-align: left;
+
+    &::after {
+      background-image: url('../img/icon-select.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: '';
+      display: block;
+      height: 24px;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+    }
+  }
+
+  &__list {
+    background-color: colors.$white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: none;
+    left: 0;
+    max-height: 200px;
+    overflow: scroll;
+    padding: 10px 0 20px;
+    position: absolute;
+    top: 55px;
+    width: 100%;
+    z-index: 2;
+
+    &::-webkit-scrollbar {
+      appearance: none;
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: colors.$blue;
+      border-radius: 30px;
+      box-shadow: none;
+    }
+
+    &::-webkit-scrollbar-track-piece {
+      border-radius: 30px;
+    }
+
+    &_visible {
+      display: block;
+    }
+  }
+
+  &__item {
+    color: colors.$text-secondary;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    padding: 7px 20px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: colors.$blue;
+      color: colors.$white;
+    }
+  }
+
+  &__input_hidden {
+    display: none;
+  }
+}
