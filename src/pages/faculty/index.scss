@@ -13,10 +13,14 @@
           }
         }
       }
-    }
 
-    &__subtitle {
-      margin: 0 0 42px;
+      .content__subtitle {
+        margin: 0 0 42px;
+
+        @media (max-width: 991px) {
+          display: none;
+        }
+      }
     }
 
     &__emblem {
@@ -29,6 +33,11 @@
       margin-right: 64px;
       max-width: 192px;
       padding: 35px 16px 20px;
+
+      @media (max-width: 600px) {
+        float: none;
+        margin: 0 0 35px;
+      }
 
       &__top {
         display: flex;
@@ -166,6 +175,10 @@
         margin-top: 60px;
         width: 100%;
 
+        @media (max-width: 991px) {
+          margin-top: 0;
+        }
+
         .directions {
           &__card {
             &__list {
@@ -253,6 +266,14 @@
     }
 
     &__sidebar {
+      .content__subtitle {
+        display: none;
+
+        @media (max-width: 991px) {
+          display: block;
+        }
+      }
+
       &__header {
         display: flex;
         margin-bottom: 46px;
