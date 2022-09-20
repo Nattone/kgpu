@@ -5,9 +5,14 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -16px;
+
+    @media (max-width: 480px) {
+      margin: 0 -8px;
+    }
   }
 
   &__item {
+    border-radius: 5px;
     margin-bottom: 32px;
     padding: 0 16px;
     width: 25%;
@@ -20,9 +25,10 @@
       width: 50%;
     }
 
-    // @media (max-width: 480px) {
-    //   width: 100%;
-    // }
+    @media (max-width: 480px) {
+      margin-bottom: 12px;
+      padding: 0 4px;
+    }
   }
 
   &__link {
@@ -46,6 +52,12 @@
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 26px;
+
+    @media (max-width: 480px) {
+      font-size: 12px;
+      line-height: 15px;
+      margin-bottom: 12px;
+    }
   }
 
   &__post {
@@ -53,6 +65,11 @@
     font-size: 14px;
     line-height: 17px;
     text-transform: uppercase;
+
+    @media (max-width: 480px) {
+      font-size: 12px;
+      line-height: 15px;
+    }
 
     & + .workers__post {
       margin-top: 16px;

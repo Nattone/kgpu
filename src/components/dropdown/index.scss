@@ -50,6 +50,13 @@
     width: 100%;
     z-index: 2;
 
+    @media (max-width: 767px) {
+      left: auto;
+      max-width: 200px;
+      right: 0;
+      top: 30px;
+    }
+
     &::-webkit-scrollbar {
       appearance: none;
       width: 4px;
