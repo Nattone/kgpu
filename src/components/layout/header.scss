@@ -10,15 +10,14 @@
       display: none;
     }
 
-
     .header__top {
       background-color: colors.$light-grey;
       padding-top: 20px;
-  
+
       .container {
         display: flex;
       }
-  
+
       &__left {
         display: flex;
         justify-content: space-between;
@@ -28,7 +27,7 @@
           width: 50%;
         }
       }
-  
+
       &__right {
         display: flex;
         justify-content: end;
@@ -38,36 +37,34 @@
           width: 50%;
         }
       }
-  
-      
     }
-  
+
     .header__bottom {
       padding-bottom: 26px;
-  
+
       @media (max-width: 1440px) {
         padding-top: 26px;
       }
-  
+
       .header__nav {
         display: flex;
         justify-content: flex-end;
         width: 100%;
       }
-  
+
       .nav__list {
         display: flex;
         justify-content: space-between;
       }
-  
+
       .nav__item {
         white-space: nowrap;
-  
+
         + .nav__item {
           margin-left: 24px;
         }
       }
-  
+
       .nav__link {
         border-bottom: 2px solid transparent;
         color: colors.$blue;
@@ -76,7 +73,7 @@
         line-height: 22px;
         text-transform: uppercase;
         transition: border 0.3s ease;
-  
+
         &:hover,
         &:focus {
           border-bottom-color: colors.$orange;
@@ -86,38 +83,37 @@
 
     .header__nav-main {
       background-color: colors.$blue;
-  
+
       .nav_desctop {
-  
         display: flex;
         justify-content: space-between;
-  
+        position: relative;
+
         .nav__list {
           display: flex;
           justify-content: space-between;
           position: relative;
         }
-  
+
         .nav__item {
           &:hover {
             .nav__link {
               background-color: colors.$light-grey;
               color: colors.$blue;
-  
+
               &_more {
                 &::after {
                   border-top-color: colors.$blue;
                 }
               }
             }
-  
+
             .nav__sub {
               display: flex;
-              flex-direction: column;
             }
           }
         }
-  
+
         .nav__link {
           background-color: transparent;
           color: colors.$white;
@@ -129,18 +125,18 @@
           position: relative;
           text-transform: uppercase;
           transition: all 0.3s ease;
-  
+
           @media (max-width: 1440px) {
             font-size: 18px;
           }
-  
+
           &_more {
             padding: 18px 42px 18px 12px;
-  
+
             @media (max-width: 1440px) {
               padding-right: 32px;
             }
-  
+
             &::after {
               border: 5px solid transparent;
               border-top: 5px solid colors.$white;
@@ -153,19 +149,21 @@
             }
           }
         }
-  
+
         .nav__sub {
           background-color: colors.$light-grey;
           display: none;
-          flex-wrap: wrap;
-          max-height: 400px;
-          min-width: 350px;
+          flex-flow: row wrap;
+          left: 50px;
           padding: 10px 0 18px;
           position: absolute;
+          right: 50px;
           z-index: 5;
-  
-          // &__item {}
-  
+
+          &__item {
+            width: 33%;
+          }
+
           &__link {
             background-color: transparent;
             color: colors.$blue;
@@ -174,7 +172,7 @@
             line-height: 20px;
             padding: 10px 22px;
             transition: all 0.3s ease;
-  
+
             &:hover,
             &:focus {
               background-color: colors.$blue;
@@ -182,7 +180,6 @@
             }
           }
         }
-  
       }
     }
   }
@@ -194,35 +191,102 @@
       display: block;
     }
 
+    &._toggle_active {
+      .nav_mobile__btn__line {
+        background-color: transparent;
+      }
+
+      .nav_mobile__btn__line::before {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        width: 35px;
+      }
+
+      .nav_mobile__btn__line::after {
+        top: 50%;
+        transform: translateY(-50%) rotate(135deg);
+        width: 35px;
+      }
+    }
+
     .header__top {
       display: flex;
     }
 
-     // .nav_mobile {
+    .nav_mobile {
       //   display: none;
-    
+
       //   @media (max-width: 900px) {
       //     display: block;
       //     background-color: colors.$light-grey;
       //     text-align: right;
-  
+
       //     .nav__list {
       //       flex-direction: column;
       //     }
-  
+
       //     .nav__item:hover .nav__sub {
       //       // display: none;
       //     }
       //   }
-  
-      //   &__btn {
-      //     width: 30px;
-      //     height: 24px;
-      //     background-color: colors.$blue;
-      //     cursor: pointer;
-  
-      //   }
-      // }
+
+      &__btn-wrapper {
+        cursor: pointer;
+        display: flex;
+        justify-content: end;
+        padding: 8px 20px 12px;
+      }
+
+      &__btn {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: block;
+        height: 24px;
+        position: relative;
+        width: 35px;
+
+        &__line {
+          margin-left: 5px;
+          width: 30px;
+
+          &::before,
+          &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+          }
+
+          &::before {
+            top: 0;
+            width: 25px;
+          }
+
+          &::after {
+            bottom: 0;
+            width: 100%;
+          }
+        }
+
+        &__line,
+        &__line::before,
+        &__line::after {
+          background-color: colors.$blue;
+          border-radius: 10%;
+          display: block;
+          height: 2px;
+          transition: all 0.5s ease;
+        }
+
+        &:hover {
+          .nav_mobile__btn__line,
+          .nav_mobile__btn__line::before {
+            margin: 0;
+            width: 35px;
+          }
+        }
+      }
+    }
   }
 
   .logo .icon {
@@ -238,8 +302,8 @@
 
     img {
       height: 100%;
-      width: 100%;
       object-fit: contain;
+      width: 100%;
     }
   }
 
@@ -341,5 +405,3 @@
     }
   }
 }
-
-
