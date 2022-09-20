@@ -3,7 +3,7 @@
 .header {
   color: inherit;
 
-  &_desctop {
+  &_desktop {
     display: block;
 
     @media (max-width: 900px) {
@@ -67,11 +67,12 @@
 
       .nav__link {
         border-bottom: 2px solid transparent;
-        color: colors.$blue;
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 22px;
-        text-transform: uppercase;
+
+        // color: colors.$blue;
+        // font-size: 18px;
+        // font-weight: 600;
+        // line-height: 22px;
+        // text-transform: uppercase;
         transition: border 0.3s ease;
 
         &:hover,
@@ -82,9 +83,9 @@
     }
 
     .header__nav-main {
-      background-color: colors.$blue;
+      //   background-color: colors.$blue;
 
-      .nav_desctop {
+      .nav_desktop {
         display: flex;
         justify-content: space-between;
         position: relative;
@@ -115,17 +116,6 @@
         }
 
         .nav__link {
-          background-color: transparent;
-          color: colors.$white;
-          display: block;
-          font-size: 20px;
-          font-weight: 600;
-          line-height: 24px;
-          padding: 18px 12px;
-          position: relative;
-          text-transform: uppercase;
-          transition: all 0.3s ease;
-
           @media (max-width: 1440px) {
             font-size: 18px;
           }
@@ -151,7 +141,6 @@
         }
 
         .nav__sub {
-          background-color: colors.$light-grey;
           display: none;
           flex-flow: row wrap;
           left: 50px;
@@ -168,8 +157,6 @@
             background-color: transparent;
             color: colors.$blue;
             display: block;
-            font-size: 16px;
-            line-height: 20px;
             padding: 10px 22px;
             transition: all 0.3s ease;
 
@@ -214,22 +201,6 @@
     }
 
     .nav_mobile {
-      //   display: none;
-
-      //   @media (max-width: 900px) {
-      //     display: block;
-      //     background-color: colors.$light-grey;
-      //     text-align: right;
-
-      //     .nav__list {
-      //       flex-direction: column;
-      //     }
-
-      //     .nav__item:hover .nav__sub {
-      //       // display: none;
-      //     }
-      //   }
-
       &__btn-wrapper {
         cursor: pointer;
         display: flex;
@@ -285,6 +256,62 @@
             width: 35px;
           }
         }
+      }
+    }
+  }
+
+  // ОБЩЕЕ В МОБ И ДЕСКТОПНОМ МЕНЮ
+
+  .nav__link {
+    color: colors.$blue;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    text-transform: uppercase;
+  }
+
+  .header__nav-main {
+    // главное меню
+    background-color: colors.$blue;
+
+    .nav__link {
+      // главное меню, пункт
+      background-color: transparent;
+      color: colors.$white;
+      display: block;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 24px;
+      padding: 18px 12px;
+      position: relative;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+
+      &_more {
+        // пункт со стрелкой
+        padding: 18px 42px 18px 12px;
+
+        &::after {
+          // стрелка
+          border: 5px solid transparent;
+          border-top: 5px solid colors.$white;
+          content: '';
+          position: absolute;
+          right: 12px;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: border 0.3s ease;
+        }
+      }
+    }
+
+    .nav__sub {
+      // список в пункте
+      background-color: colors.$light-grey;
+
+      &__link {
+        color: colors.$blue;
+        line-height: 20px;
       }
     }
   }
