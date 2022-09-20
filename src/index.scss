@@ -376,20 +376,6 @@ p {
     &_calendar {
       list-style-type: none;
       margin-left: 0;
-      padding-left: 26px;
-      position: relative;
-
-      &::before {
-        background-image: url('../img/icon-calendar.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        content: '';
-        height: 16px;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 15px;
-      }
     }
   }
 
