@@ -145,6 +145,7 @@
 
   .search-results {
     // display: none;
+    width: 100%;
 
     &__title {
       color: #3b3a3c;
@@ -183,6 +184,10 @@
         color: colors.$text-secondary;
         font-size: 16px;
         line-height: 1.6;
+
+        @media (max-width: 767px) {
+          font-size: 14px;
+        }
       }
 
       &__description {

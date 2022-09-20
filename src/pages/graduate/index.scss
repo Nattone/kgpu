@@ -38,6 +38,18 @@
     position: relative;
     width: $width;
 
+    @media (min-width: 1440px) and (max-width: 1600px) {
+      width: 400px;
+    }
+
+    @media (max-width: 1030px) {
+      width: 400px;
+    }
+
+    @media (max-width: 480px) {
+      width: 100%;
+    }
+
     &__text {
       color: colors.$white;
       font-size: 50px;
@@ -66,6 +78,7 @@
 
     &_format {
       &_wide {
+        max-width: 100%;
         width: $width * 2 + 32px;
       }
 

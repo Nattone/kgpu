@@ -45,6 +45,14 @@ h1 {
     font-size: 28px;
     line-height: 1.2;
   }
+
+  @media (max-width: 767px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
 }
 
 h2 {
@@ -52,8 +60,16 @@ h2 {
   line-height: 34px;
 
   @media (max-width: 991px) {
-    font-size: 24px;
+    font-size: 26px;
     line-height: 1.2;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
   }
 }
 
@@ -64,6 +80,9 @@ h3 {
   @media (max-width: 991px) {
     font-size: 20px;
     line-height: 1.2;
+  }
+  @media (max-width: 767px) {
+    font-size: 18px;
   }
 }
 
@@ -78,9 +97,22 @@ h5 {
   line-height: 24px;
 }
 
+h4,
+h5 {
+  @media (max-width: 767px) {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+}
+
 p {
   font-size: 16px;
   line-height: 20px;
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 1.4;
+  }
 }
 
 .main {
@@ -124,6 +156,11 @@ p {
   cursor: pointer;
   height: 50px;
   width: 50px;
+
+  // @media (max-width: 767px) {
+  //   width: 40px;
+  //   height: 40px;
+  // }
 
   &_more {
     position: relative;
@@ -187,6 +224,11 @@ p {
 
     @media (max-width: 767px) {
       flex-wrap: wrap;
+      margin-bottom: 10px;
+
+      .content__title_main {
+        margin-bottom: 30px;
+      }
 
       .dropdown {
         width: 100%;
@@ -351,6 +393,14 @@ p {
     font-weight: 400;
     line-height: 1.5;
 
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+    }
+
     &_underline {
       text-decoration: underline;
     }
@@ -394,6 +444,14 @@ p {
     margin-bottom: 42px;
     padding: 90px 50px 52px;
     position: relative;
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+    }
 
     &::before {
       background-image: url('../img/icon-quotes.svg');
@@ -450,11 +508,13 @@ p {
 
   &__link {
     color: #5a83ec;
+    display: inline-block;
 
     &_single {
       display: inline-block;
       margin-bottom: 20px;
       max-width: 600px;
+      width: 100%;
 
       + .link_arrow {
         &::after {
@@ -552,6 +612,10 @@ p {
     padding-left: 48px;
     position: relative;
 
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
+
     &::before,
     &::after {
       background-repeat: no-repeat;
@@ -598,6 +662,11 @@ p {
     padding-bottom: 12px;
     width: 100%;
 
+    @media (max-width: 767px) {
+      border-collapse: separate;
+      border-spacing: 0 10px;
+    }
+
     &::-webkit-scrollbar {
       appearance: none;
       height: 6px;
@@ -616,6 +685,10 @@ p {
 
     &__header {
       background: colors.$grey;
+
+      @media (max-width: 767px) {
+        margin-bottom: 14px;
+      }
     }
 
     tr {
@@ -624,12 +697,17 @@ p {
 
     th,
     td {
+      background-color: colors.$white;
       color: #273d45;
       font-size: 16px;
       font-weight: 500;
       line-height: 16px;
       padding: 20px 22px;
       vertical-align: middle;
+
+      @media (max-width: 767px) {
+        font-size: 14px;
+      }
     }
 
     &__inconspicuous {
@@ -734,6 +812,12 @@ p {
     transition: all 0.3s ease;
     width: 50px;
 
+    @media (max-width: 767px) {
+      font-size: 14px;
+      height: 40px;
+      line-height: 40px;
+    }
+
     &:hover,
     &:focus {
       background-color: colors.$blue;
@@ -751,6 +835,11 @@ p {
   .button_more {
     border-radius: 5px;
     transition: all 0.3s ease;
+
+    @media (max-width: 767px) {
+      height: 40px;
+      width: 40px;
+    }
 
     &:hover {
       background-color: colors.$orange;
@@ -819,6 +908,10 @@ p {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.4;
+
+    // @media (max-width: 767px) {
+    //   font-size: 14px;
+    // }
   }
 
   &__list {
@@ -896,14 +989,16 @@ p {
   $this: &;
 
   &._toggle_active {
-    #{$this} {
+    > #{$this} {
       &__container {
         display: block;
       }
     }
   }
 
-  &__container {
-    display: none;
+  > #{$this} {
+    &__container {
+      display: none;
+    }
   }
 }
