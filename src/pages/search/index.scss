@@ -10,10 +10,19 @@
     padding: 34px 44px;
     width: 100%;
 
+    @media (max-width: 767px) {
+      padding: 34px 16px 52px;
+    }
+
     &__form {
       display: flex;
       justify-content: space-between;
       margin-bottom: 35px;
+
+      @media (max-width: 767px) {
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+      }
     }
 
     &__input {
@@ -21,6 +30,11 @@
       border-radius: 5px;
       padding: 9px 13px;
       width: 100%;
+
+      @media (max-width: 767px) {
+        margin-bottom: 16px;
+        width: 100%;
+      }
 
       // &:-webkit-input-placeholder {
       //   color: colors.$light-blue;
@@ -45,6 +59,14 @@
       padding: 0 35px;
       transition: all 0.3s ease;
 
+      @media (max-width: 767px) {
+        margin-left: 0;
+      }
+
+      @media (max-width: 480px) {
+        width: 100%;
+      }
+
       &:hover {
         background-color: colors.$blue;
       }
@@ -55,6 +77,29 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+
+      @media (max-width: 991px) {
+        justify-content: start;
+      }
+
+      .search__filter {
+        @media (max-width: 991px) {
+          margin-bottom: 16px;
+          margin-right: 16px;
+        }
+      }
+
+      .search__filter,
+      .search__checkbox {
+        @media (max-width: 991px) {
+          width: 50%;
+        }
+
+        @media (max-width: 767px) {
+          margin-right: 0;
+          width: 100%;
+        }
+      }
     }
 
     &__filter {
