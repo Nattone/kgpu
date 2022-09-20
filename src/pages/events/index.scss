@@ -10,10 +10,29 @@
     font-weight: 600;
     line-height: 20px;
     max-width: 200px;
+    padding-left: 26px;
     padding-right: 40px;
+    position: relative;
     vertical-align: top;
     white-space: nowrap;
     width: 100%;
+
+    @media (max-width: 767px) {
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    &::before {
+      background-image: url('../img/icon-calendar.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: '';
+      height: 16px;
+      left: 0;
+      position: absolute;
+      top: 2px;
+      width: 15px;
+    }
   }
 
   &__name {
@@ -29,6 +48,10 @@
   &__link {
     display: flex;
 
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+
     &:hover {
       .events__name,
       .meetings__name,
@@ -42,8 +65,10 @@
   &-page,
   &_basic-page {
     .content__item_calendar {
-      &::before {
-        top: 2px;
+      margin-bottom: 20px;
+
+      @media (max-width: 767px) {
+        margin-bottom: 22px;
       }
     }
 

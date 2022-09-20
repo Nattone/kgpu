@@ -54,6 +54,14 @@
       margin-bottom: 56px;
       max-width: (100% / 3);
       padding: 0 16px;
+
+      @media (max-width: 991px) {
+        max-width: 50%;
+      }
+
+      @media (max-width: 600px) {
+        max-width: 100%;
+      }
     }
   }
 
