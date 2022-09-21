@@ -1,11 +1,24 @@
 @use '~/styles/colors';
 
 .popup {
-  left: 50%;
+  align-items: center;
+  background-color: rgba(#000, 0.1);
+  display: none;
+  flex-flow: row nowrap;
+  inset: 0;
+  justify-content: center;
   position: fixed;
-  top: 50%;
-  transform: translate(-50%, -50%);
   z-index: 10;
+
+  &._open {
+    display: flex;
+  }
+
+  &__close-area {
+    cursor: pointer;
+    inset: 0;
+    position: absolute;
+  }
 
   &__block {
     background-color: colors.$white;
@@ -122,3 +135,5 @@
     }
   }
 }
+
+// ._open_popup {}

@@ -10,6 +10,19 @@
       font-weight: 700;
       line-height: 49px;
       margin-bottom: 22px;
+
+      @media (max-width: 991px) {
+        text-align: center;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 32px;
+        line-height: 1.2;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 20px;
+      }
     }
 
     &__position {
@@ -18,6 +31,15 @@
       font-weight: 500;
       line-height: 37px;
       margin-bottom: 22px;
+
+      @media (max-width: 991px) {
+        line-height: 1.2;
+        text-align: center;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 20px;
+      }
     }
 
     &__phone,
@@ -30,6 +52,17 @@
       margin-bottom: 42px;
       margin-right: 40px;
       padding-left: 40px;
+
+      @media (max-width: 991px) {
+        display: block;
+        line-height: 1.2;
+        margin: 0 auto 16px;
+        width: fit-content;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 20px;
+      }
 
       &:hover {
         text-decoration: underline;
@@ -51,15 +84,33 @@
     }
 
     &__caption {
+      @media (max-width: 1199px) {
+        line-height: 1.5;
+        width: 100%;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 20px;
+      }
+
       .content__main__post {
         font-size: 20px;
         line-height: 36px;
         margin-left: 16px;
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+          margin-left: 0;
+        }
+
+        @media (max-width: 767px) {
+          margin-left: 0;
+        }
       }
     }
 
     &__post {
       color: colors.$light-blue;
+      display: inline-block;
       font-size: 16px;
       font-weight: 600;
       line-height: 20px;
@@ -116,9 +167,19 @@
     }
 
     &__card {
+      @media (max-width: 991px) {
+        padding: 30px 20px;
+      }
+
       &._toggle_active {
         .accordion__caption::after {
           transform: translate(-50%, -50%) rotate(180deg);
+        }
+      }
+
+      &:first-of-type {
+        @media (max-width: 991px) {
+          margin-top: 42px;
         }
       }
     }

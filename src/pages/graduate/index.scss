@@ -59,6 +59,15 @@
       position: relative;
       text-transform: uppercase;
 
+      @media (max-width: 1600px) {
+        font-size: 40px;
+        line-height: 1.4;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 30px;
+      }
+
       &::before {
         background-image: url('../img/icon-book.svg');
         content: '';
@@ -91,6 +100,10 @@
       &_dark,
       &_light {
         padding: 30px 60px 94px;
+
+        @media (max-width: 1600px) {
+          padding: 30px 30px 94px;
+        }
       }
 
       &_dark {
@@ -106,10 +119,17 @@
           background-size: contain;
           bottom: 16px;
           content: '';
-          height: 54.67px;
+          height: 55px;
           position: absolute;
           right: 16px;
-          width: 182.11px;
+          width: 182px;
+
+          @media (max-width: 480px) {
+            bottom: 56px;
+            height: 32px;
+            right: 36px;
+            width: 108px;
+          }
         }
       }
     }

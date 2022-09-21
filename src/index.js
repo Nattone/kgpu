@@ -36,6 +36,29 @@ export const initToggle = () => {
   })
 }
 
+export const initPopup = () => {
+  const popupElement = document.querySelector('.popup')
+
+  document.querySelectorAll('._open-popup')?.forEach((element) => {
+    element.addEventListener('click', (event) => {
+      event.preventDefault()
+      popupElement.classList.add('_open')
+    })
+  })
+
+  document.querySelector('.popup .popup__close')?.addEventListener('click', (event) => {
+    popupElement.classList.remove('_open')
+  })
+  document.querySelector('.popup .popup__close-area')?.addEventListener('click', (event) => {
+    popupElement.classList.remove('_open')
+  })
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      popupElement.classList.remove('_open')
+    }
+  })
+}
+
 export const initLanguages = () => {
   const container = document.querySelector('.language')
   const itemsContainer = container?.querySelector('.language__items')
@@ -108,6 +131,7 @@ export const initDropdown = (selector) => {
 document.addEventListener('DOMContentLoaded', () => {
   initToggle()
   initLanguages()
+  initPopup()
 
   initMasonry('.grid', {
     percentPosition: true,
