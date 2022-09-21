@@ -3,13 +3,22 @@
 .phonebook {
   &__search {
     margin-bottom: 42px;
+    width: 100%;
 
     .search {
       width: 608px;
 
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+
       &__input {
         border: 1px solid colors.$light-blue;
         width: 608px;
+
+        @media (max-width: 767px) {
+          width: 100%;
+        }
       }
     }
   }
@@ -20,6 +29,7 @@
 
   &__item {
     &__head {
+      align-items: center;
       background: colors.$grey;
       border-radius: 5px;
       cursor: pointer;
@@ -29,16 +39,17 @@
       width: 100%;
     }
 
-    &__body {
-      margin: 12px 0 42px;
-    }
-
     &__title {
       color: colors.$text-main;
       font-size: 24px;
       font-weight: 700;
       line-height: 50px;
       text-transform: uppercase;
+
+      @media (max-width: 767px) {
+        font-size: 20px;
+        line-height: 1.5;
+      }
     }
 
     & + .phonebook__item {
@@ -51,7 +62,13 @@
 
     &__table {
       &-desktop {
+        display: block;
+        margin: 12px 0 42px;
         width: 100%;
+
+        @media (max-width: 767px) {
+          display: none;
+        }
 
         .phonebook__table {
           border-collapse: collapse;
@@ -89,7 +106,41 @@
         }
       }
 
-      // &-mobile {}
+      &-mobile {
+        display: none;
+        margin: 24px 0 32px;
+
+        @media (max-width: 767px) {
+          display: block;
+        }
+
+        .phonebook__table {
+          border-collapse: collapse;
+          margin-bottom: 18px;
+          width: 100%;
+
+          td {
+            color: colors.$text-main;
+            font-size: 18px;
+            line-height: 1.2;
+            padding: 20px 25px;
+
+            @media (max-width: 480px) {
+              font-size: 14px;
+            }
+          }
+
+          &__header td {
+            background-color: colors.$grey;
+            font-weight: 500;
+          }
+
+          &__body td {
+            background-color: colors.$white;
+            border-bottom: 1px solid rgba(102, 142, 169, 0.3);
+          }
+        }
+      }
     }
   }
 }

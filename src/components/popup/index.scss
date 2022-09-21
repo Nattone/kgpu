@@ -7,6 +7,7 @@
   flex-flow: row nowrap;
   inset: 0;
   justify-content: center;
+  min-width: 320px;
   position: fixed;
   z-index: 10;
 
@@ -27,6 +28,11 @@
     padding: 72px 50px 105px;
     position: relative;
     width: 100%;
+
+    @media (max-width: 767px) {
+      padding: 72px 16px 50px;
+      width: 90%;
+    }
   }
 
   &__close {
@@ -46,6 +52,11 @@
     line-height: 37px;
     margin-bottom: 48px;
     text-align: center;
+
+    @media (max-width: 767px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   &__form {
@@ -95,6 +106,10 @@
     border-radius: 10px;
     overflow: hidden;
     padding: 22px 22px 22px 62px;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
   }
 
   &__btn {
