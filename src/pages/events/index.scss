@@ -136,7 +136,7 @@
 .documents {
   &__images-block {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-right: 30px;
     max-width: 60px;
     width: 100%;

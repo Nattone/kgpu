@@ -29,7 +29,15 @@ export const initMasonry = (selector, options = {}) => {
 
 export const initToggle = () => {
   const toggleClass = (element) => () => {
-    element.classList.toggle('_toggle_active')
+    const container = element.querySelector('._toggle__container')
+
+    if (!element.classList.contains('_toggle_active')) {
+      const height = container?.scrollHeight
+      container.style.setProperty('--element-height', `${height}px`)
+      element.classList.add('_toggle_active')
+    } else {
+      element.classList.remove('_toggle_active')
+    }
   }
   document.querySelectorAll('._toggle')?.forEach((element) => {
     element.querySelector('._toggle__button')?.addEventListener('click', toggleClass(element))

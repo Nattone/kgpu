@@ -30,7 +30,7 @@
 
       &__right {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         width: 60%;
 
         @media (max-width: 1199px) {
@@ -225,7 +225,7 @@
 
       .search-solo {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         margin-top: 22px;
         order: 2;
         width: 100%;
@@ -269,7 +269,7 @@
         border-top: 0.2px solid colors.$text-secondary;
         cursor: pointer;
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         padding: 12px 20px;
       }
 
@@ -409,7 +409,7 @@
   .header__control {
     align-items: center;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     padding-bottom: 30px;
     width: 100%;
   }

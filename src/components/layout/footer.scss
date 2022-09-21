@@ -10,17 +10,13 @@
     background-color: colors.$orange;
     position: relative;
 
-    &._toggle_active {
+    ._toggle_active {
       .fast-links {
         &__title {
           &::after {
             top: 25px;
             transform: rotate(-180deg);
           }
-        }
-
-        &__list {
-          display: block;
         }
       }
     }
@@ -48,19 +44,17 @@
 
     &__list {
       background-color: colors.$orange;
+      box-sizing: border-box;
       color: colors.$white;
-      column-count: 3;
-      display: none;
+      display: flex;
+      flex-flow: row wrap;
       margin: 0 -16px;
-      padding: 25px 0 50px;
     }
 
     &__item {
+      margin-bottom: 20px;
       padding: 0 16px;
-
-      & + .fast-links__item {
-        margin-top: 20px;
-      }
+      width: 33.3%;
     }
 
     &__more {

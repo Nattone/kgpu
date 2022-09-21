@@ -1005,7 +1005,7 @@ p {
 .social {
   &__list {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
   }
 
   &__item {
@@ -1028,14 +1028,16 @@ p {
   &._toggle_active {
     > #{$this} {
       &__container {
-        display: block;
+        max-height: var(--element-height, auto);
       }
     }
   }
 
   > #{$this} {
     &__container {
-      display: none;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
     }
   }
 }
