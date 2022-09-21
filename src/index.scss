@@ -920,6 +920,7 @@ p {
   border-radius: 10px;
   font-weight: 500;
   margin-bottom: 42px;
+  order: 2;
   padding: 22px 30px 10px;
   width: 100%;
 
@@ -929,6 +930,10 @@ p {
     line-height: 28px;
     margin-bottom: 20px;
     text-transform: uppercase;
+
+    @media (max-width: 767px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__text,
