@@ -1,20 +1,12 @@
 import Glide from '@glidejs/glide'
 import Masonry from 'masonry-layout'
 
-export const initGlide = (selector) => {
+export const initGlide = (selector, options) => {
   document.querySelectorAll(selector)?.forEach((element) => {
     const glide = new Glide(element, {
       perView: element.dataset.count || 1,
       type: 'carousel',
-      // autoplay: 5000,
-      // breakpoints: {
-      //   1024: {
-      //     perView: 2
-      //   },
-      //   600: {
-      //     perView: 1
-      //   }
-      // }
+      ...options,
     })
     glide?.mount()
   })
@@ -146,7 +138,36 @@ document.addEventListener('DOMContentLoaded', () => {
     gutter: 30,
   })
 
-  initGlide('.glide')
+  initGlide('.slider', {
+    autoplay: 5000,
+  })
+
+  initGlide('.developments', {
+    perView: 3,
+    breakpoints: {
+      1199: {
+        perView: 2,
+      },
+      767: {
+        perView: 1,
+      },
+    },
+  })
+
+  initGlide('.info', {
+    perView: 4,
+    breakpoints: {
+      1199: {
+        perView: 3,
+      },
+      767: {
+        perView: 2,
+      },
+      600: {
+        perView: 1,
+      },
+    },
+  })
 
   initDropdown()
 })
