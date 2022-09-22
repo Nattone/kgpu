@@ -26,9 +26,17 @@ export const initToggle = () => {
     if (!element.classList.contains('_toggle_active')) {
       const height = container?.scrollHeight
       container.style.setProperty('--element-height', `${height}px`)
+      setTimeout(() => {
+        container.style.setProperty('--element-height', null)
+      }, 300)
       element.classList.add('_toggle_active')
     } else {
-      element.classList.remove('_toggle_active')
+      const height = container?.clientHeight
+      container.style.setProperty('--element-height', `${height}px`)
+      setTimeout(() => {
+        element.classList.remove('_toggle_active')
+        container.style.setProperty('--element-height', null)
+      }, 0)
     }
   }
   document.querySelectorAll('._toggle')?.forEach((element) => {
