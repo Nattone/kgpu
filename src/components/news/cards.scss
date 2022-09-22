@@ -51,6 +51,33 @@
     flex-wrap: wrap;
     margin: 0 -16px;
 
+    @media (max-width: 991px) {
+      flex-wrap: nowrap;
+      margin: 0 0 60px;
+      overflow-x: scroll;
+      padding: 0;
+
+      &::-webkit-scrollbar {
+        appearance: none;
+        height: 6px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: colors.$orange;
+        border-radius: 30px;
+        box-shadow: none;
+      }
+
+      &::-webkit-scrollbar-track-piece {
+        background-color: rgb(82 85 86 / 0.2);
+        border-radius: 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      margin-bottom: 32px;
+    }
+
     &__item {
       box-sizing: border-box;
       display: flex;
@@ -62,11 +89,14 @@
       padding: 0 16px;
 
       @media (max-width: 991px) {
-        max-width: 50%;
+        margin-bottom: 32px;
+        max-width: 100%;
+        padding: 0;
+        width: 100%;
       }
 
-      @media (max-width: 600px) {
-        max-width: 100%;
+      @media (max-width: 480px) {
+        margin-bottom: 10px;
       }
     }
   }
