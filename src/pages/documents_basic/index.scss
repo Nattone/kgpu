@@ -53,15 +53,25 @@
         background-color: colors.$orange;
         border-radius: 5px;
         color: colors.$white;
+        cursor: pointer;
         padding: 6px 40px;
 
-        // &::after {
-        //     content: '';
-        //     background-image: url('../img/icon-x.svg');
-        //     width: 10px;
-        //     height: 10px;
-        // }
-        // ????????????????????????????
+        .filter__subname {
+          padding-right: 28px;
+          position: relative;
+          width: fit-content;
+
+          &::after {
+            background-image: url('../img/icon-close_w.svg');
+            content: '';
+            height: 10px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+          }
+        }
       }
     }
 
