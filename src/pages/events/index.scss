@@ -185,4 +185,39 @@
   }
 }
 
-// .documents_basic {}
+.documents_basic-page {
+  @media (max-width: 1440px) {
+    .notice {
+      margin-bottom: 24px;
+      order: 1;
+    }
+
+    .content__sidebar {
+      order: 2;
+    }
+
+    .content__main {
+      order: 3;
+
+      .documents__block {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .content__sidebar__card {
+      padding: 38px 20px 32px;
+    }
+
+    .filter__item {
+      &:first-of-type {
+        padding-top: 32px;
+      }
+    }
+
+    .filter__title {
+      margin-bottom: 0;
+    }
+  }
+}

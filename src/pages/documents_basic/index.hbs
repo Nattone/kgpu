@@ -79,17 +79,13 @@
                     </div>
 
                     <div class="content__sidebar">
-                        <div class="filter__block content__sidebar__card">
-                            {{!-- <div class="search">
-                                <input class="search__input" type="search" id="search" placeholder="Поиск по справочнику">
-                                <span class="icon-search">
-                                    <img src="img/icon-search.svg" alt="search">
-                                </span>
-                            </div> --}}
+                        <div class="filter__block content__sidebar__card _toggle">
                             
                             {{> search/index}}
 
-                            <ul class="filter__list">
+                            <button class="filter__btn _toggle__button">Фильтры</button>
+
+                            <ul class="filter__list _toggle__container">
                                 <li class="filter__item _toggle">
                                     <div class="filter__title  _toggle__button">
                                         <p class="filter__name">По названию</p>

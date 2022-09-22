@@ -6,15 +6,63 @@
       .search-solo {
         display: block;
         margin-bottom: 45px;
+
+        @media (max-width: 767px) {
+          margin-bottom: 8px;
+        }
       }
 
       .search__input {
         border: 1px solid colors.$light-blue;
         width: 100%;
       }
+
+      .search__btn img {
+        opacity: 0.6;
+      }
     }
 
-    // &__list {}
+    &__btn {
+      background-color: colors.$white;
+      border: 1px solid colors.$light-blue;
+      border-radius: 5px;
+      color: colors.$text-main;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 400;
+      height: 44px;
+      padding: 0 28px 0 12px;
+      position: relative;
+      text-align: left;
+      transition: all 0.3s ease;
+      width: 100%;
+
+      @media (min-width: 767px) {
+        display: none;
+      }
+
+      &:hover {
+        background-color: colors.$light-blue;
+        color: colors.$white;
+      }
+
+      &::after {
+        background-image: url('../img/icon-filter.svg');
+        content: '';
+        height: 15px;
+        position: absolute;
+        right: 13px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15px;
+      }
+    }
+
+    &__list {
+      @media (min-width: 767px) {
+        max-height: 100%;
+      }
+    }
 
     &__item {
       & + .filter__item {
@@ -39,7 +87,9 @@
     }
 
     &__name {
-      line-height: 38px;
+      // line-height: 38px;
+      font-size: 16px;
+      line-height: 1.5;
     }
 
     // &__sublist {}
