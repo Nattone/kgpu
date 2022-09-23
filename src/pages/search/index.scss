@@ -79,7 +79,7 @@
       justify-content: space-between;
 
       @media (max-width: 991px) {
-        justify-content: start;
+        justify-content: flex-start;
       }
 
       .search__filter {
