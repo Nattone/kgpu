@@ -546,18 +546,49 @@ p {
     color: #5a83ec;
     display: inline-block;
 
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.link_arrow {
+      &::after {
+        background-image: url('../img/icon-arrow_big_p.svg') !important;
+        height: 14px !important;
+        transform: translateY(-50%) !important;
+        width: 14px !important;
+      }
+    }
+
     &_single {
       display: inline-block;
       margin-bottom: 20px;
       max-width: 600px;
       width: 100%;
 
-      + .link_arrow {
+      &.link_arrow {
         &::after {
-          top: 0;
-          transform: rotate(320deg);
+          top: 0 !important;
+          transform: none !important;
         }
       }
+    }
+  }
+
+  .link_arrow {
+    padding-right: 30px;
+    position: relative;
+
+    &::after {
+      background-image: url('../img/icon-arrow_big.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: '';
+      height: 12px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(320deg);
+      width: 16px;
     }
   }
 
@@ -609,26 +640,6 @@ p {
       background-image: url('../img/icon-time.svg');
       height: 20px;
       width: 20px;
-    }
-  }
-
-  .link_arrow {
-    padding-right: 30px;
-    position: relative;
-
-    // @media (max-width: 767px) {
-    //   display: inline-block; !!!!!!
-    // }
-
-    &::after {
-      background-image: url('../img/icon-arrow_big.svg');
-      content: '';
-      height: 12px;
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%) rotate(320deg);
-      width: 16px;
     }
   }
 
