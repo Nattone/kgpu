@@ -3,4 +3,30 @@
 
 // @import "@glidejs/glide/src/assets/sass/glide.theme";
 
-// .main-page {}
+.main-page {
+  .information__title,
+  .info__title,
+  .news__title,
+  .developments__title {
+    color: colors.$text-main;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+
+    @media (max-width: 991px) {
+      font-size: 28px;
+      line-height: 1.2;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+    }
+  }
+}

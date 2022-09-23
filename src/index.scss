@@ -6,6 +6,8 @@
   font-family: Montserrat, sans-serif;
   margin: 0;
   padding: 0;
+  scrollbar-color: colors.$orange colors.$grey;
+  scrollbar-width: thin;
 }
 
 ul,
