@@ -296,6 +296,7 @@ p {
     &_h3,
     &_h4,
     &_h5 {
+      color: #0c4458;
       display: block;
       margin: 42px 0 20px;
       width: 100%;
@@ -719,10 +720,13 @@ p {
     }
 
     &__header {
-      background: colors.$grey;
-
       @media (max-width: 767px) {
         margin-bottom: 14px;
+      }
+
+      th,
+      td {
+        background-color: colors.$grey !important;
       }
     }
 
