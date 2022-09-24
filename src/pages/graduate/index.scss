@@ -60,8 +60,9 @@
       text-transform: uppercase;
 
       @media (max-width: 1600px) {
-        font-size: 40px;
+        font-size: 36px;
         line-height: 1.4;
+        padding-top: 65px;
       }
 
       @media (max-width: 480px) {
@@ -89,6 +90,18 @@
       &_wide {
         max-width: 100%;
         width: $width * 2 + 32px;
+
+        @media (min-width: 1440px) and (max-width: 1600px) {
+          width: 832px;
+        }
+
+        @media (max-width: 1030px) {
+          width: 832px;
+        }
+
+        @media (max-width: 869px) {
+          width: 400px;
+        }
       }
 
       &_high {

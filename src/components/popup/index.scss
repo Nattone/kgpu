@@ -110,6 +110,10 @@
     @media (max-width: 767px) {
       width: 100%;
     }
+
+    &::placeholder {
+      color: colors.$text-secondary;
+    }
   }
 
   &__btn {

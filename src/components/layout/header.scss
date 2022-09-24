@@ -237,6 +237,10 @@
           @media (max-width: 480px) {
             width: 100%;
           }
+
+          &::placeholder {
+            color: colors.$blue;
+          }
         }
       }
     }
@@ -420,6 +424,10 @@
 
     &__input {
       width: 280px;
+
+      &::placeholder {
+        color: colors.$blue;
+      }
     }
   }
 

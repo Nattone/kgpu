@@ -1,6 +1,13 @@
 @use '~/styles/colors';
 
 .divisions {
+  &-page {
+    .content__text,
+    .content__list {
+      color: #0c4458;
+    }
+  }
+
   &__list {
     width: 100%;
   }

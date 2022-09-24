@@ -39,7 +39,7 @@ h4 {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 34px;
   line-height: 44px;
   text-transform: uppercase;
 
@@ -423,8 +423,8 @@ p {
   &__text,
   &__item,
   &__caption {
-    // color: #0c4458;
-    color: colors.$text-main;
+    // color: colors.$text-main;
+    color: #0c4458;
     font-size: 20px;
     font-weight: 400;
     line-height: 1.5;
@@ -456,6 +456,7 @@ p {
   }
 
   &__item {
+    color: colors.$text-main;
     margin-bottom: 16px;
     margin-left: 20px;
 
@@ -960,7 +961,7 @@ p {
 
   &__text,
   &__item {
-    color: colors.$text-main;
+    color: #0c4458;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.4;

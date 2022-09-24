@@ -36,13 +36,9 @@
         width: 100%;
       }
 
-      // &:-webkit-input-placeholder {
-      //   color: colors.$light-blue;
-      // }
-
-      // &:-moz-placeholder {
-      //   color: colors.$light-blue;
-      // }
+      &::placeholder {
+        color: #0c4458;
+      }
     }
 
     &__btn {
