@@ -23,6 +23,11 @@
       max-width: 100%;
     }
 
+    @media (max-width: 480px) {
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
     &::before {
       background-image: url('../img/icon-calendar.svg');
       background-repeat: no-repeat;
@@ -47,6 +52,11 @@
 
     @media (max-width: 767px) {
       width: calc(100% - 35px);
+    }
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+      line-height: 1.2;
     }
   }
 

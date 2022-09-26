@@ -11,6 +11,14 @@
     }
   }
 
+  &__title {
+    width: calc(100% - 114px);
+  }
+
+  .glide__arrows {
+    width: 114px;
+  }
+
   .glide__track {
     margin: 0 -32px;
   }

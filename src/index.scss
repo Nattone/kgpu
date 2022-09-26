@@ -141,9 +141,14 @@ p {
     margin-bottom: 40px;
   }
 
+  &__title {
+    max-width: 90%;
+  }
+
   &__link {
     color: colors.$orange;
     text-decoration: underline;
+    white-space: nowrap;
 
     &:hover,
     &:focus {
@@ -798,7 +803,7 @@ p {
 
 .breadcrumbs {
   &__list {
-    overflow: scroll;
+    overflow: auto;
     white-space: nowrap;
 
     @media (max-width: 991px) {
