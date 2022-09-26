@@ -4,10 +4,9 @@
         {{#if item.img}}
             <img class="news__card__image__img" src="{{item.img}}" alt="{{item.title}}">
         {{/if}}
+            <p class="news__card__title">{{item.title}}</p>
         </div>
     {{/unless}}
-
-    <p class="news__card__title">{{item.title}}</p>
 
     {{#if item.description}}
         <p class="news__card__description">{{item.description}}</p>

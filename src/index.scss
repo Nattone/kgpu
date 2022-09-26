@@ -515,6 +515,10 @@ p {
       padding-left: 145px;
       position: relative;
 
+      @media (max-width: 767px) {
+        padding-left: 65px;
+      }
+
       &::before {
         background-color: colors.$blue;
         content: '';
@@ -524,6 +528,10 @@ p {
         top: 50%;
         transform: translateY(-50%);
         width: 130px;
+
+        @media (max-width: 767px) {
+          width: 42px;
+        }
       }
     }
   }
@@ -669,6 +677,10 @@ p {
       font-size: 16px;
     }
 
+    @media (max-width: 480px) {
+      font-size: 14px;
+    }
+
     &::before,
     &::after {
       background-repeat: no-repeat;
@@ -696,9 +708,19 @@ p {
     &_locked {
       padding-left: 102px;
 
+      @media (max-width: 767px) {
+        min-height: 80px;
+        padding-left: 44px;
+      }
+
       &::after {
         background-image: url('../img/icon-locked.svg');
         left: 48px;
+
+        @media (max-width: 767px) {
+          left: 0;
+          top: 40px;
+        }
       }
     }
   }
