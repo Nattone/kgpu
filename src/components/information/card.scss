@@ -60,6 +60,11 @@
 
     &__image {
       text-align: center;
+
+      &__img {
+        display: block;
+        max-width: 100%;
+      }
     }
   }
 }

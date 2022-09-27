@@ -46,8 +46,18 @@
       width: 400px;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 869px) {
+      height: 500px;
       width: 100%;
+    }
+
+    @media (max-width: 480px) {
+      height: 400px;
+      width: 100%;
+    }
+
+    @media (max-width: 400px) {
+      height: 300px;
     }
 
     &__text {
@@ -63,6 +73,8 @@
         font-size: 36px;
         line-height: 1.4;
         padding-top: 65px;
+        top: 50%;
+        transform: translateY(-50%);
       }
 
       @media (max-width: 480px) {
@@ -100,12 +112,34 @@
         }
 
         @media (max-width: 869px) {
-          width: 400px;
+          height: 500px;
+          width: 100%;
+        }
+
+        @media (max-width: 480px) {
+          height: 400px;
+        }
+
+        @media (max-width: 400px) {
+          height: 300px;
         }
       }
 
       &_high {
         height: $height * 2 + 37px;
+
+        @media (max-width: 869px) {
+          // height: $height;
+          height: 500px;
+        }
+
+        @media (max-width: 480px) {
+          height: 400px;
+        }
+
+        @media (max-width: 400px) {
+          height: 300px;
+        }
       }
     }
 

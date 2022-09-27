@@ -553,6 +553,10 @@ p {
       object-fit: contain;
       padding: 0 15px;
       width: 50%;
+
+      @media (max-width: 767px) {
+        width: 100%;
+      }
     }
   }
 
@@ -1087,7 +1091,7 @@ p {
     &__container {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.3s ease;
+      transition: all 0.3s ease;
     }
   }
 }

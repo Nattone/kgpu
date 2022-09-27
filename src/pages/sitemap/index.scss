@@ -7,6 +7,10 @@
 
   &__item {
     margin-bottom: 62px;
+
+    @media (max-width: 767px) {
+      margin-top: 42px;
+    }
   }
 
   &__sublist {
@@ -15,6 +19,13 @@
 
     .sitemap__sublist {
       margin: 24px 0;
+
+      .sitemap__link {
+        @media (max-width: 767px) {
+          font-size: 14px;
+          line-height: 17px;
+        }
+      }
     }
   }
 
@@ -59,6 +70,11 @@
       font-size: 20px;
       font-weight: 500;
       line-height: 24px;
+
+      @media (max-width: 767px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
     }
   }
 }

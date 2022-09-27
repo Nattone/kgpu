@@ -68,38 +68,43 @@ export const initPopup = () => {
 }
 
 export const initLanguages = () => {
-  const container = document.querySelector('.language')
-  const itemsContainer = container?.querySelector('.language__items')
+  document.querySelectorAll('.language')?.forEach((container) => {
+    const itemsContainer = container?.querySelector('.language__items')
 
-  itemsContainer?.querySelectorAll('.language__item')?.forEach((element) =>
-    element.addEventListener('click', (event) => {
-      if (element.classList.contains('_current')) {
-        event.preventDefault()
-        container.classList.toggle('_open')
-      } else {
-        container.classList.remove('_open')
-        itemsContainer?.querySelector('._current')?.classList?.remove('_current')
-        element?.classList?.add('_current')
+    itemsContainer?.querySelectorAll('.language__item')?.forEach((element) =>
+      element.addEventListener('click', (event) => {
+        if (element.classList.contains('_current')) {
+          event.preventDefault()
+          container.classList.toggle('_open')
+        } else {
+          container.classList.remove('_open')
+          itemsContainer?.querySelector('._current')?.classList?.remove('_current')
+          element?.classList?.add('_current')
+        }
+      })
+    )
+
+    document.addEventListener('click', (e) => {
+      if (!itemsContainer.contains(e.target)) {
+        if (container.classList.contains('_open')) {
+          e.preventDefault()
+          e.stopPropagation()
+          container.classList.remove('_open')
+        }
       }
     })
-  )
 
-  document.addEventListener('click', (e) => {
-    if (!itemsContainer.contains(e.target)) {
-      if (container.classList.contains('_open')) {
-        e.preventDefault()
-        e.stopPropagation()
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab' || e.key === 'Escape') {
         container.classList.remove('_open')
       }
-    }
-  })
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Tab' || e.key === 'Escape') {
-      container.classList.remove('_open')
-    }
+    })
   })
 }
+
+// document.querySelector('.filter__subname').addEventListener('click', () => {
+//   document.querySelector('.filter__subname').classList.toggle('active')
+// })
 
 export const initDropdown = (selector) => {
   document.querySelectorAll('.dropdown').forEach((dropDownWrapper) => {

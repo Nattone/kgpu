@@ -216,7 +216,7 @@
     }
 
     .header__bottom {
-      padding-top: 20px;
+      transform: translateY(0);
 
       .header__control {
         flex-wrap: wrap;
@@ -246,6 +246,10 @@
     }
 
     &._toggle_active {
+      .header__bottom {
+        transform: translateY(20px);
+      }
+
       .nav_mobile__btn__line {
         background-color: transparent;
       }
@@ -270,11 +274,21 @@
 
     .nav_mobile {
       &__btn-wrapper {
-        border-top: 0.2px solid colors.$text-secondary;
         cursor: pointer;
         display: flex;
         justify-content: flex-end;
         padding: 12px 20px;
+        position: relative;
+
+        &::before {
+          background-color: colors.$text-secondary;
+          content: '';
+          height: 0.2px;
+          left: 20px;
+          position: absolute;
+          right: 20px;
+          top: 0;
+        }
       }
 
       &__btn {
@@ -440,8 +454,14 @@
 
     &._open {
       .language {
+        &__items::before {
+          border: 0.2px solid transparent;
+          transition: border-color 1s ease;
+        }
+
         &__item {
           display: block;
+          z-index: 1;
 
           &._current {
             &::after {
@@ -458,6 +478,19 @@
       left: 0;
       position: absolute;
       top: 0;
+
+      &::before {
+        background: #f4f4f2;
+        border-color: #668ea9 !important;
+        border-radius: 5px;
+        bottom: -6px;
+        content: '';
+        left: -14px;
+        position: absolute;
+        right: -28px;
+        top: -6px;
+        z-index: 0;
+      }
     }
 
     &__item {
