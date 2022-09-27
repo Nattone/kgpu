@@ -50,6 +50,7 @@
 
       &__title {
         border-left: 2px solid colors.$white;
+        color: colors.$white;
         font-size: 12px;
         font-weight: 600;
         line-height: 1.5;
@@ -57,7 +58,12 @@
         text-transform: uppercase;
       }
 
+      &__text {
+        color: colors.$white;
+      }
+
       &__year {
+        color: colors.$white;
         font-size: 56px;
         font-weight: 600;
         line-height: 68px;

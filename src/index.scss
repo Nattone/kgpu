@@ -425,6 +425,8 @@ p {
     margin-bottom: 20px;
   }
 
+  // p,
+  // li,
   &__text,
   &__item,
   &__caption {
@@ -461,7 +463,7 @@ p {
   }
 
   &__item {
-    color: colors.$text-main;
+    color: #0c4458;
     margin-bottom: 16px;
     margin-left: 20px;
 
