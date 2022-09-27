@@ -3,6 +3,10 @@
 .information {
   padding: 102px 0 62px;
 
+  @media (max-width: 480px) {
+    padding-top: 62px;
+  }
+
   &__title {
     width: calc(100% - 50px);
   }
