@@ -38,6 +38,10 @@
     height: 100%;
     padding: 16px 28px 30px;
     text-align: center;
+
+    @media (max-width: 480px) {
+      padding: 14px;
+    }
   }
 
   &__image {
@@ -45,6 +49,11 @@
     margin-bottom: 18px;
     max-width: 275px;
     width: 100%;
+
+    @media (max-width: 480px) {
+      margin-bottom: 14px;
+      max-width: 105px;
+    }
   }
 
   &__name {
@@ -73,6 +82,10 @@
 
     & + .workers__post {
       margin-top: 16px;
+
+      @media (max-width: 480px) {
+        margin-top: 14px;
+      }
     }
   }
 }

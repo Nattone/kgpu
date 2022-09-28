@@ -1018,6 +1018,11 @@ p {
       background-color: colors.$orange;
       color: colors.$white;
     }
+
+    &::after {
+      height: 7px;
+      width: 12px;
+    }
   }
 }
 

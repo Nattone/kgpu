@@ -19,6 +19,7 @@
 
   &__link {
     color: colors.$text-main;
+    padding-right: 40px !important;
 
     @media (max-width: 767px) {
       font-size: 18px;
@@ -30,6 +31,13 @@
 
     &:hover {
       text-decoration: underline;
+    }
+
+    &::after {
+      background-image: url('../img/icon-arrow_big_b.svg') !important;
+      height: 14px !important;
+      transform: translateY(-50%) !important;
+      width: 14px !important;
     }
   }
 

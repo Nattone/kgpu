@@ -38,22 +38,40 @@
     position: relative;
     width: $width;
 
-    @media (min-width: 1440px) and (max-width: 1600px) {
+    // меньше 1600
+    @media (min-width: 1441px) and (max-width: 1600px) {
       width: 400px;
     }
 
+    // меньше 1440
+    @media (max-width: 1440px) {
+      width: 365px;
+    }
+
+    // меньше 1199
+    @media (max-width: 1199px) {
+      width: 308px;
+    }
+
+    // меньше 1030
     @media (max-width: 1030px) {
-      width: 400px;
+      width: 460px;
     }
 
-    @media (max-width: 869px) {
+    // меньше 991
+    @media (max-width: 991px) {
+      // height: 500px;
+      width: 348px;
+    }
+
+    // меньше 767
+    @media (max-width: 767px) {
       height: 500px;
       width: 100%;
     }
 
     @media (max-width: 480px) {
       height: 400px;
-      width: 100%;
     }
 
     @media (max-width: 400px) {
@@ -103,16 +121,33 @@
         max-width: 100%;
         width: $width * 2 + 32px;
 
-        @media (min-width: 1440px) and (max-width: 1600px) {
+        // меньше 1600
+        @media (min-width: 1441px) and (max-width: 1600px) {
           width: 832px;
         }
 
+        // меньше 1440
+        @media (max-width: 1440px) {
+          width: 762px;
+        }
+
+        // меньше 1199
+        @media (max-width: 1199px) {
+          width: 648px;
+        }
+
+        // меньше 1030
         @media (max-width: 1030px) {
-          width: 832px;
+          width: 460px;
         }
 
-        @media (max-width: 869px) {
-          height: 500px;
+        // меньше 991
+        @media (max-width: 991px) {
+          width: 728px;
+        }
+
+        // меньше 767
+        @media (max-width: 767px) {
           width: 100%;
         }
 
@@ -128,8 +163,7 @@
       &_high {
         height: $height * 2 + 37px;
 
-        @media (max-width: 869px) {
-          // height: $height;
+        @media (max-width: 767px) {
           height: 500px;
         }
 

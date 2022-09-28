@@ -4,6 +4,42 @@
   .content {
     display: flex;
     flex-wrap: wrap;
+
+    &__sidebar {
+      @media (max-width: 991px) {
+        order: 1;
+        padding-bottom: 28px;
+      }
+
+      .content__header {
+        display: none;
+
+        @media (max-width: 991px) {
+          display: block;
+          margin-bottom: 32px;
+        }
+      }
+    }
+
+    &__main {
+      @media (max-width: 991px) {
+        order: 2;
+      }
+
+      .content__header {
+        display: block;
+
+        @media (max-width: 991px) {
+          display: none;
+        }
+      }
+    }
+
+    &__table-block {
+      @media (max-width: 991px) {
+        order: 3;
+      }
+    }
   }
 
   .news {
