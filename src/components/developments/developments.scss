@@ -23,7 +23,17 @@
     width: 114px;
 
     @media (max-width: 480px) {
-      width: 70px;
+      display: flex;
+      justify-content: space-between;
+      left: 3px;
+      position: absolute;
+      right: 3px;
+      top: 50%;
+      width: auto;
+
+      // width: 70px;
+
+      z-index: 5;
     }
   }
 
