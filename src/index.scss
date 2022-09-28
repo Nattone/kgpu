@@ -833,13 +833,16 @@ p {
     width: 68px;
     z-index: 1;
 
+    &._hide {
+      display: none;
+    }
+
     &:hover {
       &::after {
         border-color: rgba(255, 255, 255, 0.6);
-
-        // width: 67px;
-        // height: 67px;
         opacity: 1;
+        transform: translate(-50%, -50%) scale(0.63);
+        transform-origin: center;
       }
     }
   }
@@ -859,6 +862,8 @@ p {
     content: '';
     height: 106px;
     opacity: 0.6;
+    pointer-events: none;
+    transform-origin: center;
     transition: all 0.3s ease;
     width: 106px;
   }

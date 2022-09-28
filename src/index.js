@@ -141,6 +141,22 @@ export const initDropdown = (selector) => {
   })
 }
 
+export const initVideo = () => {
+  document.querySelectorAll('.content__video-block')?.forEach((element) => {
+    const overlay = element.querySelector('.content__video-overlay')
+    const video = element.querySelector('.content__video')
+    overlay?.addEventListener('click', (event) => {
+      video?.play()
+    })
+    video?.addEventListener('play', (event) => {
+      overlay.classList.add('_hide')
+    })
+    video?.addEventListener('pause', (event) => {
+      overlay.classList.remove('_hide')
+    })
+  })
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initToggle()
   initLanguages()
@@ -183,4 +199,6 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   initDropdown()
+
+  initVideo()
 })

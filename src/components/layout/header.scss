@@ -281,7 +281,7 @@
         position: relative;
 
         &::before {
-          background-color: colors.$text-secondary;
+          background-color: rgba(82, 85, 86, 0.5);
           content: '';
           height: 0.2px;
           left: 20px;
