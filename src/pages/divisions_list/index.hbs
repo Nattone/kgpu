@@ -19,188 +19,77 @@
                 <div class="content__wrapper">
                     <h2 class="divisions__title">Общевузовские кафедры (дополнительный заголовок)</h2>
                     <ul class="divisions__list">
-                        <li class="divisions__item">
-                            <a href="" class="divisions__link">
-                                <div class="divisions__left">
-                                    <img class="divisions__image"  src="img/content/worker1.png" alt="divisions">
-                                    <p class="divisions__position">Кандидат исторических наук</p>
-                                    <h4 class="divisions__name">Буланков Василий Валерьевич</h4>
-                                </div>
-                                <div class="divisions__right">
-                                    <div class="divisions__header">
-                                        <h2 class="divisions__subtitle">Институт психолого-педагогического образования</h2>
-                                        <div class="divisions__social__list social__list">
-                                            <object class="divisions__social__item social__item">
-                                                <a href="https://t.me"><img src="img/icon-telegram_b.svg" alt="telegram"></a>
-                                            </object>
-                                            <object class="divisions__social__item social__item">
-                                                <a href="https://vk.com"><img src="img/icon-vk_b.svg" alt="vk"></a>
-                                            </object>
-                                        </div>
-                                        <button class="button button_more button_round"></button>
+                        {{#each pages.divisions_list.items}}
+                            <li class="divisions__item">
+                                <a href="" class="divisions__link">
+                                    <div class="divisions__left">
+                                        <img class="divisions__image"  src="{{this.image}}" alt="divisions">
+                                        <p class="divisions__position">{{this.position}}</p>
+                                        <h4 class="divisions__name">{{this.name}}</h4>
                                     </div>
-                                    <p class="divisions__address link_address"><span class="divisions__address_highlighted">Адрес:</span>660049, г Красноярск, ул Перенсона /  7 Корпус № 4 кабинет 1-16</p>
-                                    <object>
-                                        <a class="divisions__email link_email" href="mailto:bulankovv@mail.ru"><span class="divisions__address_highlighted">e-mail:</span>bulankovv@mail.ru</a>
-                                    </object>
-                                    <div class="divisions__contacts">
-                                        <div class="divisions__col">
-                                            <p class="divisions__post">Деканат</p>
-                                             <object>
-                                                <a class="divisions__phone link_phone" href="tel:+73912639533">+7 (391) 263 - 95 - 33</a>
-                                            </object>
-                                            <object>
-                                                <a class="divisions__email link_email" href="mailto:bulankovv@mail.ru">bulankovv@mail.ru</a>
-                                            </object>
+                                    <div class="divisions__right _toggle">
+                                        <div class="divisions__header  _toggle__button">
+                                            <h2 class="divisions__subtitle">{{this.subtitle}}</h2>
+                                            <div class="divisions__social__list social__list">
+                                                <object class="divisions__social__item social__item">
+                                                    <a href="{{this.link-tg}}"><img src="img/icon-telegram_b.svg" alt="telegram"></a>
+                                                </object>
+                                                <object class="divisions__social__item social__item">
+                                                    <a href="{{this.link-vk}}"><img src="img/icon-vk_b.svg" alt="vk"></a>
+                                                </object>
+                                            </div>
+                                            <button class="divisions__button button button_more button_round"></button>
                                         </div>
-                                        <div class="divisions__col">
-                                            <p class="divisions__post">Деканат (приемная, заместитель декана по учебной деятельности, заместитель декана по внеучебной деятельности, заместитель декана по непрерывному обучению, специалист по расписанию): </p>
-                                             <object>
-                                                <a class="divisions__phone link_phone" href="tel:+73912639533">+7 (391) 263 - 95 - 33</a>
-                                            </object>
-                                            <object>
-                                                <a class="divisions__email link_email" href="mailto:bulankovv@mail.ru">bulankovv@mail.ru</a>
-                                            </object>
-                                        </div>
-                                         <div class="divisions__col">
-                                            <p class="divisions__post">Заместитель декана по учебной деятельности:  </p>
-                                             <object>
-                                                <a class="divisions__phone link_phone" href="tel:+73912639533">+7 (391) 263 - 95 - 33</a>
-                                            </object>
-                                            <object>
-                                                <a class="divisions__email link_email" href="mailto:bulankovv@mail.ru">bulankovv@mail.ru</a>
-                                            </object>
-                                        </div>
-                                        <div class="divisions__social__list social__list">
-                                            <object class="divisions__social__item social__item">
-                                                <a href="https://t.me"><img src="img/icon-telegram_b.svg" alt="telegram"></a>
-                                            </object>
-                                            <object class="divisions__social__item social__item">
-                                                <a href="https://vk.com"><img src="img/icon-vk_b.svg" alt="vk"></a>
-                                            </object>
-                                        </div>
-                                        
-                                    </div>
 
-                                </div>
-                            </a>
-                        </li>
+                                        <div class="divisions__container _toggle__container">
+                                            <p class="divisions__address link_address"><span class="divisions__address_highlighted">Адрес:</span>{{this.address}}</p>
+                                            <object>
+                                                <a class="divisions__email link_email" href="mailto:{{this.email_main}}"><span class="divisions__address_highlighted">e-mail:</span>{{this.email_main}}</a>
+                                            </object>
+                                            <div class="divisions__contacts">
+                                                <div class="divisions__col">
+                                                    <p class="divisions__post">{{this.post_1}}</p>
+                                                    <object>
+                                                        <a class="divisions__phone link_phone" href="tel:{{this.phone-link_1}}">{{this.phone_1}}</a>
+                                                    </object>
+                                                    <object>
+                                                        <a class="divisions__email link_email" href="mailto:{{this.email_1}}">{{this.email_1}}</a>
+                                                    </object>
+                                                </div>
+                                                <div class="divisions__col">
+                                                    <p class="divisions__post">{{this.post_2}}</p>
+                                                    <object>
+                                                        <a class="divisions__phone link_phone" href="tel:{{this.phone-link_2}}">{{this.phone_2}}</a>
+                                                    </object>
+                                                    <object>
+                                                        <a class="divisions__email link_email" href="mailto:{{this.email_2}}">{{this.email_2}}</a>
+                                                    </object>
+                                                </div>
+                                                <div class="divisions__col">
+                                                    <p class="divisions__post">{{this.post_3}}</p>
+                                                    <object>
+                                                        <a class="divisions__phone link_phone" href="tel:{{this.phone-link_3}}">{{this.phone_3}}</a>
+                                                    </object>
+                                                    <object>
+                                                        <a class="divisions__email link_email" href="mailto:{{this.email_3}}">{{this.email_3}}</a>
+                                                    </object>
+                                                </div>
+                                                <div class="divisions__social__list social__list">
+                                                    <object class="divisions__social__item social__item">
+                                                        <a href="{{this.link-tg}}"><img src="img/icon-telegram_b.svg" alt="telegram"></a>
+                                                    </object>
+                                                    <object class="divisions__social__item social__item">
+                                                        <a href="{{this.link-vk}}"><img src="img/icon-vk_b.svg" alt="vk"></a>
+                                                    </object>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
 
-                        <li class="divisions__item">
-                            <a href="" class="divisions__link">
-                                <div class="divisions__left">
-                                    <img class="divisions__image"  src="img/content/worker3.png" alt="divisions">
-                                    <p class="divisions__position">Кандидат исторических наук</p>
-                                    <h4 class="divisions__name">Буланков Василий Валерьевич</h4>
-                                </div>
-                                <div class="divisions__right">
-                                    <div class="divisions__header">
-                                        <h2 class="divisions__subtitle">Институт психолого-педагогического образования</h2>
-                                        <div class="divisions__social__list social__list">
-                                            <object class="divisions__social__item social__item">
-                                                <a href="https://t.me"><img src="img/icon-telegram.svg" alt="telegram"></a>
-                                            </object>
-                                            <object class="divisions__social__item social__item">
-                                                <a href="https://vk.com"><img src="img/icon-vk.svg" alt="vk"></a>
-                                            </object>
-                                        </div>
                                     </div>
-                                    <p class="divisions__address link_address"><span class="divisions__address_highlighted">Адрес:</span>660049, г Красноярск, ул Перенсона /  7 Корпус № 4 кабинет 1-16</p>
-                                    <object>
-                                        <a class="divisions__email link_email" href="mailto:bulankovv@mail.ru"><span class="divisions__address_highlighted">e-mail:</span>bulankovv@mail.ru</a>
-                                    </object>
-                                    <div class="divisions__contacts">
-                                        <div class="divisions__col">
-                                            <p class="divisions__post">Деканат</p>
-                                             <object>
-                                                <a class="divisions__phone link_phone" href="tel:+73912639533">+7 (391) 263 - 95 - 33</a>
-                                            </object>
-                                            <object>
-                                                <a class="divisions__email link_email" href="mailto:bulankovv@mail.ru">bulankovv@mail.ru</a>
-                                            </object>
-                                        </div>
-                                        <div class="divisions__col">
-                                            <p class="divisions__post">Деканат (приемная, заместитель декана по учебной деятельности, заместитель декана по внеучебной деятельности, заместитель декана по непрерывному обучению, специалист по расписанию): </p>
-                                             <object>
-                                                <a class="divisions__phone link_phone" href="tel:+73912639533">+7 (391) 263 - 95 - 33</a>
-                                            </object>
-                                            <object>
-                                                <a class="divisions__email link_email" href="mailto:bulankovv@mail.ru">bulankovv@mail.ru</a>
-                                            </object>
-                                        </div>
-                                         <div class="divisions__col">
-                                            <p class="divisions__post">Заместитель декана по учебной деятельности:  </p>
-                                             <object>
-                                                <a class="divisions__phone link_phone" href="tel:+73912639533">+7 (391) 263 - 95 - 33</a>
-                                            </object>
-                                            <object>
-                                                <a class="divisions__email link_email" href="mailto:bulankovv@mail.ru">bulankovv@mail.ru</a>
-                                            </object>
-                                        </div>
-                                        
-                                    </div>
-
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="divisions__item">
-                            <a href="" class="divisions__link">
-                                <div class="divisions__left">
-                                    <img class="divisions__image"  src="img/content/worker5.png" alt="divisions">
-                                    <p class="divisions__position">Кандидат исторических наук</p>
-                                    <h4 class="divisions__name">Буланков Василий Валерьевич</h4>
-                                </div>
-                                <div class="divisions__right">
-                                    <div class="divisions__header">
-                                        <h2 class="divisions__subtitle">Институт психолого-педагогического образования</h2>
-                                        <div class="divisions__social__list social__list">
-                                            <object class="divisions__social__item social__item">
-                                                <a href="https://t.me"><img src="img/icon-telegram.svg" alt="telegram"></a>
-                                            </object>
-                                            <object class="divisions__social__item social__item">
-                                                <a href="https://vk.com"><img src="img/icon-vk.svg" alt="vk"></a>
-                                            </object>
-                                        </div>
-                                    </div>
-                                    <p class="divisions__address link_address"><span class="divisions__address_highlighted">Адрес:</span>660049, г Красноярск, ул Перенсона /  7 Корпус № 4 кабинет 1-16</p>
-                                    <object>
-                                        <a class="divisions__email link_email" href="mailto:bulankovv@mail.ru"><span class="divisions__address_highlighted">e-mail:</span>bulankovv@mail.ru</a>
-                                    </object>
-                                    <div class="divisions__contacts">
-                                        <div class="divisions__col">
-                                            <p class="divisions__post">Деканат</p>
-                                             <object>
-                                                <a class="divisions__phone link_phone" href="tel:+73912639533">+7 (391) 263 - 95 - 33</a>
-                                            </object>
-                                            <object>
-                                                <a class="divisions__email link_email" href="mailto:bulankovv@mail.ru">bulankovv@mail.ru</a>
-                                            </object>
-                                        </div>
-                                        <div class="divisions__col">
-                                            <p class="divisions__post">Деканат (приемная, заместитель декана по учебной деятельности, заместитель декана по внеучебной деятельности, заместитель декана по непрерывному обучению, специалист по расписанию): </p>
-                                             <object>
-                                                <a class="divisions__phone link_phone" href="tel:+73912639533">+7 (391) 263 - 95 - 33</a>
-                                            </object>
-                                            <object>
-                                                <a class="divisions__email link_email" href="mailto:bulankovv@mail.ru">bulankovv@mail.ru</a>
-                                            </object>
-                                        </div>
-                                         <div class="divisions__col">
-                                            <p class="divisions__post">Заместитель декана по учебной деятельности:  </p>
-                                             <object>
-                                                <a class="divisions__phone link_phone" href="tel:+73912639533">+7 (391) 263 - 95 - 33</a>
-                                            </object>
-                                            <object>
-                                                <a class="divisions__email link_email" href="mailto:bulankovv@mail.ru">bulankovv@mail.ru</a>
-                                            </object>
-                                        </div>
-                                        
-                                    </div>
-
-                                </div>
-                            </a>
-                        </li>
+                                </a>
+                            </li>
+                        {{/each}}
                     </ul>
                 </div>
             </div>

@@ -2,6 +2,12 @@
 
 .faculty-page,
 .divisions-page {
+  .wrapper {
+    @media (max-width: 480px) {
+      padding-bottom: 80px;
+    }
+  }
+
   .content {
     &__main {
       &__text {
@@ -79,13 +85,17 @@
       &__structure {
         margin-bottom: 62px;
 
+        @media (max-width: 480px) {
+          margin-bottom: 42px;
+        }
+
         &__list {
           background: colors.$white;
           border-radius: 10px;
           padding: 22px 26px 6px;
 
           @media (max-width: 480px) {
-            padding: 26px 12px;
+            padding: 26px 12px 10px;
           }
         }
 
@@ -213,9 +223,38 @@
         }
 
         .directions {
+          &__head {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            .content__subtitle {
+              @media (max-width: 480px) {
+                margin: 0;
+                width: calc(100% - 38px);
+              }
+            }
+          }
+
+          &__button {
+            display: none;
+
+            @media (max-width: 480px) {
+              display: block;
+            }
+          }
+
           &__card {
             &__list {
               width: 100%;
+
+              @media (min-width: 481px) {
+                max-height: 100%;
+              }
+
+              @media (max-width: 480px) {
+                transform: translateY(24px);
+              }
             }
 
             &__item {
@@ -254,6 +293,10 @@
               line-height: 24px;
               padding: 0 12px;
               text-transform: uppercase;
+
+              @media (max-width: 480px) {
+                font-size: 12px;
+              }
             }
 
             &__degree,
@@ -296,6 +339,11 @@
                 line-height: 24px;
                 margin-bottom: 10px;
                 padding-left: 16px;
+
+                @media (max-width: 480px) {
+                  font-size: 14px;
+                  line-height: 1.2;
+                }
               }
             }
           }
@@ -356,6 +404,11 @@
         font-weight: 500;
         line-height: 24px;
         padding-left: 40px;
+
+        @media (max-width: 480px) {
+          font-size: 16px;
+          line-height: 20px;
+        }
       }
 
       &__address {
@@ -377,6 +430,11 @@
         line-height: 24px;
         margin-bottom: 16px;
         text-transform: uppercase;
+
+        @media (max-width: 480px) {
+          font-size: 16px;
+          line-height: 20px;
+        }
       }
 
       &__social-block {

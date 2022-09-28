@@ -20,7 +20,8 @@ export const initMasonry = (selector, options = {}) => {
 }
 
 export const initToggle = () => {
-  const toggleClass = (element) => () => {
+  const toggleClass = (element) => (event) => {
+    event.preventDefault()
     const container = element.querySelector('._toggle__container')
 
     if (!element.classList.contains('_toggle_active')) {

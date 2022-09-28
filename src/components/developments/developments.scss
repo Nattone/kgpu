@@ -21,6 +21,10 @@
 
   .glide__arrows {
     width: 114px;
+
+    @media (max-width: 480px) {
+      width: 70px;
+    }
   }
 
   .glide__track {

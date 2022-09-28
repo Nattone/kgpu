@@ -169,10 +169,10 @@ p {
   height: 50px;
   width: 50px;
 
-  // @media (max-width: 767px) {
-  //   width: 40px;
-  //   height: 40px;
-  // }
+  @media (max-width: 480px) {
+    height: 28px;
+    width: 28px;
+  }
 
   &_more {
     position: relative;
@@ -189,6 +189,11 @@ p {
       top: 50%;
       transform: translate(-50%, -50%);
       width: 12px;
+
+      @media (max-width: 480px) {
+        height: 4px;
+        width: 7px;
+      }
     }
 
     &_left {
@@ -298,6 +303,10 @@ p {
 
     @media (max-width: 991px) {
       margin: 20px 0 40px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 20px;
     }
   }
 
@@ -428,6 +437,14 @@ p {
   &__text,
   &__list {
     margin-bottom: 20px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 480px) {
+      margin-bottom: 14px;
+    }
   }
 
   // p,
@@ -471,6 +488,10 @@ p {
     color: #0c4458;
     margin-bottom: 16px;
     margin-left: 20px;
+
+    @media (max-width: 480px) {
+      margin-bottom: 14px;
+    }
 
     &_calendar {
       list-style-type: none;
@@ -822,8 +843,19 @@ p {
   }
 
   &__video-block {
+    border-radius: 10px;
+    margin-bottom: 40px;
+    overflow: hidden;
     position: relative;
     width: 100%;
+
+    &.video_16x9 {
+      padding-bottom: 100% / 16 * 9;
+    }
+
+    &.video_4x3 {
+      padding-bottom: 100% / 4 * 2.945;
+    }
   }
 
   &__video-overlay {
@@ -878,19 +910,10 @@ p {
   }
 
   &__video {
-    border-radius: 10px;
+    height: 100%;
     margin-bottom: 42px;
-    min-height: 300px;
-    overflow: hidden;
-
-    // height: calc(100% / 16 * 9);
+    position: absolute;
     width: 100%;
-
-    // &_iframe {
-    //   @media (max-width: 1440px) {
-    //     max-height: 450px;
-    //   }
-    // }
   }
 }
 
@@ -1095,6 +1118,8 @@ p {
     margin-right: 40px;
 
     @media (max-width: 767px) {
+      margin-bottom: 18px;
+      margin-right: 0;
       width: 100%;
     }
   }
@@ -1110,6 +1135,10 @@ p {
       font-size: 18px;
       line-height: 1.2;
       width: 100%;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 16px;
     }
 
     &::after {
