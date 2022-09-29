@@ -7,6 +7,12 @@
     margin-bottom: 80px;
   }
 
+  .section__header {
+    @media (max-width: 480px) {
+      margin: 0;
+    }
+  }
+
   &__glide {
     &__track {
       border-bottom: 1px solid rgba(102, 142, 169, 0.5);
@@ -17,6 +23,19 @@
       @media (max-width: 480px) {
         padding: 10px 0;
       }
+    }
+  }
+
+  .glide__arrows {
+    @media (max-width: 480px) {
+      display: flex;
+      justify-content: space-between;
+      left: 3px;
+      position: absolute;
+      right: 3px;
+      top: 50%;
+      width: auto;
+      z-index: 5;
     }
   }
 
