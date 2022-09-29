@@ -131,6 +131,10 @@ p {
     max-width: 1440px;
     padding: 0 20px;
   }
+
+  @media (max-width: 480px) {
+    padding: 0 16px;
+  }
 }
 
 .section {
@@ -503,7 +507,8 @@ p {
     list-style-type: none;
   }
 
-  &__quote {
+  &__quote,
+  blockquote {
     background: colors.$white;
     border-radius: 10px;
     box-shadow: 0 13px 45px rgba(0, 0, 0, 0.05);
@@ -858,12 +863,25 @@ p {
     }
   }
 
-  &__video-overlay {
-    background-image: url('../img/icon-play_round.svg');
-    cursor: pointer;
-    height: 68px;
-    width: 68px;
+  &__video {
+    height: 100%;
+    margin-bottom: 42px;
+    position: absolute;
+    width: 100%;
+  }
+
+  &__video-cover {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
     z-index: 1;
+  }
+
+  &__video-overlay {
+    cursor: pointer;
 
     &._hide {
       display: none;
@@ -877,43 +895,36 @@ p {
         transform-origin: center;
       }
     }
-  }
 
-  &__video-overlay::before {
-    background-image: url('../img/icon-play.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    content: '';
-    height: 13px;
-    width: 13px;
-  }
+    &::before,
+    &::after {
+      content: '';
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+    }
 
-  &__video-overlay::after {
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 100%;
-    content: '';
-    height: 106px;
-    opacity: 0.6;
-    pointer-events: none;
-    transform-origin: center;
-    transition: all 0.3s ease;
-    width: 106px;
-  }
+    &::before {
+      background-image: url('../img/icon-play.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 68px;
+      width: 68px;
+    }
 
-  &__video-overlay,
-  &__video-overlay::before,
-  &__video-overlay::after {
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  &__video {
-    height: 100%;
-    margin-bottom: 42px;
-    position: absolute;
-    width: 100%;
+    &::after {
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 100%;
+      content: '';
+      height: 106px;
+      opacity: 0.6;
+      pointer-events: none;
+      transform-origin: center;
+      transition: all 0.3s ease;
+      width: 106px;
+    }
   }
 }
 

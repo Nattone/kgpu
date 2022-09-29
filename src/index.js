@@ -147,7 +147,12 @@ export const initVideo = () => {
     const overlay = element.querySelector('.content__video-overlay')
     const video = element.querySelector('.content__video')
     overlay?.addEventListener('click', (event) => {
-      video?.play()
+      if (video.classList.contains('content__video_iframe')) {
+        video.src += '?autoplay=1'
+        overlay.classList.add('_hide')
+      } else {
+        video?.play()
+      }
     })
     video?.addEventListener('play', (event) => {
       overlay.classList.add('_hide')
