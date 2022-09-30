@@ -103,7 +103,7 @@ export const initLanguages = () => {
   })
 }
 
-// document.querySelector('.filter__subname').addEventListener('click', () => {
+// document.querySelectorAll('.filter__subname').addEventListener('click', () => {
 //   document.querySelector('.filter__subname').classList.toggle('active')
 // })
 

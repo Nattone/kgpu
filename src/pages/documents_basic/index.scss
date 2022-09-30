@@ -72,6 +72,10 @@
       & + .filter__item {
         margin-top: 36px;
       }
+
+      &._toggle_active > ._toggle__container {
+        margin-top: 20px;
+      }
     }
 
     &__item,
@@ -111,6 +115,7 @@
         padding: 6px 40px;
 
         .filter__subname {
+          color: colors.$white;
           padding-right: 28px;
           position: relative;
           width: fit-content;
@@ -127,6 +132,10 @@
           }
         }
       }
+    }
+
+    &__subname {
+      color: colors.$text-secondary;
     }
 
     &__subamount {
