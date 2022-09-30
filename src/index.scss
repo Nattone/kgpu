@@ -846,6 +846,15 @@ p {
   &__table-block {
     overflow-x: hidden;
     width: 100%;
+
+    .navigation {
+      left: 10px;
+      right: 10px;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
   }
 
   &__video-block {
