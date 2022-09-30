@@ -183,6 +183,12 @@
       }
     }
   }
+
+  .navigation {
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
 }
 
 .main-page {

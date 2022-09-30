@@ -17,22 +17,27 @@
                     <a class="section__link" href="/news_list.html">Все новости</a>
                 </div>
 
-                <div class="news__list">
+                <div class="navigation-wrapper">
                     {{> navigation/index}}
+                    <div class="news__list navigation-target">
 
-                    {{#each pages.index.news}}
-                        <div class="news__list__item">
-                            {{> news/card item=this }}
-                        </div>
-                    {{/each}}
+                        {{#each pages.index.news}}
+                            <div class="news__list__item">
+                                {{> news/card item=this }}
+                            </div>
+                        {{/each}}
+                    </div>
                 </div>
 
-                <div class="news__list">
-                    {{#each pages.index.news}}
-                        <div class="news__list__item">
-                            {{> news/card item=this isSmall=true }}
-                        </div>
-                    {{/each}}
+                <div class="navigation-wrapper">
+                    {{> navigation/index}}
+                    <div class="news__list navigation-target">
+                        {{#each pages.index.news}}
+                            <div class="news__list__item">
+                                {{> news/card item=this isSmall=true }}
+                            </div>
+                        {{/each}}
+                    </div>
                 </div>
             </div>
         </section>
@@ -87,6 +92,32 @@
 
             </div>
         </section>
+
+        <section class="information information-adaptive">
+            <div class="container _toggle">
+                <div class="information__header section__header">
+                    <p class="information__title section__title">Важная информация АДАПТИВ</p>
+                    <button class="information__button_more button button_more button_round _toggle__button"></button>
+                </div>
+
+                <div class="navigation-wrapper _toggle__container">
+                    {{> navigation/index}}
+                    <div class="information__list navigation-target">
+                        {{#each pages.index.information__preview}}
+                            <div class="information__list__item">
+                                {{> information/card item=this }}
+                            </div>
+                        {{/each}}
+                        {{#each pages.index.information__postview}}
+                            <div class="information__list__item">
+                                {{> information/card item=this }}
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <section class="info glide" data-count="4">
             <div class="container">

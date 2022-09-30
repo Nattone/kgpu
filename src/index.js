@@ -163,20 +163,54 @@ export const initVideo = () => {
   })
 }
 
+export const initNatigationScroll = () => {
+  document.querySelectorAll('.navigation-wrapper')?.forEach((element) => {
+    const nextButton = element.querySelector('.navigation__arrow-next')
+    const prevButton = element.querySelector('.navigation__arrow-prev')
+    const container = element.querySelector('.navigation-target')
+    const smoothScroll = (pos) => {
+      let start = null
+      const time = 300
+      const currentPos = container.scrollLeft
+
+      window.requestAnimationFrame(function step(currentTime) {
+        start = !start ? currentTime : start
+        const progress = currentTime - start
+        if (currentPos < pos) {
+          container.scrollTo(((pos - currentPos) * progress) / time + currentPos, 0)
+        } else {
+          container.scrollTo(currentPos - ((currentPos - pos) * progress) / time, 0)
+        }
+        if (progress < time) {
+          window.requestAnimationFrame(step)
+        } else {
+          container.scrollTo(pos, 0)
+        }
+      })
+    }
+
+    if (container) {
+      nextButton?.addEventListener('click', (event) => {
+        smoothScroll(container.scrollLeft + container.clientWidth)
+      })
+      prevButton?.addEventListener('click', (event) => {
+        smoothScroll(container.scrollLeft - container.clientWidth)
+      })
+    }
+  })
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initToggle()
   initLanguages()
   initPopup()
-
   initMasonry('.grid', {
     percentPosition: true,
     gutter: 30,
   })
-
   initGlide('.slider', {
     autoplay: 5000,
   })
-
   initGlide('.developments', {
     perView: 3,
     breakpoints: {
@@ -188,7 +222,6 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     },
   })
-
   initGlide('.info', {
     perView: 4,
     breakpoints: {
@@ -203,8 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     },
   })
-
   initDropdown()
-
   initVideo()
+  initNatigationScroll()
 })
