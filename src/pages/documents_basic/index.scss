@@ -76,6 +76,13 @@
       &._toggle_active > ._toggle__container {
         margin-top: 20px;
       }
+
+      .button {
+        @media (max-width: 767px) {
+          height: 38px;
+          width: 38px;
+        }
+      }
     }
 
     &__item,
@@ -98,6 +105,11 @@
       // line-height: 38px;
       font-size: 16px;
       line-height: 1.5;
+      width: calc(100% - 60px);
+
+      @media (max-width: 767px) {
+        width: calc(100% - 48px);
+      }
     }
 
     // &__sublist {}
