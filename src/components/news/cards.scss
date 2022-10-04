@@ -102,19 +102,13 @@
       &_dark {
         .news__card__image {
           background-color: colors.$blue;
+          border-bottom-color: colors.$blue;
         }
       }
 
       &_light {
         .news__card__image {
           background-color: colors.$orange;
-        }
-      }
-
-      &_dark,
-      &_light {
-        .news__card__image {
-          border-bottom: none;
         }
       }
     }
@@ -134,7 +128,7 @@
     &__image {
       background-color: #ddd;
       border-bottom: 8px solid colors.$orange;
-      border-radius: 10px;
+      border-radius: 8px;
       margin-bottom: 28px;
       overflow: hidden;
       padding-top: (327% / 480 * 100);
