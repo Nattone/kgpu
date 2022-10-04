@@ -24,7 +24,7 @@
                         </form>
                         <div class="search__filter-list">
 
-                            {{> dropdown/index 
+                            {{!-- {{> dropdown/index 
                                 class="search__filter search__filter_sorting"
                             }}
                             {{> dropdown/index 
@@ -32,11 +32,42 @@
                             }}
                             {{> dropdown/index 
                                 class="search__filter search__filter_sections"
-                            }}
+                            }} --}}
 
-                            {{> checkbox/index 
-                                class="search__checkbox"
-                            }}
+                            <fieldset class="checkbox-wrapper search__checkbox">
+                                <legend>Сортировка</legend>
+                                {{#each pages.search.sorting}}
+                                    {{> checkbox/radio }}
+                                {{/each}}
+                            </fieldset>
+
+                            <fieldset class="checkbox-wrapper search__checkbox">
+                                <legend>За период</legend>
+                                {{#each pages.search.period}}
+                                    {{> checkbox/radio }}
+                                {{/each}}
+                            </fieldset>
+                            <fieldset class="checkbox-wrapper search__checkbox">
+                                <legend>Разделы</legend>
+                                {{#each pages.search.chapter}}
+                                    {{> checkbox/checkbox }}
+                                {{/each}}
+
+                            </fieldset>
+                            <fieldset class="checkbox-wrapper search__checkbox">
+                                <legend>Прочее</legend>
+                                {{#each pages.search.other}}
+                                    {{> checkbox/checkbox }}
+                                {{/each}}
+                            </fieldset>
+
+
+
+
+
+
+
+
                         </div>
                     </div>
 

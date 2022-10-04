@@ -7,11 +7,11 @@
     background-color: colors.$white;
     border-radius: 5px;
     margin-bottom: 42px;
-    padding: 34px 44px;
+    padding: 34px 44px 0;
     width: 100%;
 
     @media (max-width: 767px) {
-      padding: 34px 16px 52px;
+      padding: 34px 16px 12px;
     }
 
     &__form {
@@ -69,7 +69,6 @@
     }
 
     &__filter-list {
-      align-items: center;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;

@@ -1,12 +1,18 @@
 .navigation {
   display: flex;
   justify-content: space-between;
-  left: -17px;
   position: absolute;
-  right: -17px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 5;
+
+  &-prev {
+    left: -17px;
+  }
+
+  &-next {
+    right: -17px;
+  }
 }
 
 .navigation-wrapper {
