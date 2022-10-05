@@ -37,27 +37,27 @@
                             <fieldset class="checkbox-wrapper search__checkbox">
                                 <legend>Сортировка</legend>
                                 {{#each pages.search.sorting}}
-                                    {{> checkbox/radio }}
+                                    {{> checkbox/radio label=this.label name="sorting" value=this.value }}
                                 {{/each}}
                             </fieldset>
 
                             <fieldset class="checkbox-wrapper search__checkbox">
                                 <legend>За период</legend>
                                 {{#each pages.search.period}}
-                                    {{> checkbox/radio }}
+                                    {{> checkbox/radio label=this.label name="period" value=this.value }}
                                 {{/each}}
                             </fieldset>
                             <fieldset class="checkbox-wrapper search__checkbox">
                                 <legend>Разделы</legend>
                                 {{#each pages.search.chapter}}
-                                    {{> checkbox/checkbox }}
+                                    {{> checkbox/checkbox label=this.label }}
                                 {{/each}}
 
                             </fieldset>
                             <fieldset class="checkbox-wrapper search__checkbox">
                                 <legend>Прочее</legend>
                                 {{#each pages.search.other}}
-                                    {{> checkbox/checkbox }}
+                                    {{> checkbox/checkbox label=this.label }}
                                 {{/each}}
                             </fieldset>
 
