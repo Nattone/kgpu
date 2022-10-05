@@ -7,11 +7,13 @@
   z-index: 5;
 
   &-prev {
-    left: -17px;
+    left: 0;
+    left: -16px;
   }
 
   &-next {
-    right: -17px;
+    right: 0;
+    right: -16px;
   }
 }
 

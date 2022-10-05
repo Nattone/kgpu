@@ -1217,3 +1217,13 @@ p {
     }
   }
 }
+
+.glide {
+  &__arrows {
+    pointer-events: none;
+  }
+
+  &__arrow {
+    pointer-events: all;
+  }
+}
