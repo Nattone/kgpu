@@ -21,15 +21,17 @@
                     <ul class="divisions__list">
                         {{#each pages.divisions_list.items}}
                             <li class="divisions__item">
-                                <a href="" class="divisions__link">
+                                <div class="divisions__link">
                                     <div class="divisions__left">
                                         <img class="divisions__image"  src="{{this.image}}" alt="divisions">
                                         <p class="divisions__position">{{this.position}}</p>
                                         <h4 class="divisions__name">{{this.name}}</h4>
                                     </div>
                                     <div class="divisions__right _toggle">
-                                        <div class="divisions__header  _toggle__button">
-                                            <h2 class="divisions__subtitle">{{this.subtitle}}</h2>
+                                        <div class="divisions__header">
+                                            <h2 class="divisions__subtitle">
+                                                <a href="{{this.href}}">{{this.subtitle}}</a>
+                                            </h2>
                                             <div class="divisions__social__list social__list">
                                                 <object class="divisions__social__item social__item">
                                                     <a href="{{this.link-tg}}"><img src="img/icon-telegram_b.svg" alt="telegram"></a>
@@ -44,7 +46,7 @@
                                                     <a href="{{this.link-youtube}}"><img src="img/icon-youtube_b.svg" alt="youtube"></a>
                                                 </object>
                                             </div>
-                                            <button class="divisions__button button button_more button_round"></button>
+                                            <button class="divisions__button button button_more button_round _toggle__button"></button>
                                         </div>
 
                                         <div class="divisions__container _toggle__container">
@@ -99,7 +101,7 @@
                                         </div>
 
                                     </div>
-                                </a>
+                                </div>
                             </li>
                         {{/each}}
                     </ul>
