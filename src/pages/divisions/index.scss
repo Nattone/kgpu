@@ -83,12 +83,28 @@
       padding-left: 0;
       width: 100%;
     }
+
+    @media (min-width: 768px) {
+      &._toggle_active {
+        .divisions__container {
+          margin-top: 44px;
+        }
+      }
+    }
   }
 
   &__header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 22px;
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 767px) {
+      margin-bottom: 0;
+    }
 
     .divisions__button {
       @media (min-width: 768px) {
@@ -109,11 +125,22 @@
   }
 
   &__subtitle {
+    margin-bottom: 22px;
     max-width: 50%;
 
     @media (max-width: 1199px) {
       max-width: 100%;
       padding-right: 20px;
+      width: calc(100% - 188px);
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      padding-right: 0;
+      width: 100%;
+    }
+
+    @media (max-width: 767px) {
+      margin-bottom: 0;
       width: calc(100% - 50px);
     }
 
