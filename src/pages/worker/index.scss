@@ -93,6 +93,20 @@
         font-size: 20px;
       }
 
+      &::after {
+        display: none;
+      }
+
+      a {
+        color: inherit;
+        margin-bottom: 16px;
+        margin-right: 16px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
       .content__main__post {
         font-size: 20px;
         line-height: 36px;
@@ -207,6 +221,42 @@
         transform: translateY(-50%);
         width: 25px;
       }
+    }
+  }
+
+  .accordion__caption {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 0;
+
+    @media (max-width: 1400px) {
+      padding-right: 50px;
+    }
+  }
+}
+
+.worker-button {
+  height: 38px;
+  vertical-align: bottom;
+
+  @media (max-width: 1400px) {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &::after {
+    @media (max-width: 480px) {
+      height: 7px;
+      width: 12px;
+    }
+  }
+}
+
+._toggle_active {
+  .worker-button {
+    &::after {
+      transform: translate(-50%, -50%) rotate(180deg);
     }
   }
 }
