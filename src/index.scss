@@ -743,6 +743,50 @@ p {
       background-image: url('../img/icon-jpg.svg');
     }
 
+    &_docx::before {
+      background-image: url('../img/icon-docx.svg');
+    }
+
+    &_dot::before {
+      background-image: url('../img/icon-dot.svg');
+    }
+
+    &_gif::before {
+      background-image: url('../img/icon-gif.svg');
+    }
+
+    &_odp::before {
+      background-image: url('../img/icon-odp.svg');
+    }
+
+    &_ods::before {
+      background-image: url('../img/icon-ods.svg');
+    }
+
+    &_odt::before {
+      background-image: url('../img/icon-odt.svg');
+    }
+
+    &_ppt::before {
+      background-image: url('../img/icon-ppt.svg');
+    }
+
+    &_png::before {
+      background-image: url('../img/icon-png.svg');
+    }
+
+    &_xlb::before {
+      background-image: url('../img/icon-xlb.svg');
+    }
+
+    &_xls::before {
+      background-image: url('../img/icon-xls.svg');
+    }
+
+    &_zip::before {
+      background-image: url('../img/icon-zip.svg');
+    }
+
     &_locked {
       padding-left: 102px;
 
