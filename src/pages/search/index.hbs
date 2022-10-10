@@ -18,9 +18,17 @@
 
                 <div class="content__wrapper search-wrapper">
                     <div class="search">
-                        <form action="" class="search__form">
-                            <input class="search__input" type="search" id="search" placeholder="Что вы хотите найти?">
-                            <button class="search__btn">Найти</button>
+                        <form action="search.html" class="search__form search-prediction" data-preditction-url="/mocks/prediction2.json">
+                            <input class="search__input" type="search" id="search-page" placeholder="Что вы хотите найти?">
+                            <div class="search__variants">
+                                <ul class="search__list">
+                                    {{!--
+                                    <li class="search__item">123</li>
+                                    <li class="search__item">312</li>
+                                    --}}
+                                </ul>
+                            </div>
+                            <button class="search__btn" type="submit">Найти</button>
                         </form>
                         <div class="search__filter-list">
 

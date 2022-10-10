@@ -1,5 +1,7 @@
 import Glide from '@glidejs/glide'
 import Masonry from 'masonry-layout'
+import axios from 'axios'
+import debounce from 'lodash/debounce'
 
 export const initGlide = (selector, options) => {
   document.querySelectorAll(selector)?.forEach((element) => {
@@ -63,7 +65,7 @@ export const initPopup = () => {
   })
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      popupElement.classList.remove('_open')
+      popupElement?.classList?.remove('_open')
     }
   })
 }
@@ -200,6 +202,67 @@ export const initNatigationScroll = () => {
   })
 }
 
+export const initSearch = () => {
+  document.querySelectorAll('.search-prediction')?.forEach((element) => {
+    const input = element?.querySelector('input')
+    const options = element?.querySelector('.search__variants')
+    const list = options?.querySelector('.search__list')
+
+    let controller
+    let timer
+
+    const makeRequest = debounce((value) => {
+      const url = element.dataset.preditctionUrl
+      if (!url) return
+
+      controller?.abort()
+      controller = new AbortController()
+
+      axios
+        .get(url, {
+          signal: controller.signal,
+          params: {
+            query: value,
+          },
+        })
+        .then((response) => {
+          const { data } = response
+          if (data?.length) {
+            let markup = ''
+            data.forEach((value) => {
+              markup += `<li class="search__item">${value}</li>`
+            })
+            list.innerHTML = markup
+            options.classList.add('_open')
+          }
+        })
+    }, 500)
+
+    const changeHandler = (event) => {
+      const value = event.target.value
+      options.classList.remove('_open')
+      clearTimeout(timer)
+      timer = setTimeout(() => {
+        list.innerHTML = ''
+      }, 300)
+
+      if (value.length) {
+        makeRequest(value)
+      }
+    }
+
+    const clickHandler = (event) => {
+      if (event.target.classList.contains('search__item')) {
+        options.classList.remove('_open')
+        input.value = event.target.innerText
+      }
+    }
+
+    input?.addEventListener('input', changeHandler)
+    options?.addEventListener('click', clickHandler)
+  })
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initToggle()
   initLanguages()
@@ -239,4 +302,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initDropdown()
   initVideo()
   initNatigationScroll()
+  initSearch()
 })

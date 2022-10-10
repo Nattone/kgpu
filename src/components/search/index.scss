@@ -8,16 +8,88 @@
       background: transparent;
       border: 2px solid colors.$blue;
       border-radius: 5px;
-      color: colors.$blue;
 
       // float: left;
-      font-size: 10pt;
       height: 38px;
       outline: none;
-      padding: 0 34px 0 12px;
 
       &::placeholder {
         color: colors.$blue;
+      }
+
+      &:focus {
+        + .search__variants {
+          &._open {
+            transform: rotateX(0);
+            transition: transform 0.3s ease;
+
+            > * {
+              opacity: 1;
+              transition: opacity 0.1s 0.2s ease;
+            }
+          }
+        }
+      }
+    }
+
+    &__input,
+    &__item {
+      color: colors.$blue;
+      font-size: 10pt;
+      padding: 0 34px 0 12px;
+    }
+
+    &__item {
+      line-height: 23px;
+
+      &:hover {
+        background-color: colors.$grey;
+        cursor: pointer;
+      }
+    }
+
+    &__variants {
+      background-color: colors.$light-grey;
+      border: 2px solid #076b8f;
+      border-radius: 5px;
+      height: auto;
+      left: 0;
+      max-height: 130px;
+      min-height: 38px;
+      overflow-y: scroll;
+      padding: 8px 0;
+      pointer-events: none;
+      position: absolute;
+      top: calc(100% + 7px);
+      transform: rotateX(90deg);
+      transform-origin: top center;
+      transition: transform 0.2s 0.1s ease;
+      width: 100%;
+      z-index: 1;
+
+      &._open {
+        pointer-events: all;
+      }
+
+      > * {
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+
+      &::-webkit-scrollbar {
+        appearance: none;
+        width: 6px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: colors.$orange;
+        border-radius: 30px;
+        box-shadow: none;
+      }
+
+      &::-webkit-scrollbar-track-piece {
+        background-color: rgb(82 85 86 / 0.2);
+        border-radius: 30px;
       }
     }
 
@@ -35,5 +107,11 @@
         display: block;
       }
     }
+  }
+}
+
+.documents_basic-page {
+  .search__variants {
+    background-color: colors.$white;
   }
 }

@@ -122,6 +122,7 @@ module.exports = (env = {}, argv = {}) => {
       new CopyWebpackPlugin({
         patterns: [
           { from: `${PATHS.src}/img`, to: 'img' },
+          { from: `${PATHS.src}/mocks`, to: 'mocks' },
           // { from: `${PATHS.src}/fonts`, to: 'assets/fonts' },
           // { from: `${PATHS.src}/static`, to: '' },
         ],

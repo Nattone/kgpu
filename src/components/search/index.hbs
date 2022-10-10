@@ -1,6 +1,14 @@
 <div class="search-solo">
-    <form action="search.html" class="search">
+    <form action="search.html" class="search search-prediction" data-preditction-url="/mocks/prediction.json">
         <input class="search__input" type="text" id="search" name="search" placeholder="Поиск по справочнику">
+        <div class="search__variants">
+            <ul class="search__list">
+                {{!--
+                <li class="search__item">123</li>
+                <li class="search__item">312</li>
+                --}}
+            </ul>
+        </div>
         <button class="search__btn" type="submit">
             <img class="icon-search" src="img/icon-search.svg" alt="search">
         </button>
