@@ -187,13 +187,15 @@
   }
 
   &__phone a,
-  &__email a {
+  &__email a,
+  &__site a {
     white-space: nowrap;
   }
 
   .other-link,
   &__phone a,
-  &__email a {
+  &__email a,
+  &__site a {
     color: colors.$white;
     font-size: 18px;
     line-height: 25px;

@@ -386,12 +386,17 @@ p {
     }
 
     &__phone,
-    &__email {
+    &__email,
+    &__site {
       color: colors.$text-main;
       font-size: 20px;
       font-weight: 400;
       line-height: 24px;
       margin-bottom: 16px;
+
+      &:hover {
+        color: colors.$blue;
+      }
     }
 
     &__link {
@@ -647,7 +652,8 @@ p {
   .link_phone,
   .link_email,
   .link_address,
-  .link_time {
+  .link_time,
+  .link_site {
     display: block;
     padding-left: 28px;
     position: relative;
@@ -684,6 +690,14 @@ p {
       background-image: url('../img/icon-address.svg');
       height: 20px;
       width: 17px;
+    }
+  }
+
+  .link_site {
+    &::before {
+      background-image: url('../img/icon-site.svg');
+      height: 18px;
+      width: 18px;
     }
   }
 

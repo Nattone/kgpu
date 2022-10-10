@@ -43,7 +43,8 @@
     }
 
     &__phone,
-    &__email {
+    &__email,
+    &__site {
       color: colors.$text-main;
       display: inline-block;
       font-size: 30px;
@@ -80,6 +81,13 @@
       &::before {
         height: 17px;
         width: 22px;
+      }
+    }
+
+    &__site {
+      &::before {
+        height: 18px;
+        width: 18px;
       }
     }
 
